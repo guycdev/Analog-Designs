@@ -1176,6 +1176,20 @@ label>svg {
     margin: 0px 2rem 0px 0px;
   }
 
+  .hero-section {
+    flex-direction: column;
+  }
+
+  .content-block {
+    max-width: fit-content;
+  }
+
+  .swag-block {
+    display: flex;
+  }
+
+
+
   .stack-container {
     display: none;
   }
@@ -1228,6 +1242,9 @@ label>svg {
     gap: 1.25rem;
   }
 
+  .features-grid {
+    gap: 20px;
+  }
 
 }
 
