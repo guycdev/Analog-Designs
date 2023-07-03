@@ -30,7 +30,9 @@ export default function ControlBar(props) {
                 heading={header}
                 content={subtitle}
             >
-                {optionsArr}
+                <div>
+                    {optionsArr}
+                </div>
             </Card>
 
         </div>

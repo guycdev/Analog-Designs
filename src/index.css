@@ -100,6 +100,7 @@ To make responsive:
 
 .stack-card img {
   max-width: 170px;
+  width: 100%;
 }
 
 .card-container h2 {
@@ -290,7 +291,7 @@ nav ul {
 }
 
 .welcome-heading {
-  font-size: 3rem;
+  font-size: 2.8rem;
   z-index: 2;
   position: relative;
   font-weight: 400;
@@ -552,17 +553,13 @@ hr {
   width: 100%;
 }
 
-/**/
-
 .stack-card-container .card-container div {
   display: flex;
   height: 100%;
   align-items: center;
 }
 
-.stack-card-container img {
-  width: 10vw;
-}
+/**/
 
 .about-us-container {
   margin: var(--margin);
@@ -783,7 +780,6 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 150px;
 }
 
 .control-bar-container {
@@ -1083,15 +1079,63 @@ label>svg {
   }
 }
 
-@media (max-width:450px) {
-  .hero-section h1 {
-    font-size: 1rem;
+@media(max-width:1210px) {
+
+  .control-bar-container {
+    max-width: fit-content;
   }
+
+  .video-object-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .control-bar-container>.card {
+    width: fit-content;
+  }
+
+  .control-bar-container>.card>div>div {
+    display: flex;
+  }
+
+  .selected-row>div p {
+    display: none;
+  }
+
+}
+
+@media (max-width: 1010px) {
+  .contact-card {
+    flex-direction: column;
+  }
+
+  .welcome-heading {
+    font-size: 2.2rem;
+  }
+
+  .swag-block {}
+
+  .card-container>div>p {
+    width: fit-content;
+  }
+
+  .feature-container>.card-container>div>p {
+    width: 40ch;
+  }
+
+  .contact-card>div {
+    height: 500px;
+  }
+
 }
 
 @media (max-width: 950px) {
   ul {
     margin: 0px 2rem 0px 0px;
+  }
+
+  .stack-container {
+    display: none;
   }
 }
 
@@ -1114,12 +1158,22 @@ label>svg {
   .nav-items {
     gap: 1.25rem;
   }
+
+
 }
 
 @media (max-width:1290px) {
 
-  .swag-container {
-    max-width: 50%;
+  .hero-section {
+    gap: 20px;
+  }
+
+  .swag-block {
+    gap: 0px 25px;
+  }
+
+  .stack-card-container>div>div>img {
+    width: 13vw;
   }
 
   .top {
@@ -1136,5 +1190,12 @@ label>svg {
 
   .middle {
     top: 40%;
+  }
+
+}
+
+@media (max-width:450px) {
+  .hero-section h1 {
+    font-size: 1rem;
   }
 }
