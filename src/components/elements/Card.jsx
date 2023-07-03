@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 
 export default function Card(props) {
     const { img, heading, content, direction, id, styles, children, drag } = props
+
     const enterTransition = {
         initial: {
             opacity: 0
@@ -21,8 +22,6 @@ export default function Card(props) {
             className={[
                 "card-container",
                 "card",
-                direction ? direction : null,
-                (id > 1 && direction) ? "eat-up" : null,
                 styles ? styles : null,
             ].filter(Boolean).join(' ')}
             initial={{ opacity: 0, x: 500 }}
@@ -37,18 +36,6 @@ export default function Card(props) {
                     }
                 }
             }
-            whileHover={drag &&
-            {
-                scale: 1.1,
-                transition: {
-                    duration: 0.25,
-                    ease: 'easeInOut'
-                }
-            }
-            }
-            drag={drag}
-            dragConstraints={{ left: -0, right: 0, top: 0, bottom: -0 }}
-            dragElastic={0.5}
         >
             <motion.div
                 variants={enterTransition}

@@ -39,7 +39,7 @@ export default function VideoObject(props) {
                         </>
                     )
             }
-            <style>
+            {/* <style>
                 {`
                     .section-${sectionNumber}>.control-bar-container::before {
                         content: '{0${sectionNumber}}. ${psudoContent}';
@@ -52,7 +52,7 @@ export default function VideoObject(props) {
                         text-align: center;
                     }
                 `}
-            </style>
+            </style> */}
         </section>
     )
 }

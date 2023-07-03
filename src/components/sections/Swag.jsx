@@ -1,6 +1,7 @@
 import React from 'react'
 import SwagRows from '../elements/SwagRows'
 import Card from '../elements/Card'
+import { motion } from 'framer-motion'
 
 export default function Swag(props) {
 
@@ -20,7 +21,7 @@ export default function Swag(props) {
     })
 
     return (
-        <section className='feature-container' id={id}>
+        <motion.section className='feature-container' id={id}>
             {heading && <Card
                 heading={heading}
                 content={content}
@@ -30,6 +31,6 @@ export default function Swag(props) {
             <div className={style}>
                 {elementArr}
             </div>
-        </section>
+        </motion.section>
     )
 }
