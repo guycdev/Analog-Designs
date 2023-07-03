@@ -1206,6 +1206,19 @@ label>svg {
   }
 }
 
+@media (max-width: 850px) {
+
+  .pricing-container,
+  .getting-started-container>div {
+    flex-direction: column;
+    max-width: 50%;
+  }
+
+  .footer-container {
+    display: none;
+  }
+}
+
 @media (max-width: 820px) {
   ul {
     margin: 0px 0.9rem 0px 0px;
