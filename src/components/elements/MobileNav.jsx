@@ -50,6 +50,7 @@ export default function MobileNav(props) {
                 <NavContent
                     theme={theme}
                     style="mobile-content-container"
+                    setIsClicked={setIsClicked}
                 />
             </motion.nav>
             <div

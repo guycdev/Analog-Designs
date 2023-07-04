@@ -6,9 +6,8 @@ import { Link } from 'react-router-dom'
 
 export default function NavContent(props) {
 
-    const { theme, style } = props
+    const { theme, style, setIsClicked } = props
     const [time, setTime] = useState(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }))
-    const [dark, bright] = svgThemeArr
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -28,19 +27,29 @@ export default function NavContent(props) {
         <div className={`nav-links ${style}`}>
             <ul>
                 <div className='nav-items'>
-                    <li>
+                    <li
+                        onClick={setIsClicked}
+                    >
                         <a href="#home">Home</a>
                     </li>
-                    <li>
+                    <li
+                        onClick={setIsClicked}
+                    >
                         <a href="#about-us">About Us</a>
                     </li>
-                    <li>
+                    <li
+                        onClick={setIsClicked}
+                    >
                         <a href="#gallery">Our Work</a>
                     </li>
-                    <li>
+                    <li
+                        onClick={setIsClicked}
+                    >
                         <a href="#pricing">Pricing</a>
                     </li>
-                    <li className='contact'>
+                    <li
+                        onClick={setIsClicked}
+                    >
                         <a href="#contact">Contact Us</a>
                     </li>
                 </div>
@@ -65,7 +74,6 @@ export default function NavContent(props) {
                         className='contact-container register'
                         whileHover={{
                             scale: 1.1,
-                            color: '#333',
                             backgroundColor: 'white'
                         }}
                         whileTap={{ scale: 0.9 }}

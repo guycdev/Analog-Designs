@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import DesktopNav from '../elements/DesktopNav'
 import MobileNav from '../elements/MobileNav'
-import { Outlet } from 'react-router-dom'
 
 export default function Nav(props) {
     const { logo, name } = props
@@ -25,20 +24,20 @@ export default function Nav(props) {
 
 
     return (
-        <>
-            {windowWidth ?
-                <MobileNav
-                    logo={logo}
-                    name={name}
-                    theme={{ theme, setTheme }}
-                />
-                :
-                <DesktopNav
-                    logo={logo}
-                    name={name}
-                    theme={{ theme, setTheme }}
-                />}
-            <Outlet />
-        </>
+
+        windowWidth ?
+            <MobileNav
+                logo={logo}
+                name={name}
+                theme={{ theme, setTheme }
+                }
+            />
+            :
+            <DesktopNav
+                logo={logo}
+                name={name}
+                theme={{ theme, setTheme }}
+            />
+
     )
 }

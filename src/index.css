@@ -149,10 +149,6 @@ p {
   text-wrap: balance;
 }
 
-body {
-  background-color: #ededed;
-}
-
 
 /*Loader*/
 
@@ -264,6 +260,10 @@ body {
 .register {
   background-color: var(--hue);
   color: white;
+}
+
+.register:hover {
+  color: #333;
 }
 
 .nav-items>li>a,
@@ -1297,6 +1297,12 @@ hr {
 
 }
 
+@media (max-width: 1120px) {
+  .contact-container {
+    width: fit-content;
+  }
+}
+
 @media (max-width: 1010px) {
   .contact-card {
     flex-direction: column;
@@ -1326,12 +1332,11 @@ hr {
 
 }
 
-@media (max-width: 976px) {}
-
 @media (max-width: 950px) {
   .hero-section {
     flex-direction: column;
   }
+
 
   .content-block {
     max-width: fit-content;
