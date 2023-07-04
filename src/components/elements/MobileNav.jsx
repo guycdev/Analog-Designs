@@ -3,8 +3,14 @@ import { ReactSVG } from 'react-svg'
 import close from '../../assets/close.svg'
 import NavContent from './NavContent'
 import MiscNavItems from './MiscNavItems'
+import { motion } from 'framer-motion'
 
 export default function MobileNav(props) {
+
+    const navVariants = {
+        open: { x: 0, opacity: 1 },
+        closed: { x: "-100%", opacity: 0 },
+    };
 
     const { logo, name, theme } = props
 
@@ -16,12 +22,18 @@ export default function MobileNav(props) {
 
     return (
         <header>
-            <div className="burger-icon" onClick={handleClick}>
+            <div className="burger-icon" onClick={handleClick} style={{ display: isClicked ? 'none' : '' }}>
                 <div className="burger-line"></div>
                 <div className="burger-line"></div>
                 <div className="burger-line"></div>
             </div>
-            <nav className='mobile-nav' style={{ display: isClicked ? 'flex' : 'none' }}>
+            <motion.nav
+                className='mobile-nav'
+                animate={isClicked ? "open" : "closed"}
+                initial="closed"
+                variants={navVariants}
+                transition={{ type: "spring", stiffness: 260, damping: 20 }}
+            >
                 <ReactSVG
                     src={close}
                     onClick={() => handleClick()}
@@ -39,7 +51,7 @@ export default function MobileNav(props) {
                     theme={theme}
                     style="mobile-content-container"
                 />
-            </nav>
+            </motion.nav>
             <div
                 className="nav-overlay"
                 style={{ display: isClicked ? 'block' : 'none' }}

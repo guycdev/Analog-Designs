@@ -307,12 +307,6 @@ body {
   gap: 1.25rem;
 }
 
-.desktop-content-container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
 .button-theme {
   background-color: transparent;
   border: none;
@@ -1177,6 +1171,8 @@ hr {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
+  margin: 10px;
+  z-index: 1000;
 }
 
 .burger-line {
