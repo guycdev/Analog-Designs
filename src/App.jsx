@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react'
-import logo from './assets/logo.svg'
-import Nav from './components/sections/Nav'
 import Hero from './components/sections/Hero'
 import Stack from './components/sections/Stack'
 import Pricing from './components/sections/Pricing '
@@ -10,11 +8,9 @@ import Footer from './components/sections/Footer'
 import ContactForm from './components/sections/ContactForm'
 import GettingStarted from './components/sections/GettingStarted'
 import { information, features } from './copyright/information'
-import Loader from './components/sections/Loader'
 
 
 function App() {
-  const [theme, setTheme] = useState(true)
 
   const [loading, setLoading] = useState(true)
   useEffect(() => {
@@ -26,9 +22,7 @@ function App() {
 
   return (
     <div>
-      {/* <Loader length={7} loading={loading} /> */}
       <div className="container" style={{ display: !loading ? 'block' : 'block' }}>
-        <Nav logo={logo} name='Analog Designs' theme={{ theme, setTheme }} />
         <Hero />
         <Swag
           id="features"

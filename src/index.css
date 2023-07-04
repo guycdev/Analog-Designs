@@ -42,7 +42,8 @@ body {
   background-repeat: no-repeat;
 }
 
-.container {
+.container,
+#root {
   scrollbar-width: none;
   max-width: var(--max-width);
   margin: auto;
@@ -152,9 +153,6 @@ body {
   background-color: #ededed;
 }
 
-.container {
-  width: 100%;
-}
 
 /*Loader*/
 
@@ -243,7 +241,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 2.5rem;
-  margin: 0px 4rem 0px 0px;
+  margin: 0px 2rem 0px 0px;
 }
 
 .nav-items {
@@ -252,18 +250,26 @@ body {
 }
 
 .contact-container {
-  background-color: white;
-  padding: 0.33rem 0.66rem;
+  padding: 0.4rem 0.86rem;
   border-radius: 5px;
   cursor: pointer;
   border: thin solid grey;
-  color: #333;
   position: relative;
   overflow: hidden;
+  text-decoration: none;
+  width: 100px;
+  text-align: center;
+}
+
+.register {
+  background-color: var(--hue);
+  color: white;
 }
 
 .nav-items>li>a,
-.contact>a {
+.contact>a,
+.register>a,
+.login>a {
   color: inherit;
   font-size: smaller;
   text-decoration: none;
@@ -1146,6 +1152,18 @@ label>svg {
   width: 150px;
 }
 
+.mobile-content-container .contact-container {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.account-container {
+  display: flex;
+  gap: 20px;
+}
+
 .mobile-content-container .nav-items {
   margin: 0 0 80px 0;
 }
@@ -1173,6 +1191,7 @@ hr {
   top: 0;
   margin: 10px;
   z-index: 1000;
+  transition: all 0.3s;
 }
 
 /**/
@@ -1235,6 +1254,8 @@ hr {
     top: 40%;
   }
 
+
+
 }
 
 @media(max-width:1210px) {
@@ -1260,6 +1281,20 @@ hr {
     display: none;
   }
 
+  .account-container {
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .nav-items {
+    gap: 1.5rem;
+    font-size: 0.95rem;
+
+  }
+
 }
 
 @media (max-width: 1010px) {
@@ -1283,15 +1318,15 @@ hr {
     height: 500px;
   }
 
-}
-
-@media (max-width: 976px) {
   .desktop-nav {
     margin: 0;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
   }
+
 }
+
+@media (max-width: 976px) {}
 
 @media (max-width: 950px) {
   .hero-section {
@@ -1317,6 +1352,20 @@ hr {
 
   #features .swag-row {
     max-width: 60%;
+  }
+
+  .desktop-nav ul {
+    margin: 0 1rem 0 0;
+    gap: 0;
+  }
+
+  .contact-container {
+    width: fit-content;
+  }
+
+
+  .misc-container {
+    gap: 0.2rem;
   }
 
 }
@@ -1356,6 +1405,14 @@ hr {
 
   .features-grid {
     gap: 20px;
+  }
+
+  .desktop-nav ul {
+    gap: 10px;
+  }
+
+  .hero-section {
+    margin: 6rem 3rem 0rem 3rem;
   }
 
 }

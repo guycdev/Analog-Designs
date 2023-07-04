@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { ReactSVG } from 'react-svg'
 import close from '../../assets/close.svg'
 import NavContent from './NavContent'
@@ -22,7 +22,7 @@ export default function MobileNav(props) {
 
     return (
         <header>
-            <div className="burger-icon" onClick={handleClick} style={{ display: isClicked ? 'none' : '' }}>
+            <div className="burger-icon" onClick={handleClick} style={{ opacity: isClicked ? '0' : '1' }}>
                 <div className="burger-line"></div>
                 <div className="burger-line"></div>
                 <div className="burger-line"></div>

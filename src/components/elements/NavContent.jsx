@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import svgThemeArr from '../../assets/svgThemeArr'
 import Blobs from '../elements/Blobs'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 export default function NavContent(props) {
 
@@ -23,8 +24,6 @@ export default function NavContent(props) {
         theme.setTheme(prev => !prev)
     }
 
-    console.log(style)
-
     return (
         <div className={`nav-links ${style}`}>
             <ul>
@@ -41,21 +40,44 @@ export default function NavContent(props) {
                     <li>
                         <a href="#pricing">Pricing</a>
                     </li>
-                </div>
-                <motion.div
-                    className='contact-container'
-                    whileHover={{
-                        scale: 1.1,
-                        color: 'white',
-                        backgroundColor: '#007BFF'
-                    }}
-                    whileTap={{ scale: 0.9 }}
-                >
-                    <Blobs size="small" />
                     <li className='contact'>
                         <a href="#contact">Contact Us</a>
                     </li>
-                </motion.div>
+                </div>
+                <div className='account-container'>
+                    <motion.li
+                        className='contact-container login'
+                        whileHover={{
+                            scale: 1.1,
+                            color: 'white',
+                            backgroundColor: '#007BFF'
+                        }}
+                        whileTap={{ scale: 0.9 }}
+                    >
+                        <Blobs size="small" />
+                        <Link
+                            to={'./login'}
+                        >
+                            Login
+                        </Link>
+                    </motion.li>
+                    <motion.li
+                        className='contact-container register'
+                        whileHover={{
+                            scale: 1.1,
+                            color: '#333',
+                            backgroundColor: 'white'
+                        }}
+                        whileTap={{ scale: 0.9 }}
+                    >
+                        <Blobs size="small" />
+                        <Link
+                            to={'./register'}
+                        >
+                            Register
+                        </Link>
+                    </motion.li>
+                </div>
             </ul>
         </div>
     )

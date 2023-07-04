@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 export default function Card(props) {
-    const { img, heading, content, direction, id, styles, children, drag } = props
+    const { img, heading, content, id, styles, children } = props
 
     const enterTransition = {
         initial: {

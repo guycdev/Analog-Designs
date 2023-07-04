@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import DesktopNav from '../elements/DesktopNav'
 import MobileNav from '../elements/MobileNav'
+import { Outlet } from 'react-router-dom'
 
 export default function Nav(props) {
-    const { logo, name, theme } = props
+    const { logo, name } = props
 
     const [windowWidth, setWindowWidth] = useState(window.innerWidth <= 775)
+    const [theme, setTheme] = useState(true)
+
 
 
     useEffect(() => {
@@ -22,16 +25,20 @@ export default function Nav(props) {
 
 
     return (
-        windowWidth ?
-            <MobileNav
-                logo={logo}
-                name={name}
-                theme={theme}
-            /> :
-            <DesktopNav
-                logo={logo}
-                name={name}
-                theme={theme}
-            />
+        <>
+            {windowWidth ?
+                <MobileNav
+                    logo={logo}
+                    name={name}
+                    theme={{ theme, setTheme }}
+                />
+                :
+                <DesktopNav
+                    logo={logo}
+                    name={name}
+                    theme={{ theme, setTheme }}
+                />}
+            <Outlet />
+        </>
     )
 }
