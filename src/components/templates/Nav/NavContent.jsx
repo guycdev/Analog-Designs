@@ -49,7 +49,7 @@ export default function NavContent(props) {
                     >
                         <Blobs size="small" />
                         <Link
-                            to={'./login'}
+                            to={'account/'}
                         >
                             Login
                         </Link>
@@ -64,7 +64,7 @@ export default function NavContent(props) {
                     >
                         <Blobs size="small" />
                         <Link
-                            to={'./register'}
+                            to={'account/register'}
                         >
                             Register
                         </Link>

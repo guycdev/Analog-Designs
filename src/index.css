@@ -1526,7 +1526,7 @@ hr {
   width: fit-content;
 }
 
-.login-card {
+.login-container>div>div {
   display: flex;
 }
 
@@ -1547,7 +1547,7 @@ hr {
   text-align: start;
 }
 
-#root>section>div>div>div>div.misc-card-container>h2 {
+#root>section>div>div>div.misc-card-container>h2 {
   color: white;
   text-wrap: unset;
   font-weight: 300;

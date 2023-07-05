@@ -1,6 +1,6 @@
 import React from 'react'
 import dashboard from '../../assets/dashboard.png'
-import Blobs from './Blobs'
+import Blobs from '../elements/Blobs'
 
 export default function MiscCard() {
     return (
