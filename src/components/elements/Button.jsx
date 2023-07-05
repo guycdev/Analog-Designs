@@ -7,7 +7,7 @@ export default function Button(props) {
     const { buttonType, text, img, messageStatus } = props
 
     const blue = {
-        backgroundColor: '#007BFF',
+        backgroundColor: '#4153ef',
         color: 'white'
     }
 

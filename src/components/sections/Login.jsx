@@ -9,6 +9,7 @@ import login from '../../assets/login.svg'
 import logo from '../../assets/logo.svg'
 import { ReactSVG } from 'react-svg'
 import { Link } from 'react-router-dom'
+import MiscCard from '../elements/MiscCard'
 
 export default function Login() {
 
@@ -98,6 +99,7 @@ export default function Login() {
                         </Link>
                         <pre className='grey copyright'>2023 Analog Designs. All right Reserved</pre>
                     </div>
+                    <MiscCard />
                 </div>
             </Card>
         </section>

@@ -17,20 +17,20 @@
 
   --primary-color: #fff;
   --card-color: #fff;
-  --hue: #007BFF;
+  --hue: #4153ef;
   --green: #4CAF50;
 
-  --start: linear-gradient(rgba(0, 123, 255, 0.15),
+  --start: linear-gradient(rgba(65, 83, 239, 0.15),
       #ededed 10%,
-      rgba(0, 123, 255, 0.15) 20%,
+      rgba(65, 83, 239, 0.15) 20%,
       #ededed 30%,
-      rgba(0, 123, 255, 0.15) 40%,
+      rgba(65, 83, 239, 0.15) 40%,
       #ededed 50%,
-      rgba(0, 123, 255, 0.15) 60%,
+      rgba(65, 83, 239, 0.15) 60%,
       #ededed 70%,
-      rgba(0, 123, 255, 0.15) 80%,
+      rgba(65, 83, 239, 0.15) 80%,
       #ededed 90%);
-  --medium: linear-gradient(#ededed 20%, rgba(0, 123, 255, 0.15) 40%,
+  --medium: linear-gradient(#ededed 20%, rgba(65, 83, 239, 0.15) 40%,
       #ededed);
 }
 
@@ -52,7 +52,7 @@ body {
 /*Utility classes*/
 
 span {
-  color: #007BFF;
+  color: var(--hue);
 }
 
 em {
@@ -277,7 +277,7 @@ a {
 
 .nav-items>li>a:hover,
 .logo:hover {
-  color: #007BFF;
+  color: var(--hue);
 }
 
 .nav-items>li>a::after,
@@ -288,7 +288,7 @@ a {
   width: 0;
   height: 2px;
   margin-top: 5px;
-  background: #007BFF;
+  background: var(--hue);
   transition: width 0.3s ease;
   transition-delay: 0.3s;
 }
@@ -427,7 +427,7 @@ hr {
 }
 
 .primary-btn {
-  background-color: #007BFF;
+  background-color: var(--hue);
   color: white;
   border: none;
 }
@@ -933,6 +933,7 @@ form p,
   padding: 5px 0px;
   margin: 0px 0px 10px 0px;
   border-bottom: thin solid grey;
+  text-align: start;
 }
 
 .main-form>p {
@@ -994,14 +995,14 @@ form p,
 .name-container>*,
 .main-form>* {
   width: 100%;
-  text-align: start;
 }
 
 form>.contact-heading,
-.main-form>.contact-heading {
+.main-form>.contact-heading,
+#root>section>div>div>div>div.misc-card-container>h2 {
   border-bottom: none;
   text-align: start;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .contact-form button {
@@ -1064,7 +1065,7 @@ label>svg {
   border-radius: 10px;
   border: thin solid black;
   border-radius: 10px;
-  background-color: #75a6da92;
+  background-color: var(--hue);
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -1489,7 +1490,7 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 7rem 0 0 0;
+  margin: 7rem 3rem 0 3rem;
 }
 
 .login-container>div {
@@ -1523,4 +1524,25 @@ hr {
   font-size: 0.6rem;
   left: 225px;
   width: fit-content;
+}
+
+.login-card {
+  display: flex;
+}
+
+.misc-card-container {
+  background-color: var(--hue);
+  border-radius: 10px;
+  padding: 100px;
+}
+
+.misc-card-container>* {
+  color: white;
+  text-align: start;
+}
+
+#root>section>div>div>div>div.misc-card-container>h2 {
+  color: white;
+  text-wrap: unset;
+  font-weight: 300;
 }
