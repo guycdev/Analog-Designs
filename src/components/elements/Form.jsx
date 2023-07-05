@@ -166,7 +166,7 @@ export default function Form(props) {
                         required
                     />
                 </div>
-                <Button buttonType="secondary-btn" text="Send Message" img={send} messageStatus={messageStatus} />
+                <Button buttonType="primary-btn" text="Send Message" img={send} messageStatus={messageStatus} />
 
             </form>
         </div>

@@ -10,7 +10,6 @@ export default function MobileNav(props) {
     const [scrolled, setScrolled] = useState(false)
 
 
-
     useEffect(() => {
         const onScroll1 = () => {
             setScrolled(true);
@@ -33,7 +32,7 @@ export default function MobileNav(props) {
 
 
     return (
-        <header className="nav-container" style={{ top: scrolled ? '-0.9rem' : '0' }}>
+        <header className="nav-container" style={{ top: scrolled && window.innerWidth > 1012 ? '-0.9rem' : '0' }}>
             <motion.nav
                 className='card desktop-nav'
                 initial={{
