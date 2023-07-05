@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ControlBar from './ControlBar'
-import VideoPlayer from "../elements/VideoPlayer";
+import VideoPlayer from "./VideoPlayer";
 
 
 export default function VideoObject(props) {

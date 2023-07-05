@@ -1,7 +1,7 @@
 import React from "react";
-import plus from '../../assets/logo.svg'
+import plus from '../../../assets/logo.svg'
 import { ReactSVG } from "react-svg"
-import useFormSubmission from '../hooks/useFormSubmission'
+import useFormSubmission from '../../hooks/useFormSubmission'
 
 
 export default function Footer(props) {

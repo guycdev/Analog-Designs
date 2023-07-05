@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from "react";
-import Card from '../elements/Card'
-import { videoArr } from '../../copyright/videos'
+import React from "react";
+import Card from '../../../elements/Card'
+import { videoArr } from '../copyright/videos'
 
 
 export default function VideoPlayer(props) {

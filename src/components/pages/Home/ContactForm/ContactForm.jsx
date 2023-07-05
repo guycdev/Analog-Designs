@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
-import Card from '../elements/Card'
-import Form from '../elements/Form'
-import contact from '../../assets/contact-us.png'
-
+import Form from './Form'
+import Card from '../../../elements/Card'
 
 export default function ContactForm() {
 

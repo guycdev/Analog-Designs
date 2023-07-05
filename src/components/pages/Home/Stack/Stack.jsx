@@ -1,10 +1,10 @@
 import React from "react";
-import Card from '../elements/Card'
-import wixx from '../../assets/wixx.png'
-import shopify from '../../assets/shopify.jpg'
-import wordPress from '../../assets/wp.png'
-import squareSpace from '../../assets/ss.jpg'
-import costume from '../../assets/costum.jpg'
+import Card from '../../../elements/Card'
+import wixx from '../../../../assets/wixx.png'
+import shopify from '../../../../assets/shopify.jpg'
+import wordPress from '../../../../assets/wp.png'
+import squareSpace from '../../../../assets/ss.jpg'
+import costume from '../../../../assets/costum.jpg'
 
 export default function Stack() {
 

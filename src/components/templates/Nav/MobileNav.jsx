@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { ReactSVG } from 'react-svg'
-import close from '../../assets/close.svg'
+import close from '../../../assets/close.svg'
 import NavContent from './NavContent'
 import MiscNavItems from './MiscNavItems'
 import { motion } from 'framer-motion'

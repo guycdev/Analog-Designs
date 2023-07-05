@@ -1,11 +1,9 @@
 import React from 'react'
-import PricingCard from "../elements/PricingCard"
-import Card from '../elements/Card'
-import createAccount from '../../assets/create-account.jpg'
-import ticket from '../../assets/ticket.jpg'
-import coding from '../../assets/coding.png'
-import Blobs from '../elements/Blobs'
-
+import PricingCard from "../Pricing/PricingCard"
+import Card from '../../../elements/Card'
+import createAccount from '../../../../assets/create-account.jpg'
+import ticket from '../../../../assets/ticket.jpg'
+import coding from '../../../../assets/coding.png'
 
 export default function GettingStarted() {
 

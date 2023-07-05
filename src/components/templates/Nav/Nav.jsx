@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import DesktopNav from '../elements/DesktopNav'
-import MobileNav from '../elements/MobileNav'
+import DesktopNav from './DesktopNav'
+import MobileNav from './MobileNav'
 
 export default function Nav(props) {
     const { logo, name } = props

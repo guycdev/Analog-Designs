@@ -84,7 +84,7 @@ To make responsive:
 */
 .card {
   background-color: var(--card-color);
-  padding: 10px 20px;
+  padding: 15px;
   border-radius: 10px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
   border: thin solid black;
@@ -370,17 +370,17 @@ img {
   position: absolute;
   left: -5px;
   top: -4px;
-  color: #007BFF;
+  color: black;
   z-index: -1;
 }
 
 .welcome-heading::after {
+  color: var(--hue);
   font-size: 4rem;
   content: 'E';
   position: absolute;
   left: 5px;
-  top: 5px;
-  color: black;
+  top: 4.5px;
 }
 
 hr {
@@ -1534,6 +1534,12 @@ hr {
   background-color: var(--hue);
   border-radius: 10px;
   padding: 100px;
+  overflow: hidden;
+  position: relative;
+}
+
+.misc-card-container>img {
+  width: 100%;
 }
 
 .misc-card-container>* {

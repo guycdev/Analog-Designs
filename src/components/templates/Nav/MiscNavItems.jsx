@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import svgThemeArr from '../../assets/svgThemeArr'
+import svgThemeArr from '../../../assets/svgThemeArr'
 
 export default function MobileNav(props) {
 

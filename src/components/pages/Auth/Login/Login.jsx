@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faEye } from '@fortawesome/free-solid-svg-icons'
-import Card from '../elements/Card'
-import Button from '../elements/Button'
-import google from '../../assets/google.svg'
-import apple from '../../assets/apple.svg'
-import login from '../../assets/login.svg'
-import logo from '../../assets/logo.svg'
+import Card from '../../../elements/Card'
+import Button from '../../../elements/Button'
+import google from '../../../../assets/google.svg'
+import apple from '../../../../assets/apple.svg'
+import login from '../../../../assets/login.svg'
+import logo from '../../../../assets/logo.svg'
 import { ReactSVG } from 'react-svg'
 import { Link } from 'react-router-dom'
-import MiscCard from '../elements/MiscCard'
+import MiscCard from '../../../elements/MiscCard'
 
 export default function Login() {
 

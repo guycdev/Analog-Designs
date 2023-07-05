@@ -1,6 +1,6 @@
 import React from 'react'
-import SwagRows from '../elements/SwagRows'
-import Card from '../elements/Card'
+import SwagRows from '../../../elements/SwagRows'
+import Card from '../../../elements/Card'
 import { motion } from 'framer-motion'
 
 export default function Swag(props) {

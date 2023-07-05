@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react'
-import arrow from '../../assets/arrow.svg'
+import React from 'react'
+import arrow from '../../../../assets/arrow.svg'
 import { motion } from "framer-motion"
-import Circles from '../elements/Circles'
-import Blobs from '../elements/Blobs'
-import Tag from '../elements/Tag'
-import Button from '../elements/Button'
-import whiteArrow from '../../assets/white-arrow.svg'
-import designImg from '../../assets/sideimg.png'
-import hostImg from '../../assets/hosting.png'
-import applicationImg from '../../assets/application.svg'
-import Card from '../elements/Card'
+import Circles from '../../../elements/Circles'
+import Blobs from '../../../elements/Blobs'
+import Tag from '../../../elements/Tag'
+import Button from '../../../elements/Button'
+import whiteArrow from '../../../../assets/white-arrow.svg'
+import designImg from '../../../../assets/sideimg.png'
+import hostImg from '../../../../assets/hosting.png'
+import applicationImg from '../../../../assets/application.svg'
+import Card from '../../../elements/Card'
 
 
 export default function Hero(props) {

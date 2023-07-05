@@ -1,5 +1,5 @@
-import firstVideo from '../assets/videos/1.mp4'
-import secondVideo from '../assets/videos/2.mp4'
+import firstVideo from '../../../../assets/videos/1.mp4'
+import secondVideo from '../../../../assets/videos/2.mp4'
 
 export const options = [
     {

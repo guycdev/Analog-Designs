@@ -1,9 +1,9 @@
 import React from "react";
-import Card from './Card'
+import Card from '../../../elements/Card'
 import { ReactSVG } from 'react-svg';
-import Button from './Button'
-import email from '../../assets//email.svg'
-import Tag from '../elements/Tag'
+import Button from '../../../elements/Button'
+import email from '../../../../assets//email.svg'
+import Tag from '../../../elements/Tag'
 
 
 

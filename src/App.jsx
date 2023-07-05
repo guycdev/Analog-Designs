@@ -1,70 +1,26 @@
-import { useState, useEffect } from 'react'
-import Hero from './components/sections/Hero'
-import Stack from './components/sections/Stack'
-import Pricing from './components/sections/Pricing '
-import Swag from './components/sections/Swag'
-import VideoObject from './components/sections/VideoObject'
-import ContactForm from './components/sections/ContactForm'
-import GettingStarted from './components/sections/GettingStarted'
-import { information, features } from './copyright/information'
+import React from 'react'
+import './index.css'
+import {
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route
+} from "react-router-dom"
+import Register from './components/pages/Auth/Register/Register.jsx'
+import Login from './components/pages/Auth/Login/Login.jsx'
+import HomeLayout from './layouts/HomeLayout.jsx'
+import Home from './components/pages/Home/Home'
 
+const route = createBrowserRouter(createRoutesFromElements(
+  <Route element={<HomeLayout />}>
+    <Route path='login' element={<Login />} />
+    <Route path='register' element={<Register />} />
+    <Route index element={<Home />} />
+  </Route>
+))
 
-function App() {
-
-  const [loading, setLoading] = useState(true)
-  useEffect(() => {
-    setInterval(() => {
-      setLoading(false)
-    }, 0)
-  }, [])
-
-
+export default function App() {
   return (
-    <main className="container" style={{ display: !loading ? 'block' : 'block' }}>
-      <Hero />
-      <Swag
-        id="features"
-        featureArr={information}
-        style='swag-container'
-        tag={
-          {
-            name: "Features",
-            color: "#4CAF50"
-          }
-        }
-      />
-      <GettingStarted />
-      <VideoObject
-        sectionNumber={4}
-        psudoContent={'Our Work'}
-        direction={true}
-        content={{
-          header: "See Our Work",
-          subheading: 'Check out these videos of our past projects to get a feel for what we do'
-        }}
-      />
-      <VideoObject
-        sectionNumber={5}
-        psudoContent={'Our Designs'}
-        direction={false}
-        content={{
-          header: "Our Design Selection",
-          subheading: 'Check out these videos of our past projects to get a feel for what we do'
-        }}
-      />
-      <Stack />
-      <Pricing />
-      <Swag
-        id='more-features'
-        featureArr={features}
-        style='features-grid'
-        heading="We will build for you"
-        content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo odio cum necessitatibus iste eum quibusdam."
-      />
-      <ContactForm />
-
-    </main>
+    <RouterProvider router={route} />
   )
 }
-
-export default App

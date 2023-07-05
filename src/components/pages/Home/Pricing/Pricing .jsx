@@ -1,8 +1,8 @@
 import React from "react";
-import Card from '../elements/Card'
-import PricingCard from '../elements/PricingCard'
-import x from '../../assets/x.svg'
-import checkMark from '../../assets/check.svg';
+import Card from '../../../elements/Card'
+import PricingCard from './PricingCard'
+import x from '../../../../assets/x.svg'
+import checkMark from '../../../../assets/check.svg';
 
 
 

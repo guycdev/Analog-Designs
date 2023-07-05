@@ -1,27 +1,11 @@
-import React, { useState, useEffect } from 'react'
-import svgThemeArr from '../../assets/svgThemeArr'
-import Blobs from '../elements/Blobs'
+import React from 'react'
+import Blobs from '../../elements/Blobs'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
 export default function NavContent(props) {
 
-    const { theme, style, setIsClicked } = props
-    const [time, setTime] = useState(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }))
-
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setTime(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }))
-        }, 1000)
-
-        return () => {
-            clearInterval(timer)
-        }
-    }, [])
-
-    function toggleTheme() {
-        theme.setTheme(prev => !prev)
-    }
+    const { style, setIsClicked } = props
 
     return (
         <div className={`nav-links ${style}`}>

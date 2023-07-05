@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
-import { options } from '../../copyright/videos'
-import Option from '../elements/Option'
-import Card from '../elements/Card'
+import React from 'react'
+import { options } from '../copyright/videos'
+import Option from '../../../elements/Option'
+import Card from '../../../elements/Card'
 
 export default function ControlBar(props) {
 
