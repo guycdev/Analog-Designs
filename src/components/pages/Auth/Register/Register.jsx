@@ -10,7 +10,7 @@ import { ReactSVG } from 'react-svg'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
-export default function LoginForm() {
+export default function Register() {
 
     const [formData, setFormData] = useState({
         name: '',
@@ -62,18 +62,18 @@ export default function LoginForm() {
 
 
     return (
-        <div className='login-card'>
+        <div className='register-card'>
             <div className="main-form">
                 <ReactSVG
                     src={logo}
                     beforeInjection={(svg) => {
-                        svg.classList.add('login-logo')
+                        svg.classList.add('register-logo')
                     }
                     }
                 />
                 <h2 className='contact-heading'>Register to Manage your Subscription</h2>
-                <p className='login-p'>Enter your <span>information</span> to <span>create</span> your new <span>account</span></p>
-                <div className="app-login">
+                <p className='register-p'>Enter your <span>information</span> to <span>create</span> your new <span>account</span></p>
+                <div className="app-register">
                     <Button
                         buttonType="secondary-btn"
                         text="Sign up with Google"
@@ -85,7 +85,7 @@ export default function LoginForm() {
                         img={apple}
                     />
                 </div>
-                <form className='login-form' id='register-form'>
+                <form className='register-form' id='register-form'>
                     <div>
                         <label htmlFor="name">
                             <FontAwesomeIcon icon={faUser} />
