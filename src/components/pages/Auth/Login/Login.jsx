@@ -88,9 +88,9 @@ export default function LoginForm() {
                             autoComplete="on"
                         />
                     </div>
-                    <Button buttonType="primary-btn" text="Send Message" img={login} />
+                    <Button buttonType="primary-btn" text="Login" img={login} />
                 </form>
-                <Link to="../register" className='wrong-page-link'>
+                <Link to="./register" className='wrong-page-link'>
                     Don't have an account ? <span>Register here</span>
                 </Link>
                 <pre className='grey copyright'>2023 Analog Designs. All right Reserved</pre>
