@@ -5,7 +5,6 @@ import { Outlet } from 'react-router-dom'
 
 export default function Login() {
 
-
     return (
         <section className="login-container">
             <Card
