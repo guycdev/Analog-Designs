@@ -76,12 +76,12 @@ export default function Register() {
                 <p className='register-p'>Enter your <span>information</span> to <span>create</span> your new <span>account</span></p>
                 <div className="app-register">
                     <Button
-                        buttonType="secondary-btn"
+                        buttonType="secondaryBtn"
                         text="Sign up with Google"
                         img={google}
                     />
                     <Button
-                        buttonType="secondary-btn"
+                        buttonType="secondaryBtn"
                         text="Sign up with Apple"
                         img={apple}
                     />
@@ -162,7 +162,7 @@ export default function Register() {
 
                         >{errorMessage}</motion.p>}
                     </div>
-                    <Button buttonType="primary-btn" text="Sign Up" img={login} />
+                    <Button buttonType="primaryBtn" text="Sign Up" img={login} />
                 </form>
                 <Link to=".." className='wrong-page-link'>
                     Have an account ? <span>Login here</span>

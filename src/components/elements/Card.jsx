@@ -19,11 +19,12 @@ export default function Card(props) {
 
     return (
         <motion.div
-            className={[
-                "card-container",
-                "card",
-                styles ? styles : null,
-            ].filter(Boolean).join(' ')}
+            className={
+                [
+                    "card-container",
+                    "card",
+                    styles ? styles : null,
+                ].filter(Boolean).join(' ')}
             initial={{ opacity: 0, x: 500 }}
             animate={
                 {
