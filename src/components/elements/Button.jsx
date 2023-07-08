@@ -8,13 +8,13 @@ export default function Button(props) {
 
     const blue = {
         backgroundColor: '#4153ef',
-        color: 'white'
+        color: '#FFFFFF'
     }
 
 
     const grey = {
         backgroundColor: '#ededed',
-        color: 'black'
+        color: '#000000'
     }
 
     const isLoading = messageStatus == 'loading'

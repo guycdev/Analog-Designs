@@ -14,27 +14,27 @@ export default function NavContent(props) {
                     <li
                         onClick={setIsClicked}
                     >
-                        <a href="#home">Home</a>
+                        <Link href="../#home">Home</Link>
                     </li>
                     <li
                         onClick={setIsClicked}
                     >
-                        <a href="#about-us">About Us</a>
+                        <Link href="../#about-us">About Us</Link>
                     </li>
                     <li
                         onClick={setIsClicked}
                     >
-                        <a href="#gallery">Our Work</a>
+                        <Link href="../#gallery">Our Work</Link>
                     </li>
                     <li
                         onClick={setIsClicked}
                     >
-                        <a href="#pricing">Pricing</a>
+                        <Link href="../#pricing">Pricing</Link>
                     </li>
                     <li
                         onClick={setIsClicked}
                     >
-                        <a href="#contact">Contact Us</a>
+                        <Link href="../#contact">Contact Us</Link>
                     </li>
                 </div>
                 <div className='account-container'>

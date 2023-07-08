@@ -36,29 +36,36 @@ export default function Register() {
 
     function validatePassword(event) {
         const { value } = event.target
-        if (value != formData.password && value.length > 5) {
+        //Check if passwords match
+        if (value != formData.password) {
             setErrorMessage("Password do not match")
-        }
-        if (value == formData.password) {
+        } else if (value == formData.password) {
             setErrorMessage("")
         }
         if (value.length < 5) {
             setErrorMessage("")
+            return null
         }
-
+        //Check if password is at least 8 characters long
+        if (value.length < 8) {
+            setErrorMessage("Password too short")
+            return null
+        }
+        //Check if password contains at least 1 capital letter
+        if (!value.split('').find(letter => letter.charCodeAt() >= 65 && letter.charCodeAt() <= 90)) {
+            setErrorMessage("Password missing a capital")
+            return null
+        }
+        //Check if password contains at least 1 number
+        if (!value.split('').find(number => number.charCodeAt() >= 48 && letter.charCodeAt() <= 57)) {
+            setErrorMessage("Password missing a capital")
+            return null
+        }
     }
 
-    // function handleProgress() {
-    //     let length = 0
-    //     for (var prop in formData) {
-    //         console.log(prop)
-    //         if (formData[prop]) {
-    //             length += 25
-    //         }
-    //     }
-    //     console.log(length)
-    //     return length
-    // }
+    function handleSubmit() {
+        return null
+    }
 
 
     return (
@@ -67,7 +74,7 @@ export default function Register() {
                 <ReactSVG
                     src={logo}
                     beforeInjection={(svg) => {
-                        svg.classList.add('register-logo')
+                        svg.classList.add('login-logo')
                     }
                     }
                 />
@@ -85,7 +92,7 @@ export default function Register() {
                         img={apple}
                     />
                 </div>
-                <form className='register-form' id='register-form'>
+                <form className='register-form' id='register-form' onSubmit={errorMessage ? null : handleSubmit}>
                     <div>
                         <label htmlFor="name">
                             <FontAwesomeIcon icon={faUser} />
@@ -136,16 +143,15 @@ export default function Register() {
                             />
                         </div>
                         <div>
-                            <label htmlFor="confirmPassword">
+                            <label htmlFor="repeatPassword">
                                 <FontAwesomeIcon icon={faEye} />
                                 Confirm Password
                             </label>
                             <input
                                 type="password"
                                 name="repeatPassword"
-                                id='password'
+                                id='repeatPassword'
                                 placeholder='min 8 characters'
-                                value={formData.repeatPassword}
                                 onChange={validatePassword}
                                 required
                                 autoComplete="on"
