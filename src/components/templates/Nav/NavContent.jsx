@@ -2,6 +2,7 @@ import React from 'react'
 import Blobs from '../../elements/Blobs'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link';
 
 export default function NavContent(props) {
 
@@ -14,27 +15,27 @@ export default function NavContent(props) {
                     <li
                         onClick={setIsClicked}
                     >
-                        <Link href="../#home">Home</Link>
+                        <HashLink to="/#home">Home</HashLink>
                     </li>
                     <li
                         onClick={setIsClicked}
                     >
-                        <Link href="../#about-us">About Us</Link>
+                        <HashLink to="../#about-us">About Us</HashLink>
                     </li>
                     <li
                         onClick={setIsClicked}
                     >
-                        <Link href="../#gallery">Our Work</Link>
+                        <HashLink to="../#gallery">Our Work</HashLink>
                     </li>
                     <li
                         onClick={setIsClicked}
                     >
-                        <Link href="../#pricing">Pricing</Link>
+                        <HashLink to="../#pricing">Pricing</HashLink>
                     </li>
                     <li
                         onClick={setIsClicked}
                     >
-                        <Link href="../#contact">Contact Us</Link>
+                        <HashLink to="/#contact">Contact Us</HashLink>
                     </li>
                 </div>
                 <div className='account-container'>

@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from 'framer-motion'
 import { ReactSVG } from 'react-svg';
-import styles from './Button.module.css'
 
 
 export default function Button(props) {
@@ -21,11 +20,11 @@ export default function Button(props) {
     const isLoading = messageStatus == 'loading'
 
     return (
-        <div className={styles.btnContainer}>
+        <div className="btn-container">
             <motion.button
-                className={styles[buttonType]}
+                className={buttonType}
                 whileHover={
-                    buttonType == "primaryBtn" ?
+                    buttonType == "primary-btn" ?
                         grey :
                         blue
                 }

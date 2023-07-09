@@ -35,31 +35,25 @@ export default function Register() {
     }
 
     function validatePassword(event) {
-        const { value } = event.target
-        //Check if passwords match
-        if (value != formData.password) {
-            setErrorMessage("Password do not match")
-        } else if (value == formData.password) {
-            setErrorMessage("")
-        }
+        const { value } = event.target;
+
         if (value.length < 5) {
-            setErrorMessage("")
-            return null
+            setErrorMessage('')
+            return
         }
-        //Check if password is at least 8 characters long
+
+        if (value !== formData.password) {
+            setErrorMessage("Passwords do not match");
+        } else if (value === formData.password) {
+            setErrorMessage("")
+        }
+
         if (value.length < 8) {
             setErrorMessage("Password too short")
-            return null
-        }
-        //Check if password contains at least 1 capital letter
-        if (!value.split('').find(letter => letter.charCodeAt() >= 65 && letter.charCodeAt() <= 90)) {
-            setErrorMessage("Password missing a capital")
-            return null
-        }
-        //Check if password contains at least 1 number
-        if (!value.split('').find(number => number.charCodeAt() >= 48 && letter.charCodeAt() <= 57)) {
-            setErrorMessage("Password missing a capital")
-            return null
+        } else if (!value.split('').find(letter => letter.charCodeAt() >= 65 && letter.charCodeAt() <= 90)) {
+            setErrorMessage("Password missing a capital letter")
+        } else if (!value.split('').find(number => number.charCodeAt() >= 48 && number.charCodeAt() <= 57)) {
+            setErrorMessage("Password missing a number")
         }
     }
 
@@ -82,12 +76,12 @@ export default function Register() {
                 <p className='register-p'>Enter your <span>information</span> to <span>create</span> your new <span>account</span></p>
                 <div className="app-register">
                     <Button
-                        buttonType="secondaryBtn"
+                        buttonType="secondary-btn"
                         text="Sign up with Google"
                         img={google}
                     />
                     <Button
-                        buttonType="secondaryBtn"
+                        buttonType="secondary-btn"
                         text="Sign up with Apple"
                         img={apple}
                     />
@@ -168,7 +162,7 @@ export default function Register() {
 
                         >{errorMessage}</motion.p>}
                     </div>
-                    <Button buttonType="primaryBtn" text="Sign Up" img={login} />
+                    <Button buttonType="primary-btn" text="Sign Up" img={login} />
                 </form>
                 <Link to=".." className='wrong-page-link'>
                     Have an account ? <span>Login here</span>

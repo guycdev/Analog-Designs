@@ -56,7 +56,7 @@ export default function Hero(props) {
                     </p>
                     <div className="btn-container">
                         <Button
-                            buttonType="primaryBtn"
+                            buttonType="primary-btn"
                             text="Live Demos"
                             variance={
                                 {
@@ -69,7 +69,7 @@ export default function Hero(props) {
                             hoverImg={arrow}
                         />
                         <Button
-                            buttonType='secondaryBtn'
+                            buttonType='secondary-btn'
                             variance={
                                 {
                                     scale: 1.1,

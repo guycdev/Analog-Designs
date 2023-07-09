@@ -29,7 +29,7 @@ export default function Pricing(props) {
                         ]
                     }
                     styles='primary-plan'
-                    btnStyle='secondaryBtn'
+                    btnStyle='secondary-btn'
                 />
                 <PricingCard
                     heading={'Premium Recuring Package'}
@@ -44,7 +44,7 @@ export default function Pricing(props) {
                         ]
                     }
                     styles='primary-plan'
-                    btnStyle='primaryBtn'
+                    btnStyle='primary-btn'
                 />
                 <PricingCard
                     heading={'Premium Recuring Package'}
@@ -59,7 +59,7 @@ export default function Pricing(props) {
                         ]
                     }
                     styles='primary-plan'
-                    btnStyle='secondaryBtn'
+                    btnStyle='secondary-btn'
                 />
             </div>
         </section>

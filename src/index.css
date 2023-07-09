@@ -74,6 +74,14 @@ em {
   font-weight: 300;
 }
 
+/*Card component*/
+
+/*
+To make responsive:
+-Change margin units to vw
+-Change p width
+-Change image sizing to vw
+*/
 .card {
   background-color: var(--card-color);
   padding: 15px;
@@ -88,6 +96,7 @@ em {
 
 .card-container>div>img {
   width: min(220px, 18vw);
+  /* width: min(288px, 18vw); */
 }
 
 .stack-card img {
@@ -401,6 +410,40 @@ hr {
 
 /*Buttons*/
 
+.primary-btn,
+.secondary-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  width: 12rem;
+  border-radius: 10px;
+  text-align: center;
+  font-size: smaller;
+  letter-spacing: 0.7px;
+  margin: 1rem 0px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.primary-btn {
+  background-color: var(--hue);
+  color: white;
+  border: none;
+}
+
+form .btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.secondary-btn {
+  color: black;
+  background-color: #ededed;
+  border: none;
+}
 
 .container-footer {
   display: flex;
@@ -463,6 +506,51 @@ hr {
   border-radius: 50%;
 }
 
+/*Blobs*/
+
+.blobs {
+  position: absolute;
+  transition: all 1.2s ease-out;
+}
+
+.blobs {
+  position: absolute;
+}
+
+.top {
+  top: -15%;
+}
+
+.middle {
+  top: 35%;
+  transform: rotate(120deg);
+}
+
+.bottom {
+  top: 70%;
+}
+
+.left {
+  left: -25%;
+}
+
+.right {
+  left: 79%;
+}
+
+.small {
+  width: 5vw;
+}
+
+.medium {
+  width: 15vw;
+}
+
+.big {
+  width: 25vw;
+}
+
+/**/
 
 /*Floating images*/
 
@@ -506,6 +594,31 @@ hr {
 .compress-p p {
   width: 30ch;
 }
+
+/**/
+
+/*Stack*/
+
+.stack-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem 3rem;
+}
+
+.stack-card-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.stack-card-container .card-container div {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+/**/
 
 .about-us-container {
   margin: var(--margin);

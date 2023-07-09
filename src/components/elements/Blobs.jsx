@@ -3,13 +3,8 @@ import blueBlob from '../../assets/blob.png'
 import greyBlob from '../../assets/greyblob.png'
 import whiteBlob from '../../assets/whiteBlob.png'
 import { motion } from "framer-motion"
-import styles from './Blobs.module.css'
 
 export default function Blobs(props) {
-
-    function getDuration() {
-        return Math.floor(Math.random * 20)
-    }
 
     const { size, contact } = props
 
@@ -46,11 +41,11 @@ export default function Blobs(props) {
     }
 
     return (
-        <div className={styles.blobContainer}>
+        <div className="blob-container">
             <motion.img
                 src={blueBlob}
                 alt="blobs"
-                className={`${styles.top} ${styles.left} ${styles.blobs} ${styles[size]}`}
+                className={`top left blobs ${size}`}
                 initial="initial"
                 animate="breathe"
                 variants={breathingVariant}
@@ -63,7 +58,7 @@ export default function Blobs(props) {
             <motion.img
                 src={whiteBlob}
                 alt="blobs"
-                className={`${styles.middle} ${styles.right} ${styles.blobs} ${styles[size]}`}
+                className={`middle right blobs ${size}`}
                 initial="initial"
                 animate="breathe"
                 variants={breathingVariant}
@@ -78,7 +73,7 @@ export default function Blobs(props) {
             <motion.img
                 src={blueBlob}
                 alt="blobs"
-                className={`${styles.bottom} ${styles.left} ${styles.blobs} ${styles[size]}`}
+                className={`bottom left blobs ${size}`}
                 initial="initial"
                 animate="breathe"
                 variants={breathingVariant}
@@ -91,7 +86,7 @@ export default function Blobs(props) {
             <motion.img
                 src={blueBlob}
                 alt="blobs"
-                className={`${styles.top} ${styles.right} ${styles.blobs} ${styles[size]}`}
+                className={`top right blobs ${size}`}
                 initial="initial"
                 animate="breathe"
                 variants={breathingVariant}
@@ -104,7 +99,7 @@ export default function Blobs(props) {
             {contact && <motion.img
                 src={greyBlob}
                 alt="blobs"
-                className={`${styles.bottom} ${styles.right} ${styles.blobs} ${styles[size]}`}
+                className={`bottom right blobs ${size}`}
                 initial="initial"
                 animate="breathe"
                 variants={breathingVariant}

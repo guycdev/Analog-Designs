@@ -45,12 +45,12 @@ export default function LoginForm() {
                 <p className='login-p'>Enter your <span>credentials </span>to access your<span> account</span></p>
                 <div className="app-login">
                     <Button
-                        buttonType="secondaryBtn"
+                        buttonType="secondary-btn"
                         text="Log in with Google"
                         img={google}
                     />
                     <Button
-                        buttonType="secondaryBtn"
+                        buttonType="secondary-btn"
                         text="Log in with Apple"
                         img={apple}
                     />
@@ -88,7 +88,7 @@ export default function LoginForm() {
                             autoComplete="on"
                         />
                     </div>
-                    <Button buttonType="primaryBtn" text="Login" img={login} />
+                    <Button buttonType="primary-btn" text="Login" img={login} />
                 </form>
                 <Link to="./register" className='wrong-page-link'>
                     Don't have an account ? <span>Register here</span>
