@@ -35,25 +35,31 @@ export default function Register() {
     }
 
     function validatePassword(event) {
-        const { value } = event.target;
-
-        if (value.length < 5) {
-            setErrorMessage('')
-            return
-        }
-
-        if (value !== formData.password) {
-            setErrorMessage("Passwords do not match");
-        } else if (value === formData.password) {
+        const { value } = event.target
+        //Check if passwords match
+        if (value != formData.password) {
+            setErrorMessage("Password do not match")
+        } else if (value == formData.password) {
             setErrorMessage("")
         }
-
+        if (value.length < 5) {
+            setErrorMessage("")
+            return null
+        }
+        //Check if password is at least 8 characters long
         if (value.length < 8) {
             setErrorMessage("Password too short")
-        } else if (!value.split('').find(letter => letter.charCodeAt() >= 65 && letter.charCodeAt() <= 90)) {
-            setErrorMessage("Password missing a capital letter")
-        } else if (!value.split('').find(number => number.charCodeAt() >= 48 && number.charCodeAt() <= 57)) {
-            setErrorMessage("Password missing a number")
+            return null
+        }
+        //Check if password contains at least 1 capital letter
+        if (!value.split('').find(letter => letter.charCodeAt() >= 65 && letter.charCodeAt() <= 90)) {
+            setErrorMessage("Password missing a capital")
+            return null
+        }
+        //Check if password contains at least 1 number
+        if (!value.split('').find(number => number.charCodeAt() >= 48 && letter.charCodeAt() <= 57)) {
+            setErrorMessage("Password missing a capital")
+            return null
         }
     }
 
