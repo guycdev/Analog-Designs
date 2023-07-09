@@ -1,6 +1,5 @@
 import React from 'react'
 import Circle from './Circle'
-import { motion } from 'framer-motion'
 
 export default function Circles() {
 
@@ -11,15 +10,15 @@ export default function Circles() {
                 delay={0.2}
             />
             <Circle
-                color="#3b3b3b"
+                color="#474747"
                 delay={0.4}
             />
             <Circle
-                color="#b1b1b1"
+                color="#8f8f8f"
                 delay={0.6}
             />
             <Circle
-                color="#ededed"
+                color="#d7d7d7"
                 delay={0.8}
             />
             <Circle
@@ -27,25 +26,27 @@ export default function Circles() {
                 delay={1}
             />
             <Circle
-                color="#fafafa"
+                color="#c8c8f0"
                 delay={1.2}
             />
             <Circle
-                color="#ededed"
+                color="#9c9ced"
                 delay={1.4}
             />
             <Circle
-                color="#00588b"
+                color="#7070ea"
                 delay={1.6}
             />
             <Circle
-                color="#007BFF"
+                color="#4545e6"
                 delay={1.8}
             />
             <Circle
-                color="#40a1ff"
+                color="#4153ef"
                 delay={2.0}
             />
+
+
         </div>
     )
 }

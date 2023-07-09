@@ -90,7 +90,7 @@ export default function Hero(props) {
                         <p className='small-p'>Building an online presence that banks<span> value and trust </span></p>
                         <Tag
                             name="Welcome"
-                            color="#007BFF"
+                            color="#4153ef"
                         />
                     </div>
                 </div>
