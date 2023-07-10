@@ -8,7 +8,7 @@ import coding from '../../../../assets/coding.png'
 export default function GettingStarted() {
 
     const tag = {
-        color: 'red',
+        color: '#9c9ced',
         name: 'Steps'
     }
 

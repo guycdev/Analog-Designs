@@ -29,7 +29,7 @@ function App() {
                 tag={
                     {
                         name: "Features",
-                        color: "#4CAF50"
+                        color: "#7070ea"
                     }
                 }
             />
