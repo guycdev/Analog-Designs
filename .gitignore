@@ -27,3 +27,5 @@ dist-ssr
 .env
 /dist
 .vite
+/node_modules
+/.vscode
