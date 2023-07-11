@@ -1,0 +1,12 @@
+.container {
+    width: 70%;
+    background-image: url(../../../../assets/outer-waves.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 200px 100px;
+}
+
+.container>h1 {
+    font-size: 48px;
+    font-weight: 700;
+}

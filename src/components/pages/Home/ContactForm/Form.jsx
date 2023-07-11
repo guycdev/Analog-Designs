@@ -39,7 +39,6 @@ export default function Form(props) {
             )
         })
     }
-    console.log('rerendering')
     return (
         <div className="contact-card">
             <div>

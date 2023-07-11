@@ -26,6 +26,10 @@
 
 /*Scroll bar styling*/
 
+input {
+  box-shadow: inset 0 2px 2px hsla(0, 0, 0, 0.1);
+}
+
 body {
   background-image: url(./assets/bg.svg), var(--medium);
   background-repeat: no-repeat, no-repeat;
@@ -48,7 +52,7 @@ body {
 }
 
 section {
-  margin: 15rem 0rem;
+  margin: 12rem 0rem;
 }
 
 section:first-child {
@@ -690,8 +694,7 @@ form .btn-container {
 
 .getting-started-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
 }
 
 .getting-started-container .top-left {
@@ -700,18 +703,10 @@ form .btn-container {
   left: 20px;
 }
 
-/* #getting-started::before {
-  content: '{03. What you need to know}';
-  color: var(--hue);
-  opacity: 0.5;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-} */
-
-
-.getting-started-container>div {
-  margin: 1rem 0rem;
+.steps {
   display: flex;
+  flex-direction: column;
+  width: 25%;
   gap: 40px;
 }
 
