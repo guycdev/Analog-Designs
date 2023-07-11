@@ -22,17 +22,6 @@ function App() {
     return (
         <main className="container" style={{ display: !loading ? 'block' : 'block' }}>
             <Hero />
-            <Swag
-                id="features"
-                featureArr={information}
-                style='swag-container'
-                tag={
-                    {
-                        name: "Features",
-                        color: "#7070ea"
-                    }
-                }
-            />
             <GettingStarted />
             <VideoObject
                 sectionNumber={4}

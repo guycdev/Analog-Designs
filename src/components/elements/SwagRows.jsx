@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Tag from './Tag'
+import { ReactSVG } from 'react-svg'
 
 export default function SwagRows(props) {
 
@@ -35,7 +36,10 @@ export default function SwagRows(props) {
         >
             <div className="row-content">
                 <div>
-                    <img src={icon} alt="" className='swag-icon' />
+                    <ReactSVG src={icon} beforeInjection={(svg) => {
+                        svg.classList.add('swag-icon')
+                    }}
+                    />
                     <h2>{header}</h2>
                 </div>
                 {tag && <Tag

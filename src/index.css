@@ -11,18 +11,16 @@
   --primary-font: 'Inter', sans-serif;
   --secondary-font: 'Roboto', sans-serif;
 
-  --max-width: 1400px;
-  --margin: 3.5rem 3rem;
+  --max-width: 1500px;
+  --margin: 0rem 3rem;
   --nav-margin: 0.9rem 3rem;
 
   --primary-color: #fff;
   --card-color: #fff;
   --hue: #4153ef;
-  --green: #4CAF50;
 
   --start: linear-gradient(#ededed);
-  --medium: linear-gradient(#ededed 20%, rgba(65, 83, 239, 0.15) 40%,
-      #ededed);
+  --medium: linear-gradient(#ededed 20%, rgba(65, 83, 239, 0.15) 90%);
 }
 
 
@@ -45,6 +43,16 @@ body {
 .container {
   scrollbar-width: none;
   max-width: var(--max-width);
+  margin: 7rem 3rem 0rem 3rem;
+  padding: var(--margin);
+}
+
+section {
+  margin: 15rem 0rem;
+}
+
+section:first-child {
+  margin: 0;
 }
 
 /*Utility classes*/
@@ -88,9 +96,7 @@ To make responsive:
   border: thin solid black;
 }
 
-.card-margin {
-  margin: var(--margin);
-}
+
 
 .card-container>div>img {
   width: min(220px, 18vw);
@@ -130,10 +136,10 @@ form>p,
 }
 
 .feature-container {
-  margin: var(--margin);
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 3rem 0rem;
 }
 
 /**/
@@ -320,8 +326,13 @@ a {
 
 .hero-section {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  margin: 7rem 3rem 0rem 3rem;
+}
+
+.hero-section>div {
+  display: flex;
+  justify-content: space-between;
 }
 
 .content-block {
@@ -556,7 +567,6 @@ form .btn-container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin: var(--margin);
   width: 100%;
 } */
 
@@ -601,7 +611,6 @@ form .btn-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   align-items: center;
-  margin: var(--margin);
   gap: 40px;
 }
 
@@ -617,10 +626,6 @@ form .btn-container {
 }
 
 /**/
-
-.about-us-container {
-  margin: var(--margin);
-}
 
 .why-us {
   display: flex;
@@ -650,7 +655,6 @@ form .btn-container {
   gap: min(40px, 5vw);
 }
 
-
 .swag-row h2 {
   font-size: 1.04rem;
   font-weight: 500;
@@ -672,6 +676,7 @@ form .btn-container {
 .swag-icon {
   margin: auto 1rem auto 0px;
   width: 22px;
+  color: var(--hue);
 }
 
 .row-content,
@@ -687,7 +692,6 @@ form .btn-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: var(--margin);
 }
 
 .getting-started-container .top-left {
@@ -763,9 +767,7 @@ form .btn-container {
   width: 100%;
 }
 
-.margin-y {
-  margin: var(--margin);
-}
+
 
 /*Pricing cards*/
 
@@ -828,7 +830,6 @@ form .btn-container {
 /*flex into grid auto rows ith 4 columns*/
 
 .video-object-container {
-  margin: var(--margin);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -916,7 +917,6 @@ video {
   justify-content: center;
   align-items: center;
   overflow-y: hidden;
-  margin: var(--margin);
 }
 
 .contact-form {
@@ -1128,8 +1128,8 @@ label>svg {
   width: 250px;
   height: 100%;
   position: fixed;
+  left: 0;
   background-color: var(--card-color);
-  margin: -2rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1154,6 +1154,7 @@ label>svg {
   z-index: 999;
   position: fixed;
   margin: -2rem 0;
+  left: 0;
 }
 
 .mobile-content-container {
@@ -1203,12 +1204,13 @@ hr {
   flex-direction: column;
   gap: 7.5px;
   background-color: var(--card-color);
-  max-width: 52px;
+  width: 52px;
   border: 1px solid black;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: fixed;
+  left: 0;
   top: 0;
   margin: 10px;
   z-index: 1000;
@@ -1247,7 +1249,11 @@ hr {
 
 @media (max-width:1290px) {
 
-  .hero-section {
+  .container {
+    margin: 7rem 0rem;
+  }
+
+  .hero-section>div {
     gap: 20px;
   }
 
@@ -1361,7 +1367,7 @@ hr {
 }
 
 @media (max-width: 950px) {
-  .hero-section {
+  .hero-section>div {
     flex-direction: column;
   }
 
@@ -1444,17 +1450,10 @@ hr {
     gap: 10px;
   }
 
-  .hero-section {
-    margin: 6rem 3rem 0rem 3rem;
-  }
-
 }
 
 @media (max-width:775px) {
 
-  .hero-section {
-    margin: 2rem 3rem;
-  }
 
   .logos {
     margin-bottom: 30px;
