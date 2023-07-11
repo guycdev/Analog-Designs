@@ -14,12 +14,12 @@ export default function GettingStarted() {
 
     return (
         <section className="getting-started-container" id='getting-started'>
-            <Card
+            {/* <Card
                 heading='How does it work?'
                 id={0}
                 styles='fit-content'
                 content={'A simple process taylored to your industry'}
-            />
+            /> */}
             <div>
                 <PricingCard
                     heading="Create Account"

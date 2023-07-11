@@ -20,16 +20,7 @@
   --hue: #4153ef;
   --green: #4CAF50;
 
-  --start: linear-gradient(rgba(65, 83, 239, 0.15),
-      #ededed 10%,
-      rgba(65, 83, 239, 0.15) 20%,
-      #ededed 30%,
-      rgba(65, 83, 239, 0.15) 40%,
-      #ededed 50%,
-      rgba(65, 83, 239, 0.15) 60%,
-      #ededed 70%,
-      rgba(65, 83, 239, 0.15) 80%,
-      #ededed 90%);
+  --start: linear-gradient(#ededed);
   --medium: linear-gradient(#ededed 20%, rgba(65, 83, 239, 0.15) 40%,
       #ededed);
 }
@@ -38,15 +29,22 @@
 /*Scroll bar styling*/
 
 body {
-  background-image: var(--start);
-  background-repeat: no-repeat;
+  background-image: url(./assets/bg.svg), var(--medium);
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, auto;
+  overflow-x: hidden;
 }
 
-.container,
 #root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
   scrollbar-width: none;
   max-width: var(--max-width);
-  margin: auto;
 }
 
 /*Utility classes*/
@@ -206,7 +204,7 @@ p {
   position: fixed;
   z-index: 10;
   width: 100%;
-  max-width: var(--max-width);
+  max-width: 1700px;
   transition: all 0.5s;
 }
 
@@ -600,22 +598,22 @@ form .btn-container {
 /*Stack*/
 
 .stack-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   align-items: center;
-  margin: 5rem 3rem;
+  margin: var(--margin);
+  gap: 40px;
 }
 
-.stack-card-container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+.stack-container img {
+  width: 70%;
+  /* This will make the image take up the full width of its grid cell */
+  height: auto;
+  /* This will maintain the aspect ratio of the image */
 }
 
-.stack-card-container .card-container div {
-  display: flex;
-  height: 100%;
-  align-items: center;
+#wixx {
+  width: 60%;
 }
 
 /**/
@@ -850,9 +848,9 @@ form .btn-container {
 }
 
 .selected-row {
-  background-color: rgba(0, 114, 239, 0.1);
+  background-color: #e3e5ff;
   border-radius: 10px;
-  color: #0072EF;
+  color: var(--hue);
 }
 
 .selected-row>* {
