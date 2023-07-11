@@ -2,6 +2,8 @@ import React from "react";
 import styles from './AboutUs.module.css'
 import { motion } from 'framer-motion'
 import Typewriter from 'typewriter-effect';
+import iphone from '../../../../assets/iPhone 12 Pro.png'
+import mac from '../../../../assets/Macbook Pro.png'
 
 
 
@@ -27,18 +29,30 @@ export default function AboutUs() {
                 }
             }}
         >
-            <h1>Your go to hub for
-                <Typewriter
-                    options={{
-                        strings: ['rapid deployment', 'reliable support', 'competitve pricing'],
-                        autoStart: true,
-                        loop: true,
-                        pauseFor: 1000,
-                        wrapperClassName: styles.type
-                    }}
-                />
-            </h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In inventore architecto ut sunt! Laboriosam, est ex dignissimos impedit quae veritatis?</p>
+            <div className={styles.contentContainer}>
+                <h1>Your go to hub for
+                    <Typewriter
+                        options={{
+                            strings: ['deployment', 'support', 'deals'],
+                            autoStart: true,
+                            loop: true,
+                            pauseFor: 1000,
+                            wrapperClassName: styles.type
+                        }}
+                    />
+                </h1>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, autem beatae. Aliquam.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, autem beatae. Aliquam.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, autem beatae. Aliquam.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, autem beatae. Aliquam.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, autem beatae. Aliquam.</li>
+                </ul>
+            </div>
+            <div className={styles.imgContainer}>
+                <img src={iphone} alt="" className={styles.iphone} />
+                <img src={mac} alt="" className={styles.mac} />
+            </div>
         </motion.div>
     )
 }

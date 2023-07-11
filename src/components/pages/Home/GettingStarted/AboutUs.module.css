@@ -4,9 +4,39 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: 200px 100px;
+    display: flex;
+    position: relative;
+
 }
 
-.container>h1 {
+.contentContainer {
+    width: 40%;
+}
+
+.contentContainer>h1 {
     font-size: 48px;
     font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.imgContainer {
+    position: absolute;
+    top: 20px;
+}
+
+.iphone,
+.mac {
+    position: absolute;
+}
+
+.iphone {
+    z-index: 5;
+    left: 640px;
+    top: 25px;
+    transform: scale(0.4);
+}
+
+.mac {
+    transform: scale(0.45);
+
 }

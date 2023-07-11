@@ -6,6 +6,8 @@ import Tag from '../../../elements/Tag'
 import Button from '../../../elements/Button'
 import whiteArrow from '../../../../assets/white-arrow.svg'
 import { motion } from "framer-motion"
+import Typewriter from 'typewriter-effect';
+
 
 
 export default function MainCard(props) {
@@ -24,7 +26,19 @@ export default function MainCard(props) {
                         Design Your Success
                     </em>
                 </p>
-                <h1 className='welcome-heading'>Efficiency Meets <span>Credibility:</span> Creating a Streamlined <span>Online Presence</span></h1>
+                <h1 className='welcome-heading'>Efficiency Meets&nbsp;
+                    <Typewriter
+                        options={{
+                            strings: [' Credibility:', ' Speed:', ' Creativity:'],
+                            autoStart: true,
+                            loop: true,
+                            pauseFor: 1000
+                        }}
+                    />
+                    <div>
+                        Creating a Streamlined <span>Online Presence</span>
+                    </div>
+                </h1>
                 <p className='subheading'>
                     An efficient solution to creating an online presence for borrowers
                 </p>
