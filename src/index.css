@@ -35,6 +35,15 @@ body {
   overflow-x: hidden;
 }
 
+body.home-page {
+  background-size: contain;
+}
+
+body.auth-page {
+  background-size: cover;
+}
+
+
 #root {
   display: flex;
   flex-direction: column;
