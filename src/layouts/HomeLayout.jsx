@@ -1,17 +1,22 @@
 import React, { useEffect } from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 import Nav from '../components/templates/Nav/Nav'
 import logo from '../assets/logo.svg'
 import Footer from '../components/templates/Footer/Footer'
 
-
 export default function HomeLayout() {
+
+    const location = useLocation()
     useEffect(() => {
-        document.body.classList.add('home-page');
-        return () => {
-            document.body.classList.remove('home-page');
-        };
-    }, []);
+        const currentPage = location.pathname
+        const body = document.getElementsByTagName('body')[0]
+        if (currentPage === '/') {
+            body.style.backgroundSize = 'contain'
+        } else {
+            body.style.backgroundSize = 'cover'
+        }
+    }, [location.pathname])
+
     return (
         <>
             <Nav logo={logo} name='Analog Designs' />

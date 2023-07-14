@@ -31,16 +31,7 @@
 body {
   background-image: url(./assets/bg.svg), var(--medium);
   background-repeat: no-repeat, no-repeat;
-  background-size: contain, auto;
   overflow-x: hidden;
-}
-
-body.home-page {
-  background-size: contain;
-}
-
-body.auth-page {
-  background-size: cover;
 }
 
 

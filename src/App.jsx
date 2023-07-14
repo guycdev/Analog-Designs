@@ -4,7 +4,8 @@ import {
   RouterProvider,
   createBrowserRouter,
   createRoutesFromElements,
-  Route
+  Route,
+  useLocation
 } from "react-router-dom"
 import Register from './components/pages/Auth/Register/Register'
 import Login from './components/pages/Auth/Login/Login'
@@ -23,6 +24,7 @@ const route = createBrowserRouter(createRoutesFromElements(
 ))
 
 export default function App() {
+
   return (
     <RouterProvider router={route} />
   )

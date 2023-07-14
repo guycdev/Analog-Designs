@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import Hero from './Hero/Hero'
 import Stack from './Stack/Stack'
 import Pricing from './Pricing/Pricing '
@@ -6,21 +5,12 @@ import Swag from './Features/Swag'
 import VideoObject from './VideoObject/VideoObject'
 import ContactForm from './ContactForm/ContactForm'
 import GettingStarted from './GettingStarted/GettingStarted'
-import { information, features } from './copyright/information'
-
+import { features } from './copyright/information'
+import React from 'react'
 
 function App() {
-
-    const [loading, setLoading] = useState(true)
-    useEffect(() => {
-        setInterval(() => {
-            setLoading(false)
-        }, 0)
-    }, [])
-
-
     return (
-        <main className="container" style={{ display: !loading ? 'block' : 'block' }}>
+        <main className="container" >
             <Hero />
             <GettingStarted />
             <VideoObject
@@ -48,7 +38,6 @@ function App() {
                 featureArr={features}
                 style='features-grid'
                 heading="We will build for you"
-                content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo odio cum necessitatibus iste eum quibusdam."
             />
             <ContactForm />
 
