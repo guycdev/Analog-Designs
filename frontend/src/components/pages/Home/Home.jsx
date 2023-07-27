@@ -5,6 +5,7 @@ import Swag from './Features/Swag'
 import VideoObject from './VideoObject/VideoObject'
 import ContactForm from './ContactForm/ContactForm'
 import GettingStarted from './GettingStarted/GettingStarted'
+import Steps from './Steps/Steps'
 import { features } from './copyright/information'
 import React from 'react'
 
@@ -13,6 +14,7 @@ function App() {
         <main className="container" >
             <Hero />
             <GettingStarted />
+            <Steps />
             <VideoObject
                 sectionNumber={4}
                 psudoContent={'Our Work'}
