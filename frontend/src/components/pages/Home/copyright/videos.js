@@ -4,25 +4,25 @@ import secondVideo from '../../../../assets/videos/2.mp4'
 export const options = [
     {
         header: 'AutoLab Florida',
-        subHeader: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        subHeader: "As Canada's #1 IGL coating applier, TheAutoLab Florida offers an array of protective services for vehicles, boats, planes, and homes, now expanding their excellence in Florida.",
         icon: '',
         video: 'video1.mp4', // assuming you're linking to a video file here
     },
     {
         header: 'BeYa Homes',
-        subHeader: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        subHeader: 'Beya Homes - Crafting verdant oases with their superior landscaping services for both commercial and residential properties.',
         icon: '',
         video: 'video2.mp4', // and here
     },
     {
-        header: 'option 3',
-        subHeader: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        header: 'Zeeko Financial',
+        subHeader: 'Established in 2021, Zeeko Financial Services provides expert bookkeeping, astute budgeting guidance, and meticulous tax preparation services.',
         icon: '',
         video: 'video2.mp4', // and here
     },
     {
-        header: 'option 4',
-        subHeader: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        header: 'Rods and Wire Welcing Inc.',
+        subHeader: 'RODS AND WIRE WELDING INC. - Masterful welders offering comprehensive metal repairs, boiler services, and steam fitting across the Greater Toronto Area.',
         icon: '',
         video: 'video2.mp4', // and here
     }

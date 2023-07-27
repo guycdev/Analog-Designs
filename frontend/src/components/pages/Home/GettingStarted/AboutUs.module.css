@@ -1,42 +1,80 @@
 .container {
-    width: 70%;
     background-image: url(../../../../assets/outer-waves.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 200px 100px;
     display: flex;
-    position: relative;
-
-}
-
-.contentContainer {
-    width: 40%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 50px;
+    width: 100%;
 }
 
 .contentContainer>h1 {
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 2rem;
+    color: #333;
 }
 
-.imgContainer {
-    position: absolute;
-    top: 20px;
+.contentContainer {
+    width: 48%;
 }
 
-.iphone,
-.mac {
-    position: absolute;
+.boxEffect {
+    background-color: #F7F7F7;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    border-radius: 5px;
 }
 
-.iphone {
-    z-index: 5;
-    left: 640px;
-    top: 25px;
-    transform: scale(0.4);
+.contentContainer>h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-size: 28px;
+    font-weight: 500;
+    color: #333;
+    letter-spacing: -0.5px;
+    line-height: 36px;
+    background-color: #F7F7F7;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    border-radius: 5px;
+    text-wrap: unset;
 }
 
-.mac {
-    transform: scale(0.45);
+.contentContainer>p,
+details>p {
+    font-family: "Calibri", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333333;
+}
 
+.accordionContainer {
+    width: 45%;
+}
+
+.accordionContainer>* {
+    margin: 10px 0px;
+}
+
+details {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    background-color: #d7d8f2;
+    color: #333;
+    border-radius: 4px;
+    padding: 10.5px;
+}
+
+
+summary {
+    font-weight: 500;
+    padding: 1rem;
+    font-size: 1.04rem;
+    color: #333;
+    letter-spacing: 0.7px;
+}
+
+details[open] summary {
+    border-bottom: thin solid grey;
 }

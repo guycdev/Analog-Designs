@@ -16,7 +16,6 @@ export default function GettingStarted() {
             /> */}
 
             {/* <Blobs size="big" /> */}
-            <Steps />
             <AboutUs />
         </section>
     )

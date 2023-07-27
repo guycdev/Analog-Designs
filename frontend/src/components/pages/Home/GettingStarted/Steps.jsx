@@ -27,13 +27,13 @@ export default function Steps() {
                 img={ticket}
                 tag={tag}
             />
-            {/* <PricingCard
+            <PricingCard
                 heading="We Handle the Rest"
                 content="Once we have your details, we manage the building and hosting of your client's site.  Be sure to follow up upon approval."
                 btnStyle="primary-btn"
                 img={coding}
                 tag={tag}
-            /> */}
+            />
         </div>
     )
 }
