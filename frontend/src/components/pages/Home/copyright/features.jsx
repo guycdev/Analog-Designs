@@ -74,29 +74,5 @@ export const information = [
         icon: handshake,
         header: "Collaborative Design Process",
         description: <p>Engage in <span>collaborative design</span> for success.</p>
-    },
-    {
-        id: 11,
-        icon: globe,
-        header: "Global Design Standards",
-        description: <p>Adhere to <span>universal design standards</span>.</p>
-    },
-    {
-        id: 12,
-        icon: pencil,
-        header: "Custom-Tailored Designs",
-        description: <p>Create <span>unique designs</span> for your brand.</p>
-    },
-    {
-        id: 13,
-        icon: chat,
-        header: "Clear Communication",
-        description: <p>Promote <span>clear communication</span> in designs.</p>
-    },
-    {
-        id: 14,
-        icon: speed,
-        header: "Fast and Efficient Design",
-        description: <p><span>Optimize</span> designs for <span>speed and efficiency</span>.</p>
     }
 ]

@@ -1,6 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Form from './Form'
 import Card from '../../../elements/Card'
+import Swag from '../../../elements/Swag'
+import { information } from '../copyright/features'
+
 
 export default function ContactForm() {
 
@@ -12,6 +15,12 @@ export default function ContactForm() {
             >
                 <Form />
             </Card>
+            <Swag
+                id='more-features'
+                featureArr={information}
+                style='features-grid'
+                heading="We will build for you"
+            />
         </section>
     )
 }

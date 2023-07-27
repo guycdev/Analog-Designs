@@ -1,12 +1,10 @@
 import Hero from './Hero/Hero'
 import Stack from './Stack/Stack'
 import Pricing from './Pricing/Pricing '
-import Swag from './Features/Swag'
 import VideoObject from './VideoObject/VideoObject'
 import ContactForm from './ContactForm/ContactForm'
 import GettingStarted from './GettingStarted/GettingStarted'
 import Steps from './Steps/Steps'
-import { features } from './copyright/information'
 import React from 'react'
 
 function App() {
@@ -35,12 +33,7 @@ function App() {
             />
             <Stack />
             <Pricing />
-            <Swag
-                id='more-features'
-                featureArr={features}
-                style='features-grid'
-                heading="We will build for you"
-            />
+
             <ContactForm />
 
         </main>

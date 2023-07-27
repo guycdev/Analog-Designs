@@ -1,5 +1,5 @@
 import React from 'react'
-import SwagRows from '../../../elements/SwagRows'
+import SwagRows from './SwagRows'
 import { motion } from 'framer-motion'
 
 export default function Swag(props) {

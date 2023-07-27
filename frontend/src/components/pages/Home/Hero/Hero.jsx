@@ -2,8 +2,8 @@ import React from 'react'
 import { motion } from "framer-motion"
 import FloatingImages from './FloatingImages'
 import MainCard from './MainCard'
-import Swag from '../Features/Swag'
 import { information } from '../copyright/information'
+import Swag from '../../../elements/Swag'
 
 export default function Hero(props) {
 

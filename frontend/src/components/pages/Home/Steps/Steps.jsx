@@ -19,7 +19,6 @@ export default function Steps() {
                 id={0}
             >
                 <div className={styles.steps}>
-
                     <PricingCard
                         heading="Create Account"
                         content="Set up an account with our integrated system. This lets you monitor your present and future orders conveniently."

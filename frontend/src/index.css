@@ -84,25 +84,18 @@ em {
 
 /*Card component*/
 
-/*
-To make responsive:
--Change margin units to vw
--Change p width
--Change image sizing to vw
-*/
 .card {
   background-color: var(--card-color);
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
-  border: thin solid black;
+  box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.25);
+  /* border: thin solid black; */
 }
 
 
 
 .card-container>div>img {
   width: min(220px, 18vw);
-  /* width: min(288px, 18vw); */
 }
 
 .stack-card img {
@@ -179,7 +172,6 @@ p {
 .show {
   opacity: 1;
   max-height: 100vh;
-  /* adjust this value to your needs */
   transition: max-height 1s ease-in, opacity 1s ease-in;
 }
 
@@ -708,12 +700,7 @@ form .btn-container {
   left: 20px;
 }
 
-.steps {
-  display: flex;
-  flex-direction: column;
-  width: 25%;
-  gap: 40px;
-}
+
 
 .getting-started-container>.steps>* {
   flex: 1;
@@ -721,29 +708,7 @@ form .btn-container {
 }
 
 
-/* .getting-started-container h2 {
-  width: fit-content;
-  padding: 10px 30px;
-} */
-
-/* .getting-started-container>div>div>p {
-  width: fit-content;
-} */
-
 /**/
-
-/* .hero-section::before {
-  position: absolute;
-  top: 5.7rem;
-  padding-left: 5px;
-  content: '{01. Welcome}';
-  color: var(--hue);
-  opacity: 0.5;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-} */
-
-
 
 .why-us-container {
   display: flex;
@@ -791,37 +756,10 @@ form .btn-container {
   text-align: center;
 }
 
-/* #features::before {
-  content: '{02. Benefits}';
-  margin: 0 0 15px 0;
-  color: var(--hue);
-  opacity: 0.5;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-}
-
-#more-features::before {
-  content: '{07. Our Specialties}';
-  margin: 0 0 15px 0;
-  color: var(--hue);
-  opacity: 0.5;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-}
-
-#pricing::before {
-  content: '{06. Packages}';
-  color: var(--hue);
-  opacity: 0.5;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-} */
-
 /**/
 
 /**/
 /*Video Object*/
-/*flex into grid auto rows ith 4 columns*/
 
 .video-object-container {
   display: flex;
