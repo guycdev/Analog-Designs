@@ -58,3 +58,10 @@
   font-weight: normal;
   text-transform: uppercase;
 }
+
+@media (max-width: 1212px) {
+  .container {
+    flex-direction: column;
+    width: 50%;
+  }
+}
