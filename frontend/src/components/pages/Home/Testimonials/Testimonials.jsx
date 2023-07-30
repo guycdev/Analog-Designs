@@ -5,24 +5,24 @@ import Testimonial from "./Testimonial";
 export default function Testimonials() {
   const testimonialsArr = [
     {
-      header: "A Swift Solution",
+      header: "Quick and Effective!",
       subheading: "Mortgage Broker, QuickMortgage Inc.",
       content:
-        "Analog Designs created an online presence for our clients in record time, making the mortgage approval process smooth and efficient. Their componentized templates were a game-changer!",
+        "Analog Designs brought our clients online fast, smoothing the mortgage approval process. Their creativity and attention to detail were exactly what we needed!",
       name: "Sarah Thompson",
     },
     {
-      header: "Innovative and Reliable",
+      header: "Problem-Solvers Extraordinaire!",
       subheading: "Financial Advisor, HomeLoans Co.",
       content:
-        "I was amazed by the strategic handling of domain names by Analog Designs. They understood exactly what underwriters look for, and their creative problem-solving made all the difference.",
+        "I was impressed by Analog Designs' ability to understand our unique needs. Their creative problem-solving and innovative thinking made all the difference in our success.",
       name: "James McArthur",
     },
     {
-      header: "Highly Professional Service",
+      header: "Professional and Customized Service",
       subheading: "Mortgage Underwriter, BankChoice Ltd.",
       content:
-        "Analog Designs' approach to website hosting, using Netlify with Vite, was perfectly aligned with our temporary needs. Their insightful solutions make them our go-to agency for future projects.",
+        "Working with Analog Designs was a pleasure. They tailored their solutions to fit our temporary needs, making them our go-to agency for future projects.",
       name: "Maria Gonzalez",
     },
   ];
