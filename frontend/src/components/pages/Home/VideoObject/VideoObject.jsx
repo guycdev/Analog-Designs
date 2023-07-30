@@ -1,45 +1,41 @@
-import React, { useState, useEffect } from "react";
-import ControlBar from './ControlBar'
+import React, { useState } from "react";
+import ControlBar from "./ControlBar";
 import VideoPlayer from "./VideoPlayer";
 
-
 export default function VideoObject(props) {
+  const { direction, sectionNumber, psudoContent, content } = props;
 
-    const { direction, sectionNumber, psudoContent, content } = props
+  const [video, setVideo] = useState(0);
 
-    const [video, setVideo] = useState(0)
-
-
-    return (
-        <section className={`video-object-container section-${sectionNumber}`}>
-            {
-                direction
-                    ? (
-                        <>
-                            <ControlBar
-                                sectionNumber={sectionNumber}
-                                setVideo={setVideo}
-                                video={video}
-                                header={content.header}
-                                subtitle={content.subheading}
-                            />
-                            <VideoPlayer video={video} />
-                        </>
-                    )
-                    : (
-                        <>
-                            <VideoPlayer video={video} />
-                            <ControlBar
-                                sectionNumber={sectionNumber}
-                                setVideo={setVideo}
-                                video={video}
-                                header={content.header}
-                                subtitle={content.subheading}
-                            />
-                        </>
-                    )
-            }
-            {/* <style>
+  return (
+    <section
+      className={`video-object-container section-${sectionNumber}`}
+      id="video-player"
+    >
+      {direction ? (
+        <>
+          <ControlBar
+            sectionNumber={sectionNumber}
+            setVideo={setVideo}
+            video={video}
+            header={content.header}
+            subtitle={content.subheading}
+          />
+          <VideoPlayer video={video} />
+        </>
+      ) : (
+        <>
+          <VideoPlayer video={video} />
+          <ControlBar
+            sectionNumber={sectionNumber}
+            setVideo={setVideo}
+            video={video}
+            header={content.header}
+            subtitle={content.subheading}
+          />
+        </>
+      )}
+      {/* <style>
                 {`
                     .section-${sectionNumber}>.control-bar-container::before {
                         content: '{0${sectionNumber}}. ${psudoContent}';
@@ -53,6 +49,6 @@ export default function VideoObject(props) {
                     }
                 `}
             </style> */}
-        </section>
-    )
+    </section>
+  );
 }

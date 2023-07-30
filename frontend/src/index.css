@@ -46,7 +46,7 @@ body {
 }
 
 section {
-  margin: 8.5rem 0rem;
+  margin: 8.5rem auto;
 }
 
 section:first-child {
@@ -726,6 +726,7 @@ form .btn-container {
   justify-content: space-between;
   width: 100%;
   gap: 50px;
+  margin: auto;
 }
 
 .pricing-details-container {
@@ -1251,6 +1252,7 @@ hr {
 
   .content-block {
     max-width: fit-content;
+    margin: auto;
   }
 
   .swag-block {

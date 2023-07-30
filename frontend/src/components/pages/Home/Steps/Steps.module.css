@@ -1,20 +1,30 @@
 .steps {
-    display: flex;
-    gap: 40px;
+  display: flex;
+  gap: 40px;
 }
 
-.steps>* {
-    flex: 1;
+.steps > * {
+  flex: 1;
 }
 
-.steps>*>* {
-    display: flex;
+.steps > * > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#root > main > section:nth-child(3) > div > div > div > div:nth-child(3) {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
+  border: none;
+}
+
+@media (max-width: 950px) {
+  .steps {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#root>main>section:nth-child(3)>div>div>div>div:nth-child(3) {
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
-    border: none;
+  }
+  .container > div {
+    width: 50%;
+    margin: auto;
+  }
 }
