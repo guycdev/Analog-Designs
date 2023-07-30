@@ -1,0 +1,60 @@
+.container {
+  display: flex;
+}
+
+.container > * {
+  flex: 1;
+  border-radius: 0px;
+}
+
+.container > * > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container > div:nth-child(1) {
+  border-radius: 5px 0px 0px 5px;
+}
+
+.container > div:nth-child(3) {
+  border-radius: 0px 5px 5px 0px;
+}
+
+.container > * > div > img {
+  width: 25%;
+}
+
+.testimonialContainer {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.testimonialContainer p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.testimonialContainer p:nth-child(1) {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.testimonialContainer p:nth-child(2) {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.testimonialContainer h6 {
+  font-size: 14px;
+  color: #777;
+  margin: 0;
+  font-weight: normal;
+  text-transform: uppercase;
+}

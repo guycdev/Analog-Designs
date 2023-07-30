@@ -1,3 +1,4 @@
+import React from 'react'
 import Hero from './Hero/Hero'
 import Stack from './Stack/Stack'
 import Pricing from './Pricing/Pricing '
@@ -5,7 +6,7 @@ import VideoObject from './VideoObject/VideoObject'
 import ContactForm from './ContactForm/ContactForm'
 import GettingStarted from './GettingStarted/GettingStarted'
 import Steps from './Steps/Steps'
-import React from 'react'
+import Testimonials from './Testimonials/Testimonials'
 
 function App() {
     return (
@@ -31,6 +32,7 @@ function App() {
                     subheading: 'Check out these videos of our past projects to get a feel for what we do'
                 }}
             />
+            <Testimonials/>
             <Stack />
             <Pricing />
 

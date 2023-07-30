@@ -9,12 +9,6 @@ import checkMark from '../../../../assets/check.svg';
 export default function Pricing(props) {
     return (
         <section className="margin-y getting-started-container" id="pricing">
-            {/* <Card
-                heading='Pricing Plans'
-                id={0}
-                styles='fit-content'
-                content={'Checkout our flexible packages'}
-            /> */}
             <div className="pricing-container">
                 <PricingCard
                     heading={'Premium Recuring Package'}
