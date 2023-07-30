@@ -4,7 +4,7 @@ import { ReactSVG } from "react-svg"
 import useFormSubmission from '../../hooks/useFormSubmission'
 import styles from './Footer.module.css'
 import Button from '../../elements/Button'
-
+import arrow from '../../../assets/arrow.svg'
 
 export default function Footer(props) {
 
@@ -36,9 +36,13 @@ export default function Footer(props) {
                         </li>
                     </ul>
                 </div>
-                <form onSubmit={handleSubmit} className="misc-footer" id="footer-form">
+                <form onSubmit={handleSubmit} className={styles.miscFooter} id="footer-form">
                     <input type="email" name="email" placeholder="Enter your email" autoComplete="on" />
-                    <Button />
+                    <Button
+                        text="Submit"
+                        buttonType="primary-btn"
+                        img={arrow}
+                    />
                 </form>
             </div>
         </footer>
