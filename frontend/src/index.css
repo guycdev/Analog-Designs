@@ -850,6 +850,7 @@ video {
   justify-content: center;
   align-items: center;
   overflow-y: hidden;
+  margin: 8.5rem 0rem 0rem 0rem;
 }
 
 .contact-form {
