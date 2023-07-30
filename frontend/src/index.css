@@ -645,6 +645,7 @@ form .btn-container {
   gap: 30px 50px;
   justify-content: space-between;
   margin: 3rem 0;
+  padding: 20px;
 }
 
 .swag-container {
@@ -986,60 +987,6 @@ label>svg {
   flex-direction: column;
   justify-content: space-between;
   gap: 15px;
-}
-
-/**/
-/*Footer*/
-
-.footer-container {
-  margin: 4rem 3rem 0rem 3rem;
-  padding: 40px 60px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  border: thin solid black;
-  border-radius: 10px;
-  background-color: var(--hue);
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-container h4 {
-  letter-spacing: 0.5px;
-  font-size: 2rem;
-}
-
-.footer-container ul {
-  list-style: none;
-}
-
-.footer-container input {
-  padding: 10px 15px;
-  border-radius: 5px;
-  border: none;
-  margin-right: 10px;
-  font-size: 16px;
-}
-
-.footer-container button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #fff;
-  color: #3333339d;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.footer-container button:hover {
-  background-color: #5cadff;
-  color: white;
-}
-
-.footer-items>ul>div>li>a {
-  font-size: 1rem;
 }
 
 /**/
