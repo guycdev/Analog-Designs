@@ -24,7 +24,7 @@
     flex-direction: column;
   }
   .container > div {
-    width: 50%;
+    width: 65%;
     margin: auto;
   }
 }

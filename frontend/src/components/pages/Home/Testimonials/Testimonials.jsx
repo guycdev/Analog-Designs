@@ -27,9 +27,10 @@ export default function Testimonials() {
     },
   ];
 
-  const testimonialElementsArr = testimonialsArr.map((testimonial) => {
+  const testimonialElementsArr = testimonialsArr.map((testimonial, index) => {
     return (
       <Testimonial
+        key={index}
         header={testimonial.header}
         subheading={testimonial.subheading}
         content={testimonial.content}

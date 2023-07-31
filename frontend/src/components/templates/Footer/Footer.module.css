@@ -11,6 +11,7 @@
 
 .container > div {
   width: 1500px;
+  padding: 0px 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
