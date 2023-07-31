@@ -19,7 +19,7 @@ export default function Testimonials() {
       name: "James McArthur",
     },
     {
-      header: "Professional and Customized Service",
+      header: "Professional Service",
       subheading: "Mortgage Underwriter, BankChoice Ltd.",
       content:
         "Working with Analog Designs was a pleasure. They tailored their solutions to fit our temporary needs, making them our go-to agency for future projects.",
