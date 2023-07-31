@@ -23,6 +23,8 @@
 
 .chartContainer > * {
   margin: 20px 0px;
+  height: 310px;
+  width: 310px;
 }
 
 .contentContainer > h2 {
@@ -41,11 +43,10 @@
 }
 
 .contentContainer > p {
-  font-family: "Calibri", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #333333;
-  text-wrap: unset;
+  line-height: 1.7;
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 0.15ch;
 }
 
 @media (max-width: 940px) {

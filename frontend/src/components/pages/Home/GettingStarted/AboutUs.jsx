@@ -25,7 +25,7 @@ export default function AboutUs(props) {
           Meet Analog Designs - Where <span>Innovation </span>Meets{" "}
           <span>Inspiration!</span>
         </h2>
-        <p className={styles.boxEffect}>
+        <p className={`${styles.boxEffect}`}>
           Welcome to Analog Designs, your bridge to success in the mortgage
           industry. In a world where 85% of consumers conduct research online
           before making a purchase, and 74% turn to websites, a robust online
@@ -75,6 +75,7 @@ export default function AboutUs(props) {
               },
             ],
           }}
+          rotate={true}
         />
       </div>
       {/* <img src={mac} alt="" className={styles.mac} /> */}
