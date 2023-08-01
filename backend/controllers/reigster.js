@@ -25,10 +25,10 @@ async function createAccountController(req, res) {
     // users.push({
     //   email: email,
     //   password: hashedPass,
-    // }); Leave for testing
-    return res.status(200).json({ status: "success", data: users });
+    // });
+    // return res.status(200).json({ status: "success", data: users });Leave for testing
   } catch {
-    return res.status(500).json({ status: "error" });
+    return res.status(500).json({ status: "error", msg: error.message });
   }
 }
 
