@@ -1,7 +1,6 @@
 const createAccount = require("../services/userService");
 
 function createAccount(req, res) {
-  connection.connect();
   const { email, pass, firstName, lastName, phone } = req.body;
   const userInput = [email, pass, `${firstName} ${lastName}`, phone];
 
