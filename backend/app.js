@@ -1,11 +1,11 @@
-const express = require('express')
-const app = express()
-const auth = require('./routes/Auth')
+const express = require("express");
+const app = express();
+const auth = require("./routes/Auth");
 
-app.use(express.json())
+app.use(express.json());
 
-app.use('/account', auth)
+app.use("/account", auth);
 
-app.listen(5000, () => {
-    console.log("Listening on port 5000...")
-})
+app.listen(3003, () => {
+  console.log("Listening on port 3003...");
+});
