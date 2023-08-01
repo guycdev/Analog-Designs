@@ -1389,6 +1389,11 @@ hr {
   margin: 7rem 3rem 0 3rem;
 }
 
+.auth-form {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+
 .login-container > div {
   position: relative;
 }
@@ -1407,8 +1412,8 @@ hr {
 
 .login-logo {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 40px;
+  left: 40px;
 }
 
 .login-form .primary-btn,
@@ -1418,7 +1423,7 @@ hr {
 
 .utils {
   position: absolute;
-  bottom: 10px;
+  bottom: 30px;
   font-size: 0.6rem;
   left: 225px;
   width: fit-content;
