@@ -1,6 +1,6 @@
 const createAccount = require("../services/userService");
 
-function createAccount(req, res) {
+function createAccountController(req, res) {
   const { email, pass, firstName, lastName, phone } = req.body;
   const userInput = [email, pass, `${firstName} ${lastName}`, phone];
 
@@ -17,4 +17,4 @@ function createAccount(req, res) {
   });
 }
 
-module.exports = { createAccount };
+module.exports = { createAccountController };

@@ -1,9 +1,8 @@
-const express = require('express')
-const router = express.Router()
+const express = require("express");
+const router = express.Router();
 
-const { createAccount } = require('../controllers/reigster')
+const { createAccountController } = require("../controllers/reigster");
 
-router.route("/register")
-    .post(createAccount)
+router.route("/register").post(createAccountController);
 
-module.exports = router
+module.exports = router;
