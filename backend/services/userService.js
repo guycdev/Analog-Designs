@@ -1,11 +1,9 @@
-const connection = require("../models/mysql");
+const { pool } = require("../models/mysql");
 
 function createAccount(userInput, callback) {
-  connection.connect();
   const query = `insert into users (email,pass,full_name,phone) values(?, ?, ?, ?);`;
 
-  connection.query(query, userInput, (error, results, fields) => {
-    connection.end();
+  pool.query(query, userInput, (error, results, fields) => {
     callback(error, results);
   });
 }
