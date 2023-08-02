@@ -1,14 +1,12 @@
 const createAccount = require("../services/userService");
-const bcrypt = require("bcrypt");
+const { hashPassword } = require("../services/passwordUtils");
 
-// const users = []; Leave for testing
+// const users = [];
 
 async function createAccountController(req, res) {
   try {
     const { email, pass, firstName, lastName, phone } = req.body;
-
-    const hashedPass = await bcrypt.hash(pass, 10);
-
+    const hashedPass = await hashPassword(pass);
     const userInput = [email, hashedPass, `${firstName} ${lastName}`, phone];
 
     createAccount(userInput, (error, results) => {
@@ -26,9 +24,10 @@ async function createAccountController(req, res) {
     //   email: email,
     //   password: hashedPass,
     // });
-    // return res.status(200).json({ status: "success", data: users });Leave for testing
-  } catch {
-    return res.status(500).json({ status: "error", msg: error.message });
+    // return res.status(200).json({ status: "success", data: users });
+    // Leave for testing
+  } catch (err) {
+    return res.status(500).json({ status: "error", msg: err.message });
   }
 }
 
