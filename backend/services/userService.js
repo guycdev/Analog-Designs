@@ -11,4 +11,6 @@ async function createAccount(userInput) {
   }
 }
 
+async function verifyCredentials() {}
+
 module.exports = createAccount;

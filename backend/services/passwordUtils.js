@@ -5,10 +5,12 @@ async function hashPassword(password) {
     const hashedPass = await bcrypt.hash(password, 10);
     return hashedPass;
   } catch (err) {
-    return json({ status: "error", msg: err.message });
+    return { status: "error", msg: err.message };
   }
 }
 
-async function verifyPassword(hashedPassword) {}
+async function verifyPassword(userProvidedPass, hashedPass) {
+  return await bcrypt.compare(userProvidedPass, hashedPass);
+}
 
 module.exports = { hashPassword, verifyPassword };

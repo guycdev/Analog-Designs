@@ -1,21 +1,20 @@
 const { pool } = require("../config/db");
 
-function getUserByEmail(email, callback) {
-  pool.query(
-    "select email,pass form users where email = ?",
-    [email],
-    (error, results, fields) => {
-      if (error) {
-        callback(error);
-        return;
-      }
-      const user = {
-        email: results[0].email,
-        pass: results[0].pass,
-      };
-      callback(null, user);
-    }
+async function getUserByEmail(email) {
+  const user = await pool.query(
+    "select email,pass from users where email = ?",
+    [email]
   );
+
+  return user[0][0];
 }
 
-module.exports = { getUserByEmail };
+async function getUserById(id) {
+  const user = await pool.query("select email,pass from users where id = ?", [
+    id,
+  ]);
+
+  return user[0][0];
+}
+
+module.exports = { getUserByEmail, getUserById };
