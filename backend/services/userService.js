@@ -1,11 +1,14 @@
 const { pool } = require("../config/db");
 
-function createAccount(userInput, callback) {
-  const query = `insert into users (email,pass,full_name,phone) values(?, ?, ?, ?);`;
+async function createAccount(userInput) {
+  try {
+    const query = `insert into users (email,full_name,phone, pass) values(?, ?, ?, ?);`;
 
-  pool.query(query, userInput, (error, results, fields) => {
-    callback(error, results);
-  });
+    const results = await pool.query(query, userInput);
+    return { success: true };
+  } catch (error) {
+    return { success: false, error: error };
+  }
 }
 
 module.exports = createAccount;

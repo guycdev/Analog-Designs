@@ -7,19 +7,22 @@ async function createAccountController(req, res) {
   try {
     const { email, pass, firstName, lastName, phone } = req.body;
     const hashedPass = await hashPassword(pass);
-    const userInput = [email, hashedPass, `${firstName} ${lastName}`, phone];
+    const userInput = [email, `${firstName} ${lastName}`, phone, hashedPass];
 
-    createAccount(userInput, (error, results) => {
-      if (error) {
-        return res.status(200).json({
-          status: "request ok, registration denied",
-          msg: error.sqlMessage,
-        });
-      }
+    const results = await createAccount(userInput);
+
+    if (!results.success) {
       return res
-        .status(200)
-        .json({ status: "success", msg: `${email} registered succesfully` });
-    });
+        .status(500)
+        .json({ status: "failed", msg: results.error.message });
+    }
+
+    return res
+      .status(200)
+      .json({
+        status: "success",
+        msg: `User ${email} registered successfully`,
+      });
     // users.push({
     //   email: email,
     //   password: hashedPass,
