@@ -1,4 +1,4 @@
-const createAccount = require("../services/userService");
+const { createAccount } = require("../models/user");
 const { hashPassword } = require("../services/passwordUtils");
 
 // const users = [];
@@ -17,12 +17,10 @@ async function createAccountController(req, res) {
         .json({ status: "failed", msg: results.error.message });
     }
 
-    return res
-      .status(200)
-      .json({
-        status: "success",
-        msg: `User ${email} registered successfully`,
-      });
+    return res.status(200).json({
+      status: "success",
+      msg: `User ${email} registered successfully`,
+    });
     // users.push({
     //   email: email,
     //   password: hashedPass,
