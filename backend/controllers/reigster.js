@@ -17,10 +17,7 @@ async function createAccountController(req, res) {
         .json({ status: "failed", msg: results.error.message });
     }
 
-    return res.status(200).json({
-      status: "success",
-      msg: `User ${email} registered successfully`,
-    });
+    return res.status(200).redirect("/login");
     // users.push({
     //   email: email,
     //   password: hashedPass,

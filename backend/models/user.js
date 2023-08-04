@@ -2,7 +2,7 @@ const { pool } = require("../config/db");
 
 async function getUserByEmail(email) {
   const user = await pool.query(
-    "select email,pass from users where email = ?",
+    "select id, email,pass from users where email = ?",
     [email]
   );
 

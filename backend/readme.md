@@ -9,6 +9,7 @@ backend/
 │ ├── authController.js // Login, registration, and other auth-related controllers
 ├── models/
 │ ├── user.js // User model definition and database interactions
+│ ├── orders.js // Orders model used to return all orders from a one-to-many relationship
 ├── routes/
 │ ├── auth.js // Routes related to authentication (login, logout, etc.)
 ├── services/
