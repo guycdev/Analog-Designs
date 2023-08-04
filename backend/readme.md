@@ -1,5 +1,6 @@
 ## Backend directory structure
 
+```
 backend/
 ├── config/
 │ ├── db.js // Database connection configuration
@@ -18,3 +19,4 @@ backend/
 │ └── ... // Other views
 ├── app.js // Main application file, setting up Express, routes, etc.
 └── package.json // Project dependencies and metadata
+```
