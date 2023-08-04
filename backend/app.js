@@ -4,8 +4,10 @@ const app = express();
 const auth = require("./routes/Auth");
 const session = require("express-session");
 const MySQLStore = require("express-mysql-session")(session);
+const env = require("dotenv").config();
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 const options = {
   host: process.env.HOST,
@@ -15,6 +17,17 @@ const options = {
 };
 
 const sessionStore = new MySQLStore(options);
+
+sessionStore
+  .onReady()
+  .then(() => {
+    // MySQL session store ready for use.
+    console.log("MySQLStore ready");
+  })
+  .catch((error) => {
+    // Something went wrong.
+    console.error(error);
+  });
 
 app.use(
   session({
