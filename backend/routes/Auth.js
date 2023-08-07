@@ -5,7 +5,7 @@ const passport = require("passport");
 const { createAccountController } = require("../controllers/reigster");
 const { loginController } = require("../controllers/login");
 
-/*Coed for test */
+/*Code for test */
 
 router.get("/", (req, res, next) => {
   res.send('<h1>Home</h1><p>Please <a href="./register">register</a></p>');
