@@ -1,11 +1,52 @@
-const express = require('express')
-const app = express()
-const auth = require('./routes/Auth')
+const express = require("express");
+const passport = require("passport");
+const app = express();
+const auth = require("./routes/Auth");
+const session = require("express-session");
+const MySQLStore = require("express-mysql-session")(session);
+const env = require("dotenv").config();
 
-app.use(express.json())
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.use('/account', auth)
+const options = {
+  host: process.env.HOST,
+  user: process.env.USER,
+  password: process.env.PASSWORD,
+  database: process.env.NAME,
+};
 
-app.listen(5000, () => {
-    console.log("Listening on port 5000...")
-})
+const sessionStore = new MySQLStore(options);
+
+sessionStore
+  .onReady()
+  .then(() => {
+    // MySQL session store ready for use.
+    console.log("MySQLStore ready");
+  })
+  .catch((error) => {
+    // Something went wrong.
+    console.error(error);
+  });
+
+app.use(
+  session({
+    secret: process.env.SECRET,
+    store: sessionStore,
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      maxAge: 1000 * 60 * 60 * 24,
+    },
+  })
+);
+
+require("./config/passportConfig");
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use("/account", auth);
+
+app.listen(3003, () => {
+  console.log("Listening on port 3003...");
+});
