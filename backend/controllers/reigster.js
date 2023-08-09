@@ -11,13 +11,15 @@ async function createAccountController(req, res) {
 
     const results = await createAccount(userInput);
 
+    console.log(results);
+
     if (!results.success) {
       return res
         .status(500)
         .json({ status: "failed", msg: results.error.message });
     }
 
-    return res.status(200).redirect("/login");
+    return res.status(200).json({ status: "Registered" });
     // users.push({
     //   email: email,
     //   password: hashedPass,

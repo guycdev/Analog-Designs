@@ -15,7 +15,7 @@ export default function Register() {
     name: "",
     phone: "",
     email: "",
-    password: "",
+    pass: "",
   });
 
   const [errorMessage, setErrorMessage] = useState("");
@@ -39,9 +39,9 @@ export default function Register() {
       return;
     }
 
-    if (value !== formData.password) {
+    if (value !== formData.pass) {
       setErrorMessage("Passwords do not match");
-    } else if (value === formData.password) {
+    } else if (value === formData.pass) {
       setErrorMessage("");
     }
 
@@ -66,8 +66,23 @@ export default function Register() {
     }
   }
 
-  function handleSubmit() {
-    return null;
+  async function accountResgitration() {
+    const data = await fetch("http://localhost:3003/api/account/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+    const response = await data.json();
+
+    return response;
+  }
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    const response = await accountResgitration();
+    console.log(await response);
   }
 
   return (
@@ -137,16 +152,16 @@ export default function Register() {
           </div>
           <div className="registration-password">
             <div>
-              <label htmlFor="password">
+              <label htmlFor="pass">
                 <FontAwesomeIcon icon={faEye} />
                 Password
               </label>
               <input
                 type="password"
-                name="password"
-                id="password"
+                name="pass"
+                id="pass"
                 placeholder="min 8 characters"
-                value={formData.password}
+                value={formData.pass}
                 onChange={handleChange}
                 required
                 autoComplete="on"

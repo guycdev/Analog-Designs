@@ -1,7 +1,8 @@
 async function loginController(req, res) {
   try {
     if (req.user) {
-      return res.status(200).json({ status: "success" });
+      // console.log(req.user);
+      return res.status(200).json({ status: "success", user: req.user });
     }
     return res
       .status(400)

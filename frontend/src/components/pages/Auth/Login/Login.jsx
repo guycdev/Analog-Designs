@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 export default function LoginForm() {
   const [formData, setFormData] = useState({
     email: "",
-    password: "",
+    pass: "",
   });
 
   function handleChange(event) {
@@ -24,6 +24,30 @@ export default function LoginForm() {
         [name]: value,
       };
     });
+  }
+
+  async function validateLogin() {
+    try {
+      const data = await fetch("http://localhost:3003/api/account/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+        credentials: "include",
+      });
+      const response = await data.json();
+
+      return response;
+    } catch (err) {
+      return err;
+    }
+  }
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    const response = await validateLogin();
+    console.log(response);
   }
 
   return (
@@ -52,7 +76,7 @@ export default function LoginForm() {
             img={apple}
           />
         </div>
-        <form className="login-form" id="login-form">
+        <form className="login-form" id="login-form" onSubmit={handleSubmit}>
           <div>
             <label htmlFor="email">
               <FontAwesomeIcon icon={faEnvelope} />
@@ -70,16 +94,16 @@ export default function LoginForm() {
             />
           </div>
           <div>
-            <label htmlFor="password">
+            <label htmlFor="pass">
               <FontAwesomeIcon icon={faEye} />
               Password
             </label>
             <input
               type="password"
-              name="password"
-              id="password"
+              name="pass"
+              id="pass"
               placeholder="min 8 characters"
-              value={formData.password}
+              value={formData.pass}
               onChange={handleChange}
               required
               autoComplete="on"
