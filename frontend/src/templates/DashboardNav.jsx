@@ -4,7 +4,7 @@ import styles from "./DashboardNav.module.css";
 import { ReactSVG } from "react-svg";
 import home from "../assets/home.svg";
 import grid from "../assets/grid.svg";
-import brush from "../assets/brush.svg";
+import send from "../assets/send.svg";
 import dash from "../assets/dash-circle.svg";
 
 export default function DashboardLayout() {
@@ -36,7 +36,7 @@ export default function DashboardLayout() {
             return isActive ? styles.activeDashboardSelection : "";
           }}
         >
-          <ReactSVG src={brush} />
+          <ReactSVG src={send} />
           Contact Us
         </NavLink>
       </nav>
