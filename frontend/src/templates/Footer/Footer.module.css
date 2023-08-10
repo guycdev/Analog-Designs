@@ -1,0 +1,87 @@
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 30vh;
+  padding: 3rem;
+  background-image: url(../../assets/outer-waves.svg);
+  background-size: cover;
+  margin: 2rem 0rem 0rem 0rem;
+}
+
+.container > div {
+  width: 1500px;
+  padding: 0px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.logo * {
+  font-size: 3rem;
+}
+
+.footerItems > ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  margin: 0rem 2rem;
+}
+
+.footerItems > ul > li > a:hover {
+  color: var(--hue);
+}
+
+.footerItems > ul > li > a::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 2px;
+  margin-top: 5px;
+  background: var(--hue);
+  transition: width 0.3s ease;
+  transition-delay: 0.3s;
+}
+
+.footerItems > ul > li > a:hover::after {
+  width: 100%;
+  transition-delay: 0;
+}
+
+.miscFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: black thin solid;
+  border-radius: 10px;
+}
+
+.miscFooter > input {
+  height: 20px;
+  padding: 20px 0.9rem;
+  border: none;
+  border-radius: 10px 10px 0px 0px;
+  width: 162.5px;
+}
+
+.miscFooter > div {
+  margin: -16px 0px;
+}
+
+.miscFooter > div > button {
+  width: 162.5px;
+  padding: 0.5rem 1rem;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.miscFooter svg {
+  width: 0.75rem;
+  height: 0.75rem;
+}

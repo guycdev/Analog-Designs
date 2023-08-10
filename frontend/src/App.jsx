@@ -5,16 +5,15 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
-  useLocation,
 } from "react-router-dom";
-import Register from "./components/pages/Auth/Register/Register";
-import Login from "./components/pages/Auth/Login/Login";
+import Register from "./pages/Auth/Register/Register";
+import Login from "./pages/Auth/Login/Login";
 import HomeLayout from "./layouts/HomeLayout.jsx";
-import Home from "./components/pages/Home/Home";
+import Home from "./pages/Home/Home";
 import AuthLayout from "./layouts/AuthLayout";
 import DashboardLayout from "./layouts/DashboardLayout";
-import Dashboard from "./components/pages/Dashboard/Dashboard";
-import Order from "./components/pages/Dashboard/Order";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Order from "./pages/Dashboard/Order";
 
 const route = createBrowserRouter(
   createRoutesFromElements(

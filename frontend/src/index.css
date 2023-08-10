@@ -815,6 +815,10 @@ video {
   justify-content: space-between;
 }
 
+#contact {
+  padding: 20px 0px;
+}
+
 .form-container > .card-container {
   padding: 0;
 }
@@ -1474,4 +1478,9 @@ hr {
   border-radius: 10px;
   right: 35px;
   z-index: 1;
+}
+
+.dashboard-container {
+  height: 60vh;
+  display: flex;
 }

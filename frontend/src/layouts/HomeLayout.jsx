@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import Nav from "../components/templates/Nav/Nav";
+import Nav from "../templates/Nav/Nav";
 import logo from "../assets/logo.svg";
-import Footer from "../components/templates/Footer/Footer";
+import Footer from "../templates/Footer/Footer";
 
 export default function HomeLayout() {
   const location = useLocation();

@@ -1,10 +1,10 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import DashboardNav from "../components/templates/DashboardNav";
+import DashboardNav from "../templates/DashboardNav";
 
 export default function DashboardLayout() {
   return (
-    <section>
+    <section className="dashboard-container">
       <DashboardNav />
       <Outlet />
     </section>

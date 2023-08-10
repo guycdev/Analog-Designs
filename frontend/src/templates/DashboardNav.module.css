@@ -1,0 +1,24 @@
+.dashboardNavContainer {
+  background-color: #d7d8f2;
+  padding: 40px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dashboardNavContainer > nav {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
+.dashboardNavContainer > nav > * {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dashboardHelpContainer > * {
+  display: block;
+}
