@@ -1,5 +1,5 @@
 .dashboardNavContainer {
-  background-color: #d7d8f2;
+  background-color: #dcdffe;
   padding: 40px;
   border-radius: 5px;
   display: flex;
@@ -7,18 +7,33 @@
   justify-content: space-between;
 }
 
+.dashboardNavContainer > h3 {
+  padding: 15px 0px;
+  border-bottom: thin solid grey;
+  text-align: center;
+}
+
 .dashboardNavContainer > nav {
   display: flex;
   flex-direction: column;
-  gap: 27px;
 }
 
-.dashboardNavContainer > nav > * {
+.dashboardNavContainer > nav > a {
+  padding: 12px 30px;
+}
+
+.dashboardNavContainer > nav > *,
+.dashboardHelpContainer > * {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.dashboardHelpContainer > * {
-  display: block;
+.activeDashboardSelection {
+  background-color: #bdc3fe;
+  border-radius: 500px;
+}
+
+.hr {
+  margin: 0px;
 }

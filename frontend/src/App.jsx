@@ -14,6 +14,7 @@ import AuthLayout from "./layouts/AuthLayout";
 import DashboardLayout from "./layouts/DashboardLayout";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Order from "./pages/Dashboard/Order";
+import DashboardContact from "./pages/Dashboard/DashboardContact";
 
 const route = createBrowserRouter(
   createRoutesFromElements(
@@ -25,6 +26,7 @@ const route = createBrowserRouter(
       <Route path="dashboard" element={<DashboardLayout />}>
         <Route index element={<Dashboard />} />
         <Route path="order" element={<Order />} />
+        <Route path="contact" element={<DashboardContact />} />
       </Route>
       <Route index element={<Home />} />
     </Route>
