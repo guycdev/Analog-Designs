@@ -1,0 +1,130 @@
+.dashboardContainer {
+  display: flex;
+  gap: 30px;
+}
+
+.faceContainer {
+  padding: 20px 100px;
+  background-color: #efefef;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+}
+
+.dashboardProfilePhoto {
+  border-radius: 50%;
+  border: 2px solid white;
+  width: 100px;
+}
+
+.infoContainer > em {
+  font-size: 0.8rem;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.miscButtonContainer {
+  display: flex;
+  gap: 20px;
+  margin: 1.25rem 0px;
+}
+
+.miscButtonContainer > a > div {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.miscButtonContainer > a > div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.miscButtonContainer > a > div:hover {
+  background-color: #e3e5ff;
+  border: 2px solid white;
+}
+
+.infoCard {
+  position: absolute;
+  top: -55px;
+  right: -25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.infoCard > p {
+  transition: all 0.3s;
+  width: 15ch;
+  font-size: 0.6rem;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+}
+
+.infoCard > div {
+  cursor: pointer;
+}
+
+.ordersContainer {
+  overflow-y: auto;
+  flex-grow: 1;
+  max-height: 200px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 7.5px 0px;
+  text-align: center;
+}
+
+th {
+  padding: 7.5px 15px;
+}
+
+tr {
+  box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.evenRow {
+  background-color: #e3e5ff;
+}
+
+.evenRow > td {
+  border: none;
+}
+
+table > * {
+  text-align: center;
+}
+
+.chartContainer {
+  height: 70%;
+}

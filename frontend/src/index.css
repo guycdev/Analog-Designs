@@ -2,8 +2,7 @@
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  font-family: "Inter", sans-serif;
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -15,7 +14,7 @@
   --margin: 0rem 3rem;
   --nav-margin: 0.9rem 3rem;
 
-  --primary-color: #fff;
+  --primary-color: #efefef;
   --card-color: #fff;
   --hue: #4153ef;
 
@@ -1481,8 +1480,8 @@ hr {
 }
 
 .dashboard-container {
-  height: 60vh;
   display: flex;
+  gap: 30px;
 }
 
 video {

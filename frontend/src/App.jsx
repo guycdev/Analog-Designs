@@ -12,7 +12,7 @@ import HomeLayout from "./layouts/HomeLayout.jsx";
 import Home from "./pages/Home/Home";
 import AuthLayout from "./layouts/AuthLayout";
 import DashboardLayout from "./layouts/DashboardLayout";
-import Dashboard from "./pages/Dashboard/Dashboard";
+import Dashboard from "./pages/Dashboard/DashboardHome/Dashboard";
 import Order from "./pages/Dashboard/Order";
 import DashboardContact from "./pages/Dashboard/DashboardContact";
 import DashboardHelp from "./pages/Dashboard/DashboardHelp";
