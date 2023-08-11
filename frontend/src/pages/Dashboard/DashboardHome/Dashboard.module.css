@@ -82,6 +82,7 @@
   text-align: center;
   color: white;
   padding: 1rem;
+  z-index: 9999;
 }
 
 .infoCard > div {
