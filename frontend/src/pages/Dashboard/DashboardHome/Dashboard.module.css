@@ -1,6 +1,6 @@
 .dashboardContainer {
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 
 .faceContainer {
@@ -97,6 +97,7 @@
 table {
   width: 100%;
   border-collapse: collapse;
+  border-radius: 10px;
 }
 
 td {
@@ -126,5 +127,42 @@ table > * {
 }
 
 .chartContainer {
-  height: 70%;
+  height: 65%;
+  width: 100%;
+}
+
+.chartContainer > canvas {
+  height: 100%;
+  width: 80%;
+}
+
+.dashboardActionsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 45%;
+  gap: 20px;
+}
+
+.formContent {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin: 20px 0px 0px 0px;
+}
+
+.deploymentControlBar > form > div > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.deploymentControlBar input {
+  margin-left: 10px;
+  width: 60%;
+  padding: 2px 10px;
+}
+
+.deploymentControlBar p {
+  text-wrap: unset;
 }

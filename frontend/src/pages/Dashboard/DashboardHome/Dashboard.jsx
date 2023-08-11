@@ -4,6 +4,7 @@ import styles from "./Dashboard.module.css";
 import FaceCard from "./FaceCard";
 import ActiveOrders from "./ActiveOrders";
 import OrderChart from "./OrderChart";
+import TerminateProject from "./TerminateProject";
 
 export default function Dashboard() {
   const [profile, setProfile] = useState({});
@@ -41,8 +42,9 @@ export default function Dashboard() {
         <FaceCard profile={profile} />
         <ActiveOrders />
       </div>
-      <div>
+      <div className={styles.dashboardActionsContainer}>
         <OrderChart />
+        <TerminateProject />
       </div>
     </div>
   );

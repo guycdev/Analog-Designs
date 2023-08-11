@@ -4,9 +4,9 @@ import DashboardNav from "../templates/DashboardNav";
 
 export default function DashboardLayout() {
   return (
-    <section className="dashboard-container">
+    <main className="container dashboard-container">
       <DashboardNav />
       <Outlet />
-    </section>
+    </main>
   );
 }

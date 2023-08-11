@@ -52,7 +52,7 @@ export default function ActiveOrders(props) {
             <th>Order ID</th>
             <th>Order Information</th>
             <th>Domain</th>
-            <th>Is Active ?</th>
+            <th>Active ?</th>
           </tr>
         </thead>
         <tbody>{elementArr}</tbody>

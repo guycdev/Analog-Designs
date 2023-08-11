@@ -24,6 +24,7 @@ ChartJS.register(
 
 export const options = {
   responsive: true,
+  maintainAspectRatio: false,
   interaction: {
     mode: "index",
     intersect: false,
@@ -76,7 +77,7 @@ export const data = {
 export default function OrderChart() {
   return (
     <div className={`card ${styles.chartContainer}`}>
-      <Line options={options} data={data} height={700} width={700} />
+      <Line options={options} data={data} />
     </div>
   );
 }
