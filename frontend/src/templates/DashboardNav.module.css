@@ -4,7 +4,6 @@
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .dashboardNavContainer > h3 {
@@ -14,22 +13,24 @@
 }
 
 .dashboardNavContainer > nav {
+  margin: 20px 0px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
-.dashboardNavContainer > nav > a {
-  padding: 12px 30px;
-}
-
-.dashboardNavContainer > nav > *,
-.dashboardHelpContainer > * {
+.dashboardNavContainer > nav > div > a {
+  padding: 10px 20px;
+  margin: 10px 0px;
   display: flex;
   align-items: center;
   gap: 10px;
+  transition: all 0.3s;
 }
 
-.activeDashboardSelection {
+.activeDashboardSelection,
+.dashboardNavContainer > nav > div > a:hover {
   background-color: #bdc3fe;
   border-radius: 500px;
 }

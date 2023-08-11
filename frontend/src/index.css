@@ -1484,3 +1484,7 @@ hr {
   height: 60vh;
   display: flex;
 }
+
+video {
+  border-radius: 5px;
+}
