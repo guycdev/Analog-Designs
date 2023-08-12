@@ -128,7 +128,6 @@ form > p,
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 3rem 0rem;
 }
 
 /**/
@@ -649,7 +648,6 @@ form .btn-container {
   align-items: start;
   gap: 30px 50px;
   justify-content: space-between;
-  margin: 3rem 0;
   padding: 20px;
 }
 
@@ -1496,4 +1494,16 @@ video {
 .dashboard-container {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
+}
+.dashboard-container > div:first-child {
+  flex: 0.5;
+}
+
+.dashboard-container > div:nth-child(2) {
+  flex: 1.5;
+}
+
+.dashboard-container > div:nth-child(3) {
+  flex: 2;
 }
