@@ -43,8 +43,6 @@ export default function AboutUs(props) {
           underwriters' expectations, ensuring a seamless mortgage approval
           process.
         </p>
-        <br />
-        <br />
         <p className={styles.boxEffect}>
           © 2023 Analog Designs. All Rights Reserved.
         </p>

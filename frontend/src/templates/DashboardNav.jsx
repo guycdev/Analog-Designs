@@ -7,6 +7,7 @@ import grid from "../assets/grid.svg";
 import send from "../assets/send.svg";
 import dash from "../assets/dash-circle.svg";
 import info from "../assets/info.svg";
+import quotes from "../assets/quotes.svg";
 
 export default function DashboardLayout() {
   return (
@@ -44,6 +45,15 @@ export default function DashboardLayout() {
           </NavLink>
         </div>
         <div className={styles.dashboardHelpContainer}>
+          <NavLink
+            to="help"
+            className={({ isActive }) => {
+              return isActive ? styles.activeDashboardSelection : "";
+            }}
+          >
+            <ReactSVG src={quotes} />
+            Testimonials
+          </NavLink>
           <NavLink
             to="help"
             className={({ isActive }) => {

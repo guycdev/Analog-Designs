@@ -37,7 +37,7 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <div className={styles.dashboardContainer}>
+    <>
       <div className="card">
         <FaceCard profile={profile} />
         <ActiveOrders />
@@ -46,6 +46,16 @@ export default function Dashboard() {
         <OrderChart />
         <TerminateProject />
       </div>
-    </div>
+    </>
+    // <div className={styles.dashboardContainer}>
+    //   <div className="card">
+    //     <FaceCard profile={profile} />
+    //     <ActiveOrders />
+    //   </div>
+    //   <div className={styles.dashboardActionsContainer}>
+    //     <OrderChart />
+    //     <TerminateProject />
+    //   </div>
+    // </div>
   );
 }

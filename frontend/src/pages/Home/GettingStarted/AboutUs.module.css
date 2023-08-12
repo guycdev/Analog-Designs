@@ -4,13 +4,16 @@
   background-size: cover;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: strech;
   padding: 100px 50px;
   width: 100%;
 }
 
 .contentContainer {
   width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .boxEffect,
@@ -28,7 +31,6 @@
 }
 
 .contentContainer > h2 {
-  margin-bottom: 2rem;
   font-size: 2rem;
   font-size: 28px;
   font-weight: 500;

@@ -17,10 +17,10 @@ export default function HomeLayout() {
   }, [location.pathname]);
 
   return (
-    <>
+    <div className="main-container">
       <Nav logo={logo} name="Analog Designs" />
       <Outlet />
       <Footer logo="Analog Designs" />
-    </>
+    </div>
   );
 }

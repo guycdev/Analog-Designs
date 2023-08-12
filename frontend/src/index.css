@@ -11,8 +11,8 @@
   --secondary-font: "Roboto", sans-serif;
 
   --max-width: 1500px;
-  --margin: 0rem 3rem;
-  --nav-margin: 0.9rem 3rem;
+  --margin: 1rem 6rem;
+  --nav-margin: 1.25rem 3rem;
 
   --primary-color: #efefef;
   --card-color: #fff;
@@ -32,24 +32,25 @@ body {
 
 #root {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.container {
-  scrollbar-width: none;
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
   max-width: var(--max-width);
-  margin: 7rem 3rem 0rem 3rem;
   padding: var(--margin);
 }
 
 section {
-  margin: 8.5rem auto;
+  margin: 4.4rem auto;
 }
 
 section:first-child {
-  margin: 0;
+  margin: 0.9rem auto;
 }
 
 /*Utility classes*/
@@ -191,18 +192,27 @@ p {
 
 /*Nav*/
 
-.nav-container {
-  position: fixed;
+/*Working*/
+/* .nav-container {
   z-index: 10;
-  width: 100%;
-  max-width: 1700px;
   transition: all 0.5s;
+  margin: 0.9rem 0rem;
+  width: inherit;
+} */
+
+.nav-container {
+  position: sticky;
+  max-width: var(--max-width);
+  z-index: 10;
+  transition: all 0.5s;
+  top: 0;
+  margin: 0px 0px 1.25rem 0px;
 }
 
 .desktop-nav {
   display: flex;
   align-items: center;
-  margin: var(--nav-margin);
+  border-radius: 10px;
 }
 
 .logos {
@@ -1389,7 +1399,7 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 7rem 3rem 0 3rem;
+  margin: 0;
 }
 
 .auth-form {
@@ -1479,11 +1489,11 @@ hr {
   z-index: 1;
 }
 
-.dashboard-container {
-  display: flex;
-  gap: 20px;
-}
-
 video {
   border-radius: 5px;
+}
+
+.dashboard-container {
+  display: flex;
+  justify-content: space-between;
 }

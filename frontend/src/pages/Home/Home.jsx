@@ -7,11 +7,22 @@ import ContactForm from "./ContactForm/ContactForm";
 import GettingStarted from "./GettingStarted/GettingStarted";
 import Steps from "./Steps/Steps";
 import Testimonials from "./Testimonials/Testimonials";
+import Swag from "../../components/Swag";
+import { information } from "./utils/information";
 
 function App() {
   return (
     <main className="container">
       <Hero />
+      <Swag
+        id="features"
+        featureArr={information}
+        style="swag-container"
+        tag={{
+          name: "Features",
+          color: "#7070ea",
+        }}
+      />
       <GettingStarted />
       <Steps />
       <VideoObject

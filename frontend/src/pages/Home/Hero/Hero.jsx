@@ -35,7 +35,7 @@ export default function Hero(props) {
         <MainCard />
         <FloatingImages />
       </div>
-      <Swag
+      {/* <Swag
         id="features"
         featureArr={information}
         style="swag-container"
@@ -43,7 +43,7 @@ export default function Hero(props) {
           name: "Features",
           color: "#7070ea",
         }}
-      />
+      /> */}
     </motion.section>
   );
 }
