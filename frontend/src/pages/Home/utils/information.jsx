@@ -104,94 +104,94 @@ export const features = [
       </p>
     ),
   },
-  {
-    id: 6,
-    icon: palette,
-    header: "Vibrant Color Mastery",
-    description: (
-      <p>
-        Use colors to <span>evoke emotions</span> and <span>captivate</span>.
-      </p>
-    ),
-  },
-  {
-    id: 7,
-    icon: phone,
-    header: "Seamless Multi-Device Experience",
-    description: (
-      <p>
-        Ensure designs <span>adapt flawlessly</span> across devices.
-      </p>
-    ),
-  },
-  {
-    id: 8,
-    icon: chart,
-    header: "Data-Driven Design",
-    description: (
-      <p>
-        <span>Leverage analytics</span> for <span>optimized designs</span>.
-      </p>
-    ),
-  },
-  {
-    id: 9,
-    icon: shield,
-    header: "Security-focused Design",
-    description: (
-      <p>
-        <span>Implement secure</span> design practices.
-      </p>
-    ),
-  },
-  {
-    id: 10,
-    icon: handshake,
-    header: "Collaborative Design Process",
-    description: (
-      <p>
-        Engage in <span>collaborative design</span> for success.
-      </p>
-    ),
-  },
-  {
-    id: 11,
-    icon: globe,
-    header: "Global Design Standards",
-    description: (
-      <p>
-        Adhere to <span>universal design standards</span>.
-      </p>
-    ),
-  },
-  {
-    id: 12,
-    icon: pencil,
-    header: "Custom-Tailored Designs",
-    description: (
-      <p>
-        Create <span>unique designs</span> for your brand.
-      </p>
-    ),
-  },
-  {
-    id: 13,
-    icon: chat,
-    header: "Clear Communication",
-    description: (
-      <p>
-        Promote <span>clear communication</span> in designs.
-      </p>
-    ),
-  },
-  {
-    id: 14,
-    icon: speed,
-    header: "Fast and Efficient Design",
-    description: (
-      <p>
-        <span>Optimize</span> designs for <span>speed and efficiency</span>.
-      </p>
-    ),
-  },
+  // {
+  //   id: 6,
+  //   icon: palette,
+  //   header: "Vibrant Color Mastery",
+  //   description: (
+  //     <p>
+  //       Use colors to <span>evoke emotions</span> and <span>captivate</span>.
+  //     </p>
+  //   ),
+  // },
+  // {
+  //   id: 7,
+  //   icon: phone,
+  //   header: "Seamless Multi-Device Experience",
+  //   description: (
+  //     <p>
+  //       Ensure designs <span>adapt flawlessly</span> across devices.
+  //     </p>
+  //   ),
+  // },
+  // {
+  //   id: 8,
+  //   icon: chart,
+  //   header: "Data-Driven Design",
+  //   description: (
+  //     <p>
+  //       <span>Leverage analytics</span> for <span>optimized designs</span>.
+  //     </p>
+  //   ),
+  // },
+  // {
+  //   id: 9,
+  //   icon: shield,
+  //   header: "Security-focused Design",
+  //   description: (
+  //     <p>
+  //       <span>Implement secure</span> design practices.
+  //     </p>
+  //   ),
+  // },
+  // {
+  //   id: 10,
+  //   icon: handshake,
+  //   header: "Collaborative Design Process",
+  //   description: (
+  //     <p>
+  //       Engage in <span>collaborative design</span> for success.
+  //     </p>
+  //   ),
+  // },
+  // {
+  //   id: 11,
+  //   icon: globe,
+  //   header: "Global Design Standards",
+  //   description: (
+  //     <p>
+  //       Adhere to <span>universal design standards</span>.
+  //     </p>
+  //   ),
+  // },
+  // {
+  //   id: 12,
+  //   icon: pencil,
+  //   header: "Custom-Tailored Designs",
+  //   description: (
+  //     <p>
+  //       Create <span>unique designs</span> for your brand.
+  //     </p>
+  //   ),
+  // },
+  // {
+  //   id: 13,
+  //   icon: chat,
+  //   header: "Clear Communication",
+  //   description: (
+  //     <p>
+  //       Promote <span>clear communication</span> in designs.
+  //     </p>
+  //   ),
+  // },
+  // {
+  //   id: 14,
+  //   icon: speed,
+  //   header: "Fast and Efficient Design",
+  //   description: (
+  //     <p>
+  //       <span>Optimize</span> designs for <span>speed and efficiency</span>.
+  //     </p>
+  //   ),
+  // },
 ];

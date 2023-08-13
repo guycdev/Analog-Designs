@@ -1,4 +1,5 @@
 .dashboardNavContainer {
+  /* background-image: url("../../assets/outer-waves.svg"); */
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
@@ -43,4 +44,10 @@
 
 .hr {
   margin: 0px;
+}
+
+.dashboardNavContainer a > div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

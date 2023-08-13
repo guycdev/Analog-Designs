@@ -2,12 +2,12 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./DashboardNav.module.css";
 import { ReactSVG } from "react-svg";
-import home from "../assets/home.svg";
-import grid from "../assets/grid.svg";
-import send from "../assets/send.svg";
-import dash from "../assets/dash-circle.svg";
-import info from "../assets/info.svg";
-import quotes from "../assets/quotes.svg";
+import home from "../../assets/home.svg";
+import grid from "../../assets/grid.svg";
+import send from "../../assets/send.svg";
+import dash from "../../assets/dash-circle.svg";
+import info from "../../assets/info.svg";
+import testimonials from "../../assets/testimonials.svg";
 
 export default function DashboardLayout() {
   return (
@@ -51,7 +51,7 @@ export default function DashboardLayout() {
               return isActive ? styles.activeDashboardSelection : "";
             }}
           >
-            <ReactSVG src={quotes} />
+            <ReactSVG src={testimonials} />
             Testimonials
           </NavLink>
           <NavLink
