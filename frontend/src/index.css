@@ -2,8 +2,8 @@
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  font-family: "Nunito", sans-serif;
   scroll-behavior: smooth;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 :root {

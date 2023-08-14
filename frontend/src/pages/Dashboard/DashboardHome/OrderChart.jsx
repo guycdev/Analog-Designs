@@ -23,6 +23,27 @@ ChartJS.register(
 );
 
 export const options = {
+  transitions: {
+    show: {
+      animations: {
+        x: {
+          from: 0,
+        },
+        y: {
+          from: 0,
+        },
+      },
+    },
+  },
+  animations: {
+    tension: {
+      duration: 1000,
+      easing: "easeInQuad",
+      from: 1,
+      to: 0,
+      loop: true,
+    },
+  },
   responsive: true,
   maintainAspectRatio: false,
   interaction: {
@@ -33,6 +54,8 @@ export const options = {
   plugins: {
     title: {
       display: true,
+      text: "Account Analytics",
+      color: "#333",
     },
   },
   scales: {
@@ -59,14 +82,14 @@ export const data = {
   datasets: [
     {
       label: "Count of Orders",
-      data: [0, 2, 6, 7],
+      data: [0, 2, 6, 7, 11, 12, 13],
       borderColor: "#d7d8f2",
       backgroundColor: "#d7d8f2",
       yAxisID: "y",
     },
     {
       label: "Sum of Cost of Orders",
-      data: [0, 484, 1286, 1502],
+      data: [0, 484, 1286, 1502, 1750, 1975, 2110],
       borderColor: "#b5bdff",
       backgroundColor: "#b5bdff",
       yAxisID: "y1",
