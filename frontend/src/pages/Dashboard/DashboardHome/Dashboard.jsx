@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import Card from "../../../components/Card";
 import styles from "./Dashboard.module.css";
 import FaceCard from "./FaceCard";
 import ActiveOrders from "./ActiveOrders";
-import OrderChart from "./OrderChart";
+import OrderChart from "./DashboardChart";
 import TerminateProject from "./TerminateProject";
+import Chart from "../../../components/Chart";
 
 export default function Dashboard() {
   const [profile, setProfile] = useState({});
@@ -44,7 +44,26 @@ export default function Dashboard() {
       </div>
       <div className={styles.dashboardActionsContainer}>
         <OrderChart />
-        <TerminateProject />
+        <div>
+          <TerminateProject />
+          <div className="card">
+            <Chart
+              data={{
+                labels: ["Active Orders", "Inactive Orders"],
+                datasets: [
+                  {
+                    label: "Count",
+                    data: [10, 15],
+                    backgroundColor: ["#acb5fa", "#d7d8f2"],
+                    borderWidth: 2,
+                  },
+                ],
+              }}
+              legend="centre"
+              title="Order Distribution"
+            />
+          </div>
+        </div>
       </div>
     </>
     // <div className={styles.dashboardContainer}>

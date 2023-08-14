@@ -14,7 +14,7 @@ import AuthLayout from "./layouts/AuthLayout";
 import DashboardLayout from "./layouts/DashboardLayout";
 import Dashboard from "./pages/Dashboard/DashboardHome/Dashboard";
 import Order from "./pages/Dashboard/Order";
-import DashboardContact from "./pages/Dashboard/DashboardContact";
+import DashboardContact from "./pages/Dashboard/DashboardContact/DashboardContact";
 import DashboardHelp from "./pages/Dashboard/DashboardHelp";
 
 const route = createBrowserRouter(

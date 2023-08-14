@@ -60,6 +60,7 @@ export default function AboutUs(props) {
               },
             ],
           }}
+          title="Consumer Online Research Habits in 2019"
         />
         <Chart
           data={{
@@ -74,6 +75,7 @@ export default function AboutUs(props) {
             ],
           }}
           rotate={true}
+          title="Consumer Online Research Habits in 2019"
         />
       </div>
       {/* <img src={mac} alt="" className={styles.mac} /> */}
