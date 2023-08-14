@@ -93,7 +93,7 @@
 .ordersContainer {
   overflow-y: auto;
   flex-grow: 1;
-  max-height: 350px;
+  max-height: 410px;
 }
 
 table {
