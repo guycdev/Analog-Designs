@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Dashboard.module.css";
 import Button from "../../../components/Button";
+import terminate from "../../../assets/terminate.svg";
 
 export default function TerminateProject(props) {
   return (
@@ -20,7 +21,11 @@ export default function TerminateProject(props) {
             <input type="number" id="orderID" placeholder="Your order..." />
           </div>
         </div>
-        <Button buttonType="primary-btn" text="Terminate Order" />
+        <Button
+          buttonType="primary-btn"
+          text="Terminate Order"
+          img={terminate}
+        />
       </form>
     </div>
   );

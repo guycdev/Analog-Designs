@@ -59,8 +59,7 @@ export default function Dashboard() {
                   },
                 ],
               }}
-              legend="centre"
-              title="Order Distribution"
+              legend="top"
             />
           </div>
         </div>
