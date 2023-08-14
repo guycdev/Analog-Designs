@@ -22,7 +22,7 @@ ChartJS.register(
   Legend
 );
 
-export const options = {
+const options = {
   transitions: {
     show: {
       animations: {
@@ -77,7 +77,7 @@ export const options = {
 
 const labels = ["January", "February", "March", "April", "May", "June", "July"];
 
-export const data = {
+const data = {
   labels,
   datasets: [
     {

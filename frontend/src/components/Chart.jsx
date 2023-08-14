@@ -4,7 +4,7 @@ import { Doughnut } from "react-chartjs-2";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 export default function Chart(props) {
-  const { data, rotate } = props;
+  const { data, rotate, title, legend } = props;
 
   return (
     <div>
@@ -15,11 +15,11 @@ export default function Chart(props) {
           responsive: true,
           plugins: {
             legend: {
-              position: "bottom",
+              position: legend,
             },
             title: {
               display: true,
-              text: "Consumer Online Research Habits in 2019",
+              text: title,
             },
           },
         }}
