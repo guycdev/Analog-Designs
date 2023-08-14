@@ -13,7 +13,7 @@ import Home from "./pages/Home/Home";
 import AuthLayout from "./layouts/AuthLayout";
 import DashboardLayout from "./layouts/DashboardLayout";
 import Dashboard from "./pages/Dashboard/DashboardHome/Dashboard";
-import Order from "./pages/Dashboard/Order";
+import DashboardOrder from "./pages/Dashboard/DashboardOrder/DashboardOrder";
 import DashboardContact from "./pages/Dashboard/DashboardContact/DashboardContact";
 import DashboardHelp from "./pages/Dashboard/DashboardHelp";
 
@@ -26,7 +26,7 @@ const route = createBrowserRouter(
       </Route>
       <Route path="/dashboard" element={<DashboardLayout />}>
         <Route index element={<Dashboard />} />
-        <Route path="order" element={<Order />} />
+        <Route path="order" element={<DashboardOrder />} />
         <Route path="contact" element={<DashboardContact />} />
         <Route path="help" element={<DashboardHelp />} />
       </Route>

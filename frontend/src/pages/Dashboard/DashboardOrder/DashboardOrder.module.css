@@ -1,0 +1,47 @@
+.lastColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.servicesContainer {
+  height: 60%;
+}
+
+.calendarContainer {
+  height: 40%;
+}
+
+.orderInformationForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.orderFormHeadings {
+  border-bottom: thin solid black;
+  padding: 0.5rem 0rem;
+  margin: 0rem 0rem 1rem 0rem;
+  text-align: center;
+}
+
+.inputContainer > * {
+  display: block;
+  margin: 10px 0px;
+}
+
+.inputContainer > input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: thin solid #d7d8f2;
+  box-shadow: 0 -2px 0 hsla(0, 0%, 100%, 0.15),
+    inset 0 2px 2px hsla(0, 0%, 0%, 0.1);
+  transition: all 0.2s;
+}
+
+.orderInformationForm form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

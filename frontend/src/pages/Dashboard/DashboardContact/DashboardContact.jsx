@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function DashboardContact() {
-  return <h1>Hello form dashboard contact</h1>;
+  return <h1>Contact</h1>;
 }
