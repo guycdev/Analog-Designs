@@ -1,0 +1,62 @@
+.container {
+  background-image: url(../../../assets/outer-waves.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: strech;
+  padding: 100px 50px;
+  width: 100%;
+}
+
+.contentContainer {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.boxEffect,
+.chartContainer > * {
+  background-color: #f7f7f7;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.chartContainer > * {
+  margin: 20px 0px;
+  height: 310px;
+  width: 310px;
+}
+
+.contentContainer > h2 {
+  font-size: 2rem;
+  font-size: 28px;
+  font-weight: 500;
+  color: #333;
+  letter-spacing: -0.5px;
+  line-height: 36px;
+  background-color: #f7f7f7;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  border-radius: 5px;
+  text-wrap: unset;
+}
+
+.contentContainer > p {
+  line-height: 1.7;
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 0.15ch;
+}
+
+@media (max-width: 940px) {
+  .container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .contentContainer {
+    width: 90%;
+  }
+}

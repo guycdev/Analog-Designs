@@ -5,20 +5,30 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
-  useLocation,
 } from "react-router-dom";
-import Register from "./components/pages/Auth/Register/Register";
-import Login from "./components/pages/Auth/Login/Login";
+import Register from "./pages/Auth/Register/Register";
+import Login from "./pages/Auth/Login/Login";
 import HomeLayout from "./layouts/HomeLayout.jsx";
-import Home from "./components/pages/Home/Home";
+import Home from "./pages/Home/Home";
 import AuthLayout from "./layouts/AuthLayout";
+import DashboardLayout from "./layouts/DashboardLayout";
+import Dashboard from "./pages/Dashboard/DashboardHome/Dashboard";
+import Order from "./pages/Dashboard/Order";
+import DashboardContact from "./pages/Dashboard/DashboardContact";
+import DashboardHelp from "./pages/Dashboard/DashboardHelp";
 
 const route = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<HomeLayout />}>
-      <Route path="account" element={<AuthLayout />}>
+      <Route path="/account" element={<AuthLayout />}>
         <Route index element={<Login />} />
         <Route path="register" element={<Register />} />
+      </Route>
+      <Route path="/dashboard" element={<DashboardLayout />}>
+        <Route index element={<Dashboard />} />
+        <Route path="order" element={<Order />} />
+        <Route path="contact" element={<DashboardContact />} />
+        <Route path="help" element={<DashboardHelp />} />
       </Route>
       <Route index element={<Home />} />
     </Route>

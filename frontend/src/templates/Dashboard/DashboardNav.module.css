@@ -1,0 +1,53 @@
+.dashboardNavContainer {
+  /* background-image: url("../../assets/outer-waves.svg"); */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.25);
+}
+
+.dashboardNavContainer > h3 {
+  padding: 15px 0px;
+  border-bottom: thin solid #333;
+  text-align: center;
+  color: #333;
+}
+
+.dashboardNavContainer > nav {
+  margin: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  color: #333;
+}
+
+.dashboardNavContainer > nav > div > a {
+  padding: 10px 20px;
+  margin: 12px 0px;
+  width: 20ch;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 500px;
+  transition: all 0.3s;
+}
+
+.dashboardNavContainer > nav > div > a.activeDashboardSelection,
+.dashboardNavContainer > nav > div > a:hover {
+  background-color: #e3e5ff;
+  /* box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.hr {
+  margin: 0px;
+}
+
+.dashboardNavContainer a > div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
