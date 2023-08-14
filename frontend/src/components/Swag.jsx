@@ -18,9 +18,5 @@ export default function Swag(props) {
     );
   });
 
-  return (
-    <motion.div className="feature-container" id={id}>
-      <div className={style}>{elementArr}</div>
-    </motion.div>
-  );
+  return <section className={style}>{elementArr}</section>;
 }

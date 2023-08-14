@@ -4,12 +4,12 @@
   gap: 1.25rem;
 }
 
-.servicesContainer {
-  height: 60%;
+.serviceContainer {
+  position: relative;
 }
 
 .calendarContainer {
-  height: 40%;
+  height: 50%;
 }
 
 .orderInformationForm {
@@ -30,7 +30,9 @@
   margin: 10px 0px;
 }
 
-.inputContainer > input {
+.inputContainer > input,
+.serviceInformationHeadings,
+textarea {
   width: 100%;
   padding: 10px;
   border-radius: 10px;
@@ -44,4 +46,73 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+.addService {
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
+  transform: scale(1.25);
+  cursor: pointer;
+}
+
+.help {
+  position: absolute;
+  top: 30px;
+  right: -125px;
+  transform: scale(1.25);
+  cursor: pointer;
+}
+
+.help > p {
+  transition: all 0.3s;
+  width: 25ch;
+  font-size: 0.6rem;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+  z-index: 99999;
+}
+
+.serviceInformationHeadings {
+  width: 100%;
+}
+
+.serviceForm > .inputContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.serviceForm > .inputContainer > div {
+  width: 100%;
+}
+
+.serviceForm textarea {
+  height: 80px;
+  width: 100%;
+}
+
+.serviceScroller {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.serviceScroller div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.serviceScrollButtons {
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.serviceScrollButtons:hover {
+  transform: scale(1.25);
 }

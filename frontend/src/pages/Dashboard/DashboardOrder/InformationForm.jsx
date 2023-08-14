@@ -1,15 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./DashboardOrder.module.css";
 import ProgressBar from "../../../components/ProgressBar";
 
-export default function InformationForm() {
-  const [formData, setFormData] = useState({
-    companyName: "",
-    industry: "",
-    ownerEmail: "",
-    ownerName: "",
-    ownerPhone: "",
-  });
+export default function InformationForm(props) {
+  const { formData, setFormData } = props;
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -24,7 +18,7 @@ export default function InformationForm() {
 
   return (
     <div className={`card ${styles.orderInformationForm}`}>
-      <ProgressBar formData={formData} formFieldCount={10} />
+      <ProgressBar formData={formData} formFieldCount={7} />
       <div className={styles.orderFormHeadings}>
         <h2>Company Information</h2>
         <p>Input Company / Order Information</p>
