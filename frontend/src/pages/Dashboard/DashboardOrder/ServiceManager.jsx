@@ -123,12 +123,6 @@ export default function ServiceManager(props) {
         </div>
       </div>
       <div>
-        <ReactSVG
-          src={plus}
-          beforeInjection={(svg) => {
-            svg.classList.add(styles.addService);
-          }}
-        />
         <div
           className={styles.help}
           onMouseEnter={() => setIsHovered((prev) => !prev)}
@@ -136,7 +130,7 @@ export default function ServiceManager(props) {
         >
           <ReactSVG src={info} />
           <p style={isHovered ? { opacity: "1" } : { opacity: "0" }}>
-            Use the + button below to register a new service
+            Use the page arrows to add new services or edit previous ones
           </p>
         </div>
       </div>

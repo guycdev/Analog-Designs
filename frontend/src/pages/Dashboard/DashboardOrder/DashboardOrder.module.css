@@ -48,18 +48,10 @@ textarea {
   height: 100%;
 }
 
-.addService {
-  position: absolute;
-  bottom: 18px;
-  right: 18px;
-  transform: scale(1.25);
-  cursor: pointer;
-}
-
 .help {
   position: absolute;
-  top: 30px;
-  right: -125px;
+  top: 20px;
+  right: 20px;
   transform: scale(1.25);
   cursor: pointer;
 }
@@ -73,7 +65,9 @@ textarea {
   text-align: center;
   color: white;
   padding: 1rem;
+  position: absolute;
   z-index: 99999;
+  right: 0px;
 }
 
 .serviceInformationHeadings {
