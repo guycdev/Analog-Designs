@@ -22,11 +22,9 @@ export default function DashboardOrder() {
       },
     ],
     dates: {
-      // Placing 'end' before 'start' as a workaround for an edge case in the form progress calculation.
-      // In the isObjectEmpty function, properties are checked in order, and we want to ensure 'start'
-      // (which has a default value) doesn't prematurely indicate progress before the user has interacted with the form.
+      //Edge case to handle initial value of start date is handled inside the ProgressBar component
+      start: new Date(),
       end: "",
-      start: "",
     },
   });
 

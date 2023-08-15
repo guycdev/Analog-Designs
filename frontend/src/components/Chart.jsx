@@ -4,6 +4,7 @@ import { Doughnut } from "react-chartjs-2";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 
 ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
+
 export default function Chart(props) {
   const { data, rotate, title, legend } = props;
 

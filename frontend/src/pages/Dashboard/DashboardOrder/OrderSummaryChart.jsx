@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./DashboardOrder.module.css";
+import Chart from "../../../components/Chart";
 
 export default function OrderSummaryChart(props) {
   const { end, start } = props;
@@ -31,7 +32,6 @@ export default function OrderSummaryChart(props) {
       months += endDate.getMonth();
       return months == 0 ? 1 : Math.ceil(months);
     }
-
     if (end) {
       const months = orderTotalCalculator();
       setOrderTotal(200 + months * 40);
@@ -40,11 +40,24 @@ export default function OrderSummaryChart(props) {
     }
   }, [new Date(end).toDateString()]);
 
-  console.log(orderTotal);
-
   return (
-    <div className={`card ${styles.chartContainer}`}>
-      <h2>{displayedOrderTotal}</h2>
+    <div className={`card `}>
+      <p>Order breakdown based on package and duration</p>
+      <Chart
+        title="Order Summary"
+        data={{
+          labels: ["Package base", "Hosting costs"],
+          datasets: [
+            {
+              label: "Price",
+              data: [200, orderTotal - 200],
+              backgroundColor: ["#acb5fa", "#d7d8f2"],
+              borderWidth: 2,
+            },
+          ],
+        }}
+      />
+      <h2>Order total: ${displayedOrderTotal}.00</h2>
     </div>
   );
 }

@@ -120,6 +120,19 @@ textarea,
 .bottomRowLastColumn > * {
   flex: 1;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottomRowLastColumn p {
+  text-wrap: unset;
+  text-align: center;
+}
+
+.bottomRowLastColumn > * {
+  width: 100%;
 }
 
 .dateContainer {
