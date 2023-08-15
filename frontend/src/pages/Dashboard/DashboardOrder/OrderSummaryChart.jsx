@@ -34,10 +34,9 @@ export default function OrderSummaryChart(props) {
 
     if (end) {
       const months = orderTotalCalculator();
-      console.log(months);
-      setOrderTotal((prev) => {
-        return prev + months * 40;
-      });
+      setOrderTotal(200 + months * 40);
+    } else {
+      setOrderTotal(200);
     }
   }, [new Date(end).toDateString()]);
 
