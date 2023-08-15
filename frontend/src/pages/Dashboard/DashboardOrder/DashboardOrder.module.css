@@ -32,7 +32,8 @@
 
 .inputContainer > input,
 .serviceInformationHeadings,
-textarea {
+textarea,
+.dateContainer > input {
   width: 100%;
   padding: 10px;
   border-radius: 10px;
@@ -109,4 +110,21 @@ textarea {
 
 .serviceScrollButtons:hover {
   transform: scale(1.25);
+}
+
+.bottomRowLastColumn {
+  display: flex;
+  gap: 20px;
+}
+
+.bottomRowLastColumn > * {
+  flex: 1;
+  height: 100%;
+}
+
+.dateContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 0px;
 }

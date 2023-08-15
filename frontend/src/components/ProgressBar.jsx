@@ -5,7 +5,7 @@ export default function ProgressBar(props) {
 
   function formProgress() {
     let count = 0;
-    Object.values(formData).forEach((prev, index) => {
+    Object.values(formData).forEach((prev) => {
       if (Array.isArray(prev)) {
         return isObjectEmpty(prev[0]) ? null : count++;
       }
