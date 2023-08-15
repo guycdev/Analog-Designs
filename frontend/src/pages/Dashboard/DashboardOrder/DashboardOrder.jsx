@@ -34,14 +34,20 @@ export default function DashboardOrder() {
     <>
       <InformationForm formData={formData} setFormData={setFormData} />
       <div className={styles.lastColumn}>
-        <ServiceManager formData={formData} setFormData={setFormData} />
+        <ServiceManager
+          services={formData.services}
+          setFormData={setFormData}
+        />
         <div className={styles.bottomRowLastColumn}>
           <Calendar
             startDate={formData.dates.start}
             endDate={formData.dates.end}
             setFormData={setFormData}
           />
-          <OrderSummaryChart />
+          <OrderSummaryChart
+            end={formData.dates.end}
+            start={formData.dates.start}
+          />
         </div>
       </div>
     </>
