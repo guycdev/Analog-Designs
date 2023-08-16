@@ -35,22 +35,13 @@ export default function DashboardLayout() {
             Place Order
           </NavLink>
           <NavLink
-            to="help"
-            className={({ isActive }) => {
-              return isActive ? styles.activeDashboardSelection : "";
-            }}
-          >
-            <ReactSVG src={testimonials} />
-            Testimonials
-          </NavLink>
-          <NavLink
             to="contact"
             className={({ isActive }) => {
               return isActive ? styles.activeDashboardSelection : "";
             }}
           >
             <ReactSVG src={send} />
-            Contact Us
+            Testimonials & Support
           </NavLink>
         </div>
         <div className={styles.dashboardHelpContainer}>
