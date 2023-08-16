@@ -35,7 +35,7 @@ export default function DashboardLayout() {
             Place Order
           </NavLink>
           <NavLink
-            to="contact"
+            to="support"
             className={({ isActive }) => {
               return isActive ? styles.activeDashboardSelection : "";
             }}

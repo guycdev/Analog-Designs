@@ -1,0 +1,7 @@
+.contactContainer > div > div {
+  display: none;
+}
+
+.contactContainer > .contact-card {
+  display: unset;
+}
