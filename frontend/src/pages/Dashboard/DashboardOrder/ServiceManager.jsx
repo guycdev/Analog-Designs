@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import styles from "./DashboardOrder.module.css";
-import plus from "../../../assets/plus.svg";
 import info from "../../../assets/info.svg";
 import { ReactSVG } from "react-svg";
 import rightArrow from "../../../assets/rightArrow.svg";
 import leftArrow from "../../../assets/leftArrow.svg";
 
 export default function ServiceManager(props) {
-  const { formData, setFormData } = props;
+  const { services, setFormData } = props;
 
   const [activeServices, setActiveServices] = useState(1);
 
@@ -36,7 +35,7 @@ export default function ServiceManager(props) {
   function addService() {
     setActiveServices((prev) => prev + 1);
     setFormData((prev) => {
-      const servicesArr = prev.services;
+      const servicesArr = services;
       servicesArr.push({
         serviceName: "",
         servicePrice: "",
@@ -64,40 +63,38 @@ export default function ServiceManager(props) {
         <p>Input Company Services / Offerings</p>
       </div>
       <form className={styles.serviceForm}>
-        <div className={styles.inputContainer}>
+        <div className={styles.serviceInformationContainer}>
           <div>
             <label htmlFor="service-name">Service Name:</label>
             <input
               name="serviceName"
-              value={formData.services[activeServices - 1].serviceName}
+              value={services[activeServices - 1].serviceName}
               type="text"
               id="service-name"
               required
               placeholder="Name..."
               onChange={handleChange}
-              className={styles.serviceInformationHeadings}
             />
           </div>
           <div>
             <label htmlFor="service-price">Price:</label>
             <input
               name="servicePrice"
-              value={formData.services[activeServices - 1].servicePrice}
+              value={services[activeServices - 1].servicePrice}
               type="text"
               id="service-price"
               required
               placeholder="$ / hour..."
               onChange={handleChange}
-              className={styles.serviceInformationHeadings}
             />
           </div>
         </div>
-        <div>
+        <div className={styles.inputContainer}>
           <label htmlFor="service-description">Service Description:</label>
           <textarea
             name="serviceDescription"
             id="service-description"
-            value={formData.services[activeServices - 1].serviceDescription}
+            value={services[activeServices - 1].serviceDescription}
             onChange={handleChange}
             placeholder="Description..."
           ></textarea>

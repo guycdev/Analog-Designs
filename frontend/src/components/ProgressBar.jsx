@@ -5,7 +5,7 @@ export default function ProgressBar(props) {
 
   function formProgress() {
     let count = 0;
-    Object.values(formData).forEach((prev, index) => {
+    Object.values(formData).forEach((prev) => {
       if (Array.isArray(prev)) {
         return isObjectEmpty(prev[0]) ? null : count++;
       }
@@ -21,7 +21,10 @@ export default function ProgressBar(props) {
 
   function isObjectEmpty(obj) {
     for (let key in obj) {
-      if (obj[key]) return false;
+      //Handle edge case of start date having a default value
+      if (obj[key] && key != "start") {
+        return false;
+      }
     }
     return true;
   }

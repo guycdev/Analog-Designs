@@ -84,6 +84,16 @@ export default function InformationForm(props) {
             onChange={handleChange}
           />
         </div>
+        <div className={`${styles.textareaContainer} ${styles.inputContainer}`}>
+          <label htmlFor="company-description">Company Description:</label>
+          <textarea
+            name="companyDescription"
+            id="company-description"
+            value={formData.companyDescription}
+            onChange={handleChange}
+            placeholder="Description..."
+          ></textarea>
+        </div>
       </form>
     </div>
   );
