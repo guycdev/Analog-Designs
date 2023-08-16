@@ -2,6 +2,49 @@
   display: none;
 }
 
-.contactContainer > .contact-card {
+.contactContainer > div {
   display: unset;
+}
+
+.lastColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lastColumn > div:first-child {
+  height: 50%;
+}
+.lastColumn > div:nth-child(2) {
+  height: 50%;
+}
+
+.testimonialFormHeadings {
+  border-bottom: thin solid black;
+  padding: 0.5rem 0rem;
+  margin: 0rem 0rem 1rem 0rem;
+  text-align: center;
+  position: relative;
+}
+
+.help {
+  position: absolute;
+  top: 7.5px;
+  right: 7.5px;
+  transform: scale(1.25);
+  cursor: pointer;
+}
+
+.help > p {
+  transition: all 0.3s;
+  width: 25ch;
+  font-size: 0.6rem;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+  position: absolute;
+  z-index: 99999;
+  right: 0px;
 }

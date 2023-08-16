@@ -20,6 +20,13 @@ async function deleteOrderController(req, res) {
   }
 }
 
+async function testimonialController(req, res) {
+  try {
+    console.log("hi");
+  } catch {}
+}
+
 module.exports = {
   deleteOrderController,
+  testimonialController,
 };
