@@ -1,8 +1,104 @@
 import React from "react";
 import styles from "./DashboardOrder.module.css";
 import ProgressBar from "../../../components/ProgressBar";
+import TextAreaInput from "../../../components/TextAreaInput";
+import TextInput from "../../../components/TextInput";
 
 export default function InformationForm(props) {
+  // const { formData, setFormData } = props;
+
+  // function handleChange(event) {
+  //   const { name, value } = event.target;
+
+  //   setFormData((prev) => {
+  //     return {
+  //       ...prev,
+  //       [name]: value,
+  //     };
+  //   });
+  // }
+
+  // return (
+  //   <div className={`card ${styles.orderInformationForm}`}>
+  //     <ProgressBar formData={formData} formFieldCount={7} />
+  //     <div className={styles.orderFormHeadings}>
+  //       <h2>Company Information</h2>
+  //       <p>Input Company / Order Information</p>
+  //     </div>
+  //     <form action="">
+  //       <div className={styles.inputContainer}>
+  //         <label htmlFor="company-name">Company Name:</label>
+  //         <input
+  //           name="companyName"
+  //           value={formData.companyName}
+  //           type="text"
+  //           id="company-name"
+  //           required
+  //           placeholder="Name..."
+  //           onChange={handleChange}
+  //         />
+  //       </div>
+  //       <div className={styles.inputContainer}>
+  //         <label htmlFor="industry">Industry:</label>
+  //         <input
+  //           name="industry"
+  //           value={formData.industry}
+  //           type="text"
+  //           id="industry"
+  //           required
+  //           placeholder="Industry..."
+  //           onChange={handleChange}
+  //         />
+  //       </div>
+  //       <div className={styles.inputContainer}>
+  //         <label htmlFor="owner-name">Owner Name:</label>
+  //         <input
+  //           name="ownerName"
+  //           value={formData.ownerName}
+  //           type="text"
+  //           id="owner-name"
+  //           required
+  //           placeholder="Owner Name..."
+  //           onChange={handleChange}
+  //         />
+  //       </div>
+  //       <div className={styles.inputContainer}>
+  //         <label htmlFor="owner-email">Owner Email:</label>
+  //         <input
+  //           name="ownerEmail"
+  //           value={formData.ownerEmail}
+  //           type="text"
+  //           id="owner-email"
+  //           required
+  //           placeholder="Owner Email..."
+  //           onChange={handleChange}
+  //         />
+  //       </div>
+  //       <div className={styles.inputContainer}>
+  //         <label htmlFor="owner-phone">Owner Phone:</label>
+  //         <input
+  //           name="ownerPhone"
+  //           value={formData.ownerPhone}
+  //           type="phone"
+  //           id="owner-phone"
+  //           required
+  //           placeholder="Owner Phone..."
+  //           onChange={handleChange}
+  //         />
+  //       </div>
+  //       <div className={`${styles.textareaContainer} ${styles.inputContainer}`}>
+  //         <label htmlFor="company-description">Company Description:</label>
+  //         <textarea
+  //           name="companyDescription"
+  //           id="company-description"
+  //           value={formData.companyDescription}
+  //           onChange={handleChange}
+  //           placeholder="Description..."
+  //         ></textarea>
+  //       </div>
+  //     </form>
+  //   </div>
+  // );
   const { formData, setFormData } = props;
 
   function handleChange(event) {
@@ -24,76 +120,59 @@ export default function InformationForm(props) {
         <p>Input Company / Order Information</p>
       </div>
       <form action="">
-        <div className={styles.inputContainer}>
-          <label htmlFor="company-name">Company Name:</label>
-          <input
-            name="companyName"
-            value={formData.companyName}
-            type="text"
-            id="company-name"
-            required
-            placeholder="Name..."
-            onChange={handleChange}
-          />
-        </div>
-        <div className={styles.inputContainer}>
-          <label htmlFor="industry">Industry:</label>
-          <input
-            name="industry"
-            value={formData.industry}
-            type="text"
-            id="industry"
-            required
-            placeholder="Industry..."
-            onChange={handleChange}
-          />
-        </div>
-        <div className={styles.inputContainer}>
-          <label htmlFor="owner-name">Owner Name:</label>
-          <input
-            name="ownerName"
-            value={formData.ownerName}
-            type="text"
-            id="owner-name"
-            required
-            placeholder="Owner Name..."
-            onChange={handleChange}
-          />
-        </div>
-        <div className={styles.inputContainer}>
-          <label htmlFor="owner-email">Owner Email:</label>
-          <input
-            name="ownerEmail"
-            value={formData.ownerEmail}
-            type="text"
-            id="owner-email"
-            required
-            placeholder="Owner Email..."
-            onChange={handleChange}
-          />
-        </div>
-        <div className={styles.inputContainer}>
-          <label htmlFor="owner-phone">Owner Phone:</label>
-          <input
-            name="ownerPhone"
-            value={formData.ownerPhone}
-            type="phone"
-            id="owner-phone"
-            required
-            placeholder="Owner Phone..."
-            onChange={handleChange}
-          />
-        </div>
-        <div className={`${styles.textareaContainer} ${styles.inputContainer}`}>
-          <label htmlFor="company-description">Company Description:</label>
-          <textarea
-            name="companyDescription"
-            id="company-description"
-            value={formData.companyDescription}
-            onChange={handleChange}
-            placeholder="Description..."
-          ></textarea>
-        </div>
+        <TextInput
+          label="Company Name"
+          id="company-name"
+          name="companyName"
+          type="text"
+          placeholder="Name..."
+          onChange={handleChange}
+          value={formData.companyName}
+        />
+        <TextInput
+          label="Industry"
+          id="industry"
+          name="industry"
+          type="text"
+          placeholder="Industry..."
+          onChange={handleChange}
+          value={formData.industry}
+        />
+        <TextInput
+          label="Owner Name"
+          id="owner-name"
+          name="ownerName"
+          type="text"
+          placeholder="Owner Name..."
+          onChange={handleChange}
+          value={formData.ownerName}
+        />
+        <TextInput
+          label="Owner Email"
+          id="owner-email"
+          name="ownerEmail"
+          type="text"
+          placeholder="Owner Email..."
+          onChange={handleChange}
+          value={formData.ownerEmail}
+        />
+        <TextInput
+          label="Owner Phone"
+          id="owner-phone"
+          name="ownerPhone"
+          type="phone"
+          placeholder="Owner Phone..."
+          onChange={handleChange}
+          value={formData.ownerPhone}
+        />
+        <TextAreaInput
+          label="Company Description"
+          id="company-description"
+          name="companyDescription"
+          placeholder="Description..."
+          onChange={handleChange}
+          value={formData.companyDescription}
+        />
       </form>
     </div>
   );

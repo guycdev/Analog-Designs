@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import styles from "./DashboardSupport.module.css";
 import info from "../../../assets/info.svg";
 import { ReactSVG } from "react-svg";
+import HoverToolTip from "../../../components/HoverToolTip";
+import TextAreaInput from "../../../components/TextAreaInput";
+import TextInput from "../../../components/TextInput";
 
 export default function TestimonialManager() {
-  const [isHovered, setIsHovered] = useState(false);
   const [testimonialData, setTestimonialData] = useState({
     name: "",
     organization: "",
@@ -28,59 +30,41 @@ export default function TestimonialManager() {
   }
 
   return (
-    <div className="card">
+    <div className="card" id="testimonials">
       <div className={styles.testimonialFormHeadings}>
         <h2>Testimonials</h2>
         <p>Enjoyed our service ? Leave us a review !</p>
-        <div
-          className={styles.help}
-          onMouseEnter={() => setIsHovered((prev) => !prev)}
-          onMouseLeave={() => setIsHovered((prev) => !prev)}
-        >
+        <HoverToolTip text="Testimonials are displayed on the home page">
           <ReactSVG src={info} />
-          <p style={isHovered ? { opacity: "1" } : { opacity: "0" }}>
-            Testimonials are displayed on the home page
-          </p>
-        </div>
+        </HoverToolTip>
       </div>
       <form onSubmit={handleSubmit}>
-        <div>
-          <div className={styles.inputContainer}>
-            <label htmlFor="name">Name:</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Name..."
-              required
-              onChange={handleChange}
-              value={testimonialData.name}
-            />
-          </div>
-          <div className={styles.inputContainer}>
-            <label htmlFor="organization">Organization:</label>
-            <input
-              type="text"
-              id="organization"
-              name="organization"
-              placeholder="Organization..."
-              required
-              onChange={handleChange}
-              value={testimonialData.organization}
-            />
-          </div>
-        </div>
-        <div className={styles.inputContainer}>
-          <label htmlFor="review">Review:</label>
-          <textarea
-            name="review"
-            id="review"
-            placeholder="Review..."
-            required
+        <div className="inline-input">
+          <TextInput
+            label="Name"
+            id="name"
+            name="name"
+            placeholder="Name..."
             onChange={handleChange}
-            value={testimonialData.review}
+            value={testimonialData.name}
+          />
+          <TextInput
+            label="Organization"
+            id="organization"
+            name="organization"
+            placeholder="Organization..."
+            onChange={handleChange}
+            value={testimonialData.organization}
           />
         </div>
+        <TextAreaInput
+          label="Review"
+          id="review"
+          name="review"
+          placeholder="Review..."
+          onChange={handleChange}
+          value={testimonialData.review}
+        />
       </form>
     </div>
   );

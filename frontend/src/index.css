@@ -1507,7 +1507,7 @@ video {
 }
 
 .dashboard-container * {
-  transition: all 0.3s;
+  transition: all 0.1s ease-in;
 }
 
 .dashboard-container > div:first-child {
@@ -1569,4 +1569,68 @@ video {
 
 .react-datepicker__day--selected:hover {
   background-color: #7d85c9 !important;
+}
+
+.help {
+  position: absolute;
+  top: 7.5px;
+  right: 7.5px;
+  transform: scale(1.25);
+  cursor: pointer;
+}
+
+.help > p {
+  transition: all 0.3s;
+  width: 25ch;
+  font-size: 0.6rem;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+  position: absolute;
+  z-index: 99999;
+  right: 0px;
+}
+
+.input-container > * {
+  display: block;
+  margin: 10px 0px;
+}
+
+.input-container > input,
+.input-container > textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: thin solid #d7d8f2;
+  box-shadow: 0 -2px 0 hsla(0, 0%, 100%, 0.15),
+    inset 0 2px 2px hsla(0, 0%, 0%, 0.1);
+  transition: all 0.2s;
+}
+
+.inline-input {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.inline-input > * {
+  flex: 1;
+}
+
+.text-area-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-area-container > textarea {
+  flex-grow: 1;
+}
+
+#testimonials {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
 }
