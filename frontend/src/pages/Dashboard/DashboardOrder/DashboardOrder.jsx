@@ -29,6 +29,12 @@ export default function DashboardOrder() {
     },
   });
 
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    console.log("Form data submitted");
+  }
+
   return (
     <>
       <InformationForm formData={formData} setFormData={setFormData} />
@@ -46,6 +52,7 @@ export default function DashboardOrder() {
           <OrderSummaryChart
             end={formData.dates.end}
             start={formData.dates.start}
+            handleSubmit={handleSubmit}
           />
         </div>
       </div>

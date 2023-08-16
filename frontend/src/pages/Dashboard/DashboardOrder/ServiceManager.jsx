@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styles from "./DashboardOrder.module.css";
-import plus from "../../../assets/plus.svg";
 import info from "../../../assets/info.svg";
 import { ReactSVG } from "react-svg";
 import rightArrow from "../../../assets/rightArrow.svg";
@@ -64,7 +63,7 @@ export default function ServiceManager(props) {
         <p>Input Company Services / Offerings</p>
       </div>
       <form className={styles.serviceForm}>
-        <div className={styles.inputContainer}>
+        <div className={styles.serviceInformationContainer}>
           <div>
             <label htmlFor="service-name">Service Name:</label>
             <input
@@ -75,7 +74,6 @@ export default function ServiceManager(props) {
               required
               placeholder="Name..."
               onChange={handleChange}
-              className={styles.serviceInformationHeadings}
             />
           </div>
           <div>
@@ -88,11 +86,10 @@ export default function ServiceManager(props) {
               required
               placeholder="$ / hour..."
               onChange={handleChange}
-              className={styles.serviceInformationHeadings}
             />
           </div>
         </div>
-        <div>
+        <div className={styles.inputContainer}>
           <label htmlFor="service-description">Service Description:</label>
           <textarea
             name="serviceDescription"

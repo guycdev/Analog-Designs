@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import styles from "./DashboardOrder.module.css";
 import Chart from "../../../components/Chart";
+import Button from "../../../components/Button";
+import globe from "../../../assets/globe.svg";
 
 export default function OrderSummaryChart(props) {
-  const { end, start } = props;
+  const { end, start, handleSubmit } = props;
 
   const [orderTotal, setOrderTotal] = useState(200);
   const [displayedOrderTotal, setDisplayedOrderTotal] = useState(0);
@@ -60,6 +61,12 @@ export default function OrderSummaryChart(props) {
       <h2 style={{ textAlign: "center" }}>
         Order total: ${displayedOrderTotal}.00
       </h2>
+      <Button
+        buttonType="primary-btn"
+        text="Submit Order"
+        img={globe}
+        action={handleSubmit}
+      />
     </div>
   );
 }
