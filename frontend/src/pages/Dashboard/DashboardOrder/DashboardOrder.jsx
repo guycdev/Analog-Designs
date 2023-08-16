@@ -14,6 +14,7 @@ export default function DashboardOrder() {
     ownerEmail: "",
     ownerName: "",
     ownerPhone: "",
+    companyDescription: "",
     services: [
       {
         serviceName: "",

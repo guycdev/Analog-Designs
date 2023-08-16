@@ -34,13 +34,14 @@ export default function Chart(props) {
                 }
                 return "#acb5fa";
               },
-              borderRadius: 10,
+              borderRadius: 50,
               anchor: "end",
               align: "start",
-              offset: 10,
+              offset: 16,
               font: {
-                size: 14,
+                size: 16,
               },
+              padding: 6,
               formatter: (value, context) => {
                 return context.chart.data.labels[context.dataset.data];
               },

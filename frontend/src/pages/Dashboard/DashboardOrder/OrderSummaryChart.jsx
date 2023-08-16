@@ -41,23 +41,25 @@ export default function OrderSummaryChart(props) {
   }, [new Date(end).toDateString()]);
 
   return (
-    <div className={`card `}>
-      <p>Order breakdown based on package and duration</p>
+    <div className={`card`}>
       <Chart
-        title="Order Summary"
+        title="Order breakdown"
+        rotate={true}
         data={{
-          labels: ["Package base", "Hosting costs"],
+          labels: ["Package base", "Hosting costs", "Domain costs"],
           datasets: [
             {
               label: "Price",
-              data: [200, orderTotal - 200],
-              backgroundColor: ["#acb5fa", "#d7d8f2"],
+              data: [200, `${orderTotal - 200}`, 20],
+              backgroundColor: ["#b6bdff", "#dddfff", "#d0d4ff"],
               borderWidth: 2,
             },
           ],
         }}
       />
-      <h2>Order total: ${displayedOrderTotal}.00</h2>
+      <h2 style={{ textAlign: "center" }}>
+        Order total: ${displayedOrderTotal}.00
+      </h2>
     </div>
   );
 }
