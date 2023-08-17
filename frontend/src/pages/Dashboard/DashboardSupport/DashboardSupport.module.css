@@ -1,0 +1,36 @@
+.lastColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lastColumn > div:first-child > form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.lastColumn > div:first-child > form > * {
+  flex-shrink: 0;
+}
+
+.testimonialFormHeadings {
+  border-bottom: thin solid black;
+  padding: 0.5rem 0rem;
+  margin: 0rem 0rem 1rem 0rem;
+  text-align: center;
+  position: relative;
+}
+
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.contactContainer form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

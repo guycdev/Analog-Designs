@@ -5,8 +5,6 @@ import ServiceManager from "./ServiceManager";
 import Calendar from "./Calendar";
 import OrderSummaryChart from "./OrderSummaryChart";
 
-export const FormData = React.createContext();
-
 export default function DashboardOrder() {
   const [formData, setFormData] = useState({
     companyName: "",

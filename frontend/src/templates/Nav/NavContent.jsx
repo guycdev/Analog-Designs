@@ -33,7 +33,7 @@ export default function NavContent(props) {
             whileHover={{
               scale: 1.1,
               color: "white",
-              backgroundColor: "#4153ef",
+              backgroundColor: "#7f57ff",
             }}
             whileTap={{ scale: 0.9 }}
           >

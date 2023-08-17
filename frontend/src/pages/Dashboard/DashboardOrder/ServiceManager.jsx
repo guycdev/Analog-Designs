@@ -4,6 +4,7 @@ import info from "../../../assets/info.svg";
 import { ReactSVG } from "react-svg";
 import rightArrow from "../../../assets/rightArrow.svg";
 import leftArrow from "../../../assets/leftArrow.svg";
+import HoverToolTip from "../../../components/HoverToolTip";
 
 export default function ServiceManager(props) {
   const { services, setFormData } = props;
@@ -61,6 +62,9 @@ export default function ServiceManager(props) {
       <div className={styles.orderFormHeadings}>
         <h2>Manage Services</h2>
         <p>Input Company Services / Offerings</p>
+        <HoverToolTip text="Use the page arrows to add new services or edit previous ones">
+          <ReactSVG src={info} />
+        </HoverToolTip>
       </div>
       <form className={styles.serviceForm}>
         <div className={styles.serviceInformationContainer}>
@@ -117,18 +121,6 @@ export default function ServiceManager(props) {
               svg.classList.add(styles.serviceScrollButtons);
             }}
           />
-        </div>
-      </div>
-      <div>
-        <div
-          className={styles.help}
-          onMouseEnter={() => setIsHovered((prev) => !prev)}
-          onMouseLeave={() => setIsHovered((prev) => !prev)}
-        >
-          <ReactSVG src={info} />
-          <p style={isHovered ? { opacity: "1" } : { opacity: "0" }}>
-            Use the page arrows to add new services or edit previous ones
-          </p>
         </div>
       </div>
     </div>
