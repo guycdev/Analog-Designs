@@ -1630,3 +1630,26 @@ video {
   display: flex;
   flex-direction: column;
 }
+
+.accordion-heading-container,
+.accordion-heading-container-clicked {
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.2s;
+}
+
+.accordion-heading-container-clicked {
+  background-color: #efefef;
+  border-bottom: thin solid black;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.accordion-body {
+  opacity: 0;
+  padding: 10px;
+}
+
+.accordion-body-clicked {
+  text-wrap: unset;
+}

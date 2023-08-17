@@ -62,28 +62,6 @@ textarea,
   margin: 0;
 }
 
-.help {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  transform: scale(1.25);
-  cursor: pointer;
-}
-
-.help > p {
-  transition: all 0.3s;
-  width: 25ch;
-  font-size: 0.6rem;
-  background-color: rgba(0, 0, 0, 0.75);
-  border-radius: 10px;
-  text-align: center;
-  color: white;
-  padding: 1rem;
-  position: absolute;
-  z-index: 99999;
-  right: 0px;
-}
-
 .serviceInformationHeadings {
   width: 100%;
 }
