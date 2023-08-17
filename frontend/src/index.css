@@ -1506,10 +1506,6 @@ video {
   gap: 20px;
 }
 
-.dashboard-container * {
-  transition: all 0.1s ease-in;
-}
-
 .dashboard-container > div:first-child {
   flex: 0.5;
 }

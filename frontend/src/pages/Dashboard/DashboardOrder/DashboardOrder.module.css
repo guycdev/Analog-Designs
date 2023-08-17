@@ -4,10 +4,6 @@
   gap: 1.25rem;
 }
 
-.serviceContainer {
-  position: relative;
-}
-
 .calendarContainer {
   height: 50%;
 }
@@ -23,6 +19,7 @@
   padding: 0.5rem 0rem;
   margin: 0rem 0rem 1rem 0rem;
   text-align: center;
+  position: relative;
 }
 
 .inputContainer > *,
@@ -91,16 +88,6 @@ textarea,
   width: 100%;
 }
 
-.serviceForm > .inputContainer:first-child {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.serviceForm > .inputContainer > div {
-  width: 100%;
-}
-
 .serviceForm textarea {
   height: 80px;
   width: 100%;
@@ -161,4 +148,8 @@ textarea,
 
 .bottomRowLastColumn > div:first-child > div:nth-child(2) {
   width: 100%;
+}
+
+.bottomRowLastColumn > div:first-child > div:nth-child(2) * {
+  transition: all 0.2s ease-in;
 }

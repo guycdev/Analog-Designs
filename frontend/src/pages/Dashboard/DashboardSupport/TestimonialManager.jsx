@@ -5,6 +5,9 @@ import { ReactSVG } from "react-svg";
 import HoverToolTip from "../../../components/HoverToolTip";
 import TextAreaInput from "../../../components/TextAreaInput";
 import TextInput from "../../../components/TextInput";
+import useFormField from "../../../hooks/useFormField";
+import Button from "../../../components/Button";
+import check from "../../../assets/check.svg";
 
 export default function TestimonialManager() {
   const [testimonialData, setTestimonialData] = useState({
@@ -13,20 +16,11 @@ export default function TestimonialManager() {
     review: "",
   });
 
+  const formSetter = useFormField(setTestimonialData);
+
   function handleSubmit(event) {
     event.preventDefault();
     console.log("testimonial submitted");
-  }
-
-  function handleChange(event) {
-    const { name, value } = event;
-
-    setTestimonialData((prev) => {
-      return {
-        ...prev,
-        [name]: value,
-      };
-    });
   }
 
   return (
@@ -45,7 +39,7 @@ export default function TestimonialManager() {
             id="name"
             name="name"
             placeholder="Name..."
-            onChange={handleChange}
+            onChange={formSetter}
             value={testimonialData.name}
           />
           <TextInput
@@ -53,7 +47,7 @@ export default function TestimonialManager() {
             id="organization"
             name="organization"
             placeholder="Organization..."
-            onChange={handleChange}
+            onChange={formSetter}
             value={testimonialData.organization}
           />
         </div>
@@ -62,9 +56,10 @@ export default function TestimonialManager() {
           id="review"
           name="review"
           placeholder="Review..."
-          onChange={handleChange}
+          onChange={formSetter}
           value={testimonialData.review}
         />
+        <Button buttonType="primary-btn" text="Submit" img={check} />
       </form>
     </div>
   );
