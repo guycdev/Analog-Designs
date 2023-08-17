@@ -4,6 +4,8 @@ import ProgressBar from "../../../components/ProgressBar";
 import TextAreaInput from "../../../components/TextAreaInput";
 import TextInput from "../../../components/TextInput";
 import useFormField from "../../../hooks/useFormField";
+import Button from "../../../components/Button";
+import check from "../../../assets/check.svg";
 
 export default function DashboardContact() {
   const [formData, setFormData] = useState({
@@ -58,6 +60,7 @@ export default function DashboardContact() {
           onChange={formSetter}
           value={formData.description}
         />
+        <Button buttonType="primary-btn" text="Submit" img={check} />
       </form>
     </div>
   );
