@@ -6,10 +6,14 @@ import OrderChart from "./DashboardChart";
 import TerminateProject from "./TerminateProject";
 import Chart from "../../../components/Chart";
 import orders from "./test-cases";
-import { useLoaderData } from "react-router-dom";
+import { redirect, useLoaderData } from "react-router-dom";
 
 export async function loader() {
   try {
+    const loggedIn = true;
+    if (!loggedIn) {
+      return redirect("/account");
+    }
     const request = await fetch(
       "https://random-data-api.com/api/v2/users?size=2&is_xml=true"
     );
