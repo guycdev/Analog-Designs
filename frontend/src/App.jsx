@@ -12,10 +12,12 @@ import HomeLayout from "./layouts/HomeLayout.jsx";
 import Home from "./pages/Home/Home";
 import AuthLayout from "./layouts/AuthLayout";
 import DashboardLayout from "./layouts/DashboardLayout";
-import Dashboard from "./pages/Dashboard/DashboardHome/Dashboard";
+import Dashboard, {
+  loader as dashboardLoader,
+} from "./pages/Dashboard/DashboardHome/Dashboard";
 import DashboardOrder from "./pages/Dashboard/DashboardOrder/DashboardOrder";
-import DashboardHelp from "./pages/Dashboard/DashboardHelp";
 import DashboardSupport from "./pages/Dashboard/DashboardSupport/DashboardSupport";
+import DashboardHelp from "./pages/Dashboard/DashboardHelp";
 
 const route = createBrowserRouter(
   createRoutesFromElements(
@@ -25,7 +27,7 @@ const route = createBrowserRouter(
         <Route path="register" element={<Register />} />
       </Route>
       <Route path="/dashboard" element={<DashboardLayout />}>
-        <Route index element={<Dashboard />} />
+        <Route index element={<Dashboard />} loader={dashboardLoader} />
         <Route path="order" element={<DashboardOrder />} />
         <Route path="support" element={<DashboardSupport />} />
         <Route path="help" element={<DashboardHelp />} />

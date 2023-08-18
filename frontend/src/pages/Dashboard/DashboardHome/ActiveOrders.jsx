@@ -1,30 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "./Dashboard.module.css";
-import orders from "./test-cases";
 import x from "../../../assets/x.svg";
 import checkmark from "../../../assets/check.svg";
 import { ReactSVG } from "react-svg";
 
 export default function ActiveOrders(props) {
-  const [activeOrders, setActiveOrders] = useState([]);
+  const { data } = props;
 
-  useEffect(() => {
-    async function getOrders() {
-      const request = orders;
-
-      return request;
-    }
-
-    async function filterOrders() {
-      const data = await getOrders();
-      const filteredOrders = data.filter((order) => order.user_id == 1);
-      setActiveOrders(filteredOrders);
-    }
-
-    filterOrders();
-  }, []);
-
-  const elementArr = activeOrders.map((order, index) => {
+  const elementArr = data.map((order, index) => {
     return (
       <tr
         className={`${styles.orderContainer} ${

@@ -1,46 +1,52 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styles from "./Dashboard.module.css";
 import FaceCard from "./FaceCard";
 import ActiveOrders from "./ActiveOrders";
 import OrderChart from "./DashboardChart";
 import TerminateProject from "./TerminateProject";
 import Chart from "../../../components/Chart";
+import orders from "./test-cases";
+import { useLoaderData } from "react-router-dom";
+
+export async function loader() {
+  try {
+    const request = await fetch(
+      "https://random-data-api.com/api/v2/users?size=2&is_xml=true"
+    );
+
+    const data = await request.json();
+
+    const revisedData = data[0];
+
+    const filteredOrders = orders.filter((order) => order.user_id == 1);
+
+    return {
+      ...revisedData,
+      orders: filteredOrders,
+    };
+  } catch (err) {
+    throw new Error(err);
+  }
+}
 
 export default function Dashboard() {
-  const [profile, setProfile] = useState({});
+  const data = useLoaderData();
 
-  useEffect(() => {
-    async function getProfile() {
-      try {
-        const request = await fetch(
-          "https://random-data-api.com/api/v2/users?size=2&is_xml=true"
-        );
-        const data = await request.json();
+  const profile = {
+    name: `${data["first_name"]} ${data["last_name"]}`,
+    username: data.username,
+    email: data.email,
+    avi: data.avatar,
+    orders: data.orders,
+  };
 
-        const revisedData = data[0];
-
-        setProfile((prev) => {
-          return {
-            ...prev,
-            name: `${revisedData["first_name"]} ${revisedData["last_name"]}`,
-            username: revisedData.username,
-            email: revisedData.email,
-            avi: revisedData.avatar,
-          };
-        });
-      } catch (err) {
-        console.log(err);
-      }
-    }
-
-    getProfile();
-  }, []);
+  console.log(data);
 
   return (
     <>
       <div className="card">
         <FaceCard profile={profile} />
-        <ActiveOrders />
+        <ActiveOrders data={profile.orders} />
       </div>
       <div className={styles.dashboardActionsContainer}>
         <OrderChart />
@@ -65,15 +71,5 @@ export default function Dashboard() {
         </div>
       </div>
     </>
-    // <div className={styles.dashboardContainer}>
-    //   <div className="card">
-    //     <FaceCard profile={profile} />
-    //     <ActiveOrders />
-    //   </div>
-    //   <div className={styles.dashboardActionsContainer}>
-    //     <OrderChart />
-    //     <TerminateProject />
-    //   </div>
-    // </div>
   );
 }
