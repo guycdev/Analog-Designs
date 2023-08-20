@@ -38,7 +38,7 @@ export default function NavContent(props) {
             whileTap={{ scale: 0.9 }}
           >
             <Blobs size="small" />
-            <Link to={"account/"}>Login</Link>
+            <Link to={"account"}>Login</Link>
           </motion.li>
           <motion.li
             className="contact-container register"
@@ -49,7 +49,7 @@ export default function NavContent(props) {
             whileTap={{ scale: 0.9 }}
           >
             <Blobs size="small" />
-            <Link to={"account/register"}>Register</Link>
+            <Link to={"./register"}>Register</Link>
           </motion.li>
         </div>
       </ul>

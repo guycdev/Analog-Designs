@@ -6,17 +6,18 @@ import OrderChart from "./DashboardChart";
 import TerminateProject from "./TerminateProject";
 import Chart from "../../../components/Chart";
 import orders from "./test-cases";
-import { redirect, useLoaderData } from "react-router-dom";
+import { useLoaderData, redirect } from "react-router-dom";
 
 export async function loader() {
   try {
-    const loggedIn = true;
-    if (!loggedIn) {
-      return redirect("/account");
-    }
+    console.log("Dashobard loader");
     const request = await fetch(
       "https://random-data-api.com/api/v2/users?size=2&is_xml=true"
     );
+
+    if (request.status === 401) {
+      return redirect("account/login");
+    }
 
     const data = await request.json();
 
@@ -43,8 +44,6 @@ export default function Dashboard() {
     avi: data.avatar,
     orders: data.orders,
   };
-
-  console.log(data);
 
   return (
     <>

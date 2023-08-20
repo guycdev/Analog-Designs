@@ -18,6 +18,7 @@ import Dashboard, {
 import DashboardOrder from "./pages/Dashboard/DashboardOrder/DashboardOrder";
 import DashboardSupport from "./pages/Dashboard/DashboardSupport/DashboardSupport";
 import DashboardHelp from "./pages/Dashboard/DashboardHelp";
+import authLoader from "./loaders/authLoader";
 
 const route = createBrowserRouter(
   createRoutesFromElements(
@@ -28,9 +29,13 @@ const route = createBrowserRouter(
       </Route>
       <Route path="/dashboard" element={<DashboardLayout />}>
         <Route index element={<Dashboard />} loader={dashboardLoader} />
-        <Route path="order" element={<DashboardOrder />} />
-        <Route path="support" element={<DashboardSupport />} />
-        <Route path="help" element={<DashboardHelp />} />
+        <Route path="order" element={<DashboardOrder />} loader={authLoader} />
+        <Route
+          path="support"
+          element={<DashboardSupport />}
+          loader={authLoader}
+        />
+        <Route path="help" element={<DashboardHelp />} loader={authLoader} />
       </Route>
       <Route index element={<Home />} />
     </Route>
