@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Accordion from "../../../components/Accordion";
+import styles from "./DashboardSupport.module.css";
 
 export default function Faq() {
   const [elementIdClicked, setElementIdClicked] = useState(0);
@@ -12,6 +13,10 @@ export default function Faq() {
 
   return (
     <div className="card" onClick={handleClick}>
+      <div className={styles.testimonialFormHeadings}>
+        <h2>Frequently Asked Questions</h2>
+        <p>Explore our most frequently asked questions</p>
+      </div>
       <Accordion
         header="How long does it take for order’s to be complete ?"
         body="Order's are usually delivered within 24-48 hours, however some hosting complications may arise along the way and so the timeline may extend to 72 hours at the latest."

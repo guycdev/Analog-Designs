@@ -22,7 +22,7 @@ export default function AboutUs(props) {
     >
       <div className={`${styles.contentContainer} ${styles.boxEffect}`}>
         <h2>
-          Meet Analog Designs - Where <span>Innovation </span>Meets{" "}
+          Meet Analog Designs - Where <span>Innovation </span> Meets{" "}
           <span>Inspiration!</span>
         </h2>
         <p className={`${styles.boxEffect}`}>

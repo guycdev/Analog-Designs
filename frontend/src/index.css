@@ -11,7 +11,7 @@
   --primary-font: "Inter", sans-serif;
   --secondary-font: "Roboto", sans-serif;
 
-  --max-width: 1900px;
+  --max-width: 1700px;
   --margin: 1rem 6rem;
   --nav-margin: 1.25rem 3rem;
 
@@ -32,9 +32,9 @@ body {
 }
 
 #root {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  max-width: var(--max-width);
+  padding: 1rem 1.25rem;
+  margin: auto;
 }
 
 .main-container {
@@ -42,8 +42,8 @@ body {
   flex-direction: column;
   align-items: stretch;
   justify-content: center;
-  max-width: var(--max-width);
-  padding: var(--margin);
+  /* max-width: var(--max-width);
+  padding: var(--margin); */
 }
 
 section {
@@ -334,7 +334,7 @@ a {
 }
 
 .content-block {
-  padding: 1.4rem 1rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -578,7 +578,7 @@ form .btn-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 0px 50px;
+  gap: 0px 30px;
   align-items: center;
 }
 
@@ -605,6 +605,19 @@ form .btn-container {
 
 .compress-p p {
   width: 30ch;
+}
+
+.hero-section .card-container > div > p {
+  font-size: unset;
+}
+
+.hero-section .card-container > div > h2,
+.hero-section span {
+  font-weight: unset;
+  background: linear-gradient(to right, #7f57ff, #9c7eff, #af97ff);
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
 }
 
 /**/
@@ -676,12 +689,12 @@ form .btn-container {
 }
 
 .swag-row > p {
-  font-size: 0.75rem;
   letter-spacing: 0.1ch;
   font-weight: 400;
   line-height: 1.4;
   color: #333;
   width: fit-content;
+  text-wrap: unset;
 }
 
 .swag-icon {
@@ -816,7 +829,7 @@ form .btn-container {
 }
 
 .video-player-container {
-  max-width: 840px;
+  max-width: 970px;
 }
 
 video {
@@ -1167,7 +1180,7 @@ hr {
   }
 
   .swag-block {
-    gap: 0px 25px;
+    gap: 0px 20px;
   }
 
   .stack-card-container > div > div > img {
@@ -1404,7 +1417,7 @@ hr {
 
 .login-container {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   margin: 0;
 }
