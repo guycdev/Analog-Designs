@@ -334,7 +334,7 @@ a {
 }
 
 .content-block {
-  padding: 1.4rem 1rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1404,7 +1404,7 @@ hr {
 
 .login-container {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   margin: 0;
 }

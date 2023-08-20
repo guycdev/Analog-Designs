@@ -49,7 +49,7 @@ export default function NavContent(props) {
             whileTap={{ scale: 0.9 }}
           >
             <Blobs size="small" />
-            <Link to={"./register"}>Register</Link>
+            <Link to={"account/register"}>Register</Link>
           </motion.li>
         </div>
       </ul>
