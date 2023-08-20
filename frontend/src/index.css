@@ -612,7 +612,7 @@ form .btn-container {
 }
 
 .hero-section .card-container > div > h2,
-span {
+.hero-section span {
   font-weight: unset;
   background: linear-gradient(to right, #7f57ff, #9c7eff, #af97ff);
   -webkit-background-clip: text;
@@ -1665,4 +1665,11 @@ video {
 
 .accordion-body-clicked {
   text-wrap: unset;
+}
+
+.Calendar__header {
+  background-color: #f0f0f0;
+  border-radius: 5px 5px 0px 0px;
+  border: thin solid #bebebe;
+  margin: 0px 0px 10px 0px !important;
 }
