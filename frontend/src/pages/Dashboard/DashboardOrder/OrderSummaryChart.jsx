@@ -4,7 +4,7 @@ import Button from "../../../components/Button";
 import globe from "../../../assets/globe.svg";
 
 export default function OrderSummaryChart(props) {
-  const { dates, handleSubmit } = props;
+  const { end, start, handleSubmit } = props;
 
   const [orderTotal, setOrderTotal] = useState(200);
   const [displayedOrderTotal, setDisplayedOrderTotal] = useState(0);
@@ -24,17 +24,22 @@ export default function OrderSummaryChart(props) {
 
   useEffect(() => {
     function orderTotalCalculator() {
-      return dates.to.month - dates.from.month;
+      const startDate = new Date(start);
+      const endDate = new Date(end);
+
+      let months;
+      months = (startDate.getFullYear() - endDate.getFullYear()) * 12;
+      months -= startDate.getMonth();
+      months += endDate.getMonth();
+      return months == 0 ? 1 : Math.ceil(months);
     }
-    if (dates.to != null) {
+    if (end) {
       const months = orderTotalCalculator();
-      console.log(months);
-      setOrderTotal(months == 0 ? 240 : 200 + months * 40);
+      setOrderTotal(200 + months * 40);
     } else {
       setOrderTotal(200);
     }
-    console.log(dates.to);
-  }, [dates]);
+  }, [new Date(end).toDateString()]);
 
   return (
     <div className={`card`}>
@@ -53,17 +58,15 @@ export default function OrderSummaryChart(props) {
           ],
         }}
       />
-      <div>
-        <h2 style={{ textAlign: "center" }}>
-          Order total: ${displayedOrderTotal}.00
-        </h2>
-        <Button
-          buttonType="primary-btn"
-          text="Submit Order"
-          img={globe}
-          action={handleSubmit}
-        />
-      </div>
+      <h2 style={{ textAlign: "center" }}>
+        Order total: ${displayedOrderTotal}.00
+      </h2>
+      <Button
+        buttonType="primary-btn"
+        text="Submit Order"
+        img={globe}
+        action={handleSubmit}
+      />
     </div>
   );
 }

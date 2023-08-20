@@ -11,7 +11,7 @@
   --primary-font: "Inter", sans-serif;
   --secondary-font: "Roboto", sans-serif;
 
-  --max-width: 1900px;
+  --max-width: 1700px;
   --margin: 1rem 6rem;
   --nav-margin: 1.25rem 3rem;
 
@@ -1665,18 +1665,4 @@ video {
 
 .accordion-body-clicked {
   text-wrap: unset;
-}
-
-.Calendar__header {
-  background-color: #f0f0f0;
-  margin: 0px 0px 10px 0px !important;
-  border-radius: 10px;
-  border: thin solid #bebebe;
-}
-
-.Calendar {
-  padding-top: 0px !important;
-  border-radius: 10px;
-  border: thin solid #bebebe;
-  z-index: 1 !important;
 }

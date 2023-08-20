@@ -21,7 +21,8 @@ export default function ProgressBar(props) {
 
   function isObjectEmpty(obj) {
     for (let key in obj) {
-      if (obj[key] && key != "from") {
+      //Handle edge case of start date having a default value
+      if (obj[key] && key != "start") {
         return false;
       }
     }

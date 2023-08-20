@@ -6,8 +6,6 @@ import Calendar from "./Calendar";
 import OrderSummaryChart from "./OrderSummaryChart";
 
 export default function DashboardOrder() {
-  const today = new Date();
-
   const [formData, setFormData] = useState({
     companyName: "",
     industry: "",
@@ -24,12 +22,8 @@ export default function DashboardOrder() {
     ],
     dates: {
       //Edge case to handle initial value of start date is handled inside the ProgressBar component
-      from: {
-        year: today.getFullYear(),
-        month: today.getMonth() + 1,
-        day: today.getDate(),
-      },
-      to: null,
+      start: new Date(),
+      end: "",
     },
   });
 
@@ -48,9 +42,14 @@ export default function DashboardOrder() {
           setFormData={setFormData}
         />
         <div className={styles.bottomRowLastColumn}>
-          <Calendar dates={formData.dates} setFormData={setFormData} />
+          <Calendar
+            startDate={formData.dates.start}
+            endDate={formData.dates.end}
+            setFormData={setFormData}
+          />
           <OrderSummaryChart
-            dates={formData.dates}
+            end={formData.dates.end}
+            start={formData.dates.start}
             handleSubmit={handleSubmit}
           />
         </div>
