@@ -53,15 +53,17 @@ export default function OrderSummaryChart(props) {
           ],
         }}
       />
-      <h2 style={{ textAlign: "center" }}>
-        Order total: ${displayedOrderTotal}.00
-      </h2>
-      <Button
-        buttonType="primary-btn"
-        text="Submit Order"
-        img={globe}
-        action={handleSubmit}
-      />
+      <div>
+        <h2 style={{ textAlign: "center" }}>
+          Order total: ${displayedOrderTotal}.00
+        </h2>
+        <Button
+          buttonType="primary-btn"
+          text="Submit Order"
+          img={globe}
+          action={handleSubmit}
+        />
+      </div>
     </div>
   );
 }

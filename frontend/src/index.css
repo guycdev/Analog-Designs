@@ -1669,7 +1669,13 @@ video {
 
 .Calendar__header {
   background-color: #f0f0f0;
-  border-radius: 5px 5px 0px 0px;
-  border: thin solid #bebebe;
   margin: 0px 0px 10px 0px !important;
+  border-radius: 10px;
+  border: thin solid #bebebe;
+}
+
+.Calendar {
+  padding-top: 0px !important;
+  border-radius: 10px;
+  border: thin solid #bebebe;
 }
