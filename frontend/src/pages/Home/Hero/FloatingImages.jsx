@@ -10,7 +10,7 @@ export default function FloatingImages() {
         id={1}
         img={designImg}
         heading={"Design Selection"}
-        content={"Select from a wide array of pre-existing or costume designs"}
+        content={`Select from a wide array of pre-existing or costume designs`}
         direction="left-card first-eat-up"
         styles="compress-p"
       />
