@@ -29,6 +29,7 @@ body {
   background-image: url(./assets/bg.svg), var(--medium);
   background-repeat: no-repeat, no-repeat;
   overflow-x: hidden;
+  background-size: contain;
 }
 
 #root {
