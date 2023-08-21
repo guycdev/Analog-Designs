@@ -7,13 +7,15 @@ import apple from "../../../assets/apple.svg";
 import login from "../../../assets/login.svg";
 import logo from "../../../assets/logo.svg";
 import { ReactSVG } from "react-svg";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
 export default function LoginForm() {
   const [formData, setFormData] = useState({
     email: "",
     pass: "",
   });
+
+  const [error, setError] = useState(false);
 
   function handleChange(event) {
     const { value, name } = event.target;
@@ -28,17 +30,18 @@ export default function LoginForm() {
 
   async function validateLogin() {
     try {
-      const data = await fetch("http://localhost:3003/api/account/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-        credentials: "include",
-      });
-      const response = await data.json();
-
-      return response;
+      const data = await fetch(
+        "http://api.local.example.com:3003/api/account/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+          credentials: "include",
+        }
+      );
+      return data;
     } catch (err) {
       return err;
     }
@@ -47,7 +50,9 @@ export default function LoginForm() {
   async function handleSubmit(event) {
     event.preventDefault();
     const response = await validateLogin();
-    console.log(response);
+    if (response.status === 200) {
+      return <Navigate replace to="/dashboard" />;
+    }
   }
 
   return (
@@ -109,7 +114,9 @@ export default function LoginForm() {
               autoComplete="on"
             />
           </div>
-          <Button buttonType="primary-btn" text="Login" img={login} />
+          <a href="dashboard">
+            <Button buttonType="primary-btn" text="Login" img={login} />
+          </a>
         </form>
         <Link to="./register" className="wrong-page-link">
           Don't have an account ? <span>Register here</span>

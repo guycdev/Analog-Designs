@@ -14,10 +14,19 @@ export async function loader() {
     const request = await fetch(
       "https://random-data-api.com/api/v2/users?size=2&is_xml=true"
     );
+    const requestTwo = await fetch(
+      "http://api.local.example.com:3003/api/order/check-session",
+      {
+        credentials: "include",
+      }
+    );
 
-    if (request.status === 401) {
-      return redirect("account/login");
+    if (requestTwo.status != 200) {
+      return redirect("../account");
     }
+
+    const data2 = await requestTwo.json();
+    console.log(data2);
 
     const data = await request.json();
 

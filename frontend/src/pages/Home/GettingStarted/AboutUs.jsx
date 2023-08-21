@@ -6,7 +6,7 @@ import { checkedInternet, checkedWebsite } from "../utils/chartData";
 
 export default function AboutUs(props) {
   return (
-    <motion.div
+    <motion.section
       className={`${styles.container} card`}
       initial={{
         x: 1500,
@@ -79,6 +79,6 @@ export default function AboutUs(props) {
         />
       </div>
       {/* <img src={mac} alt="" className={styles.mac} /> */}
-    </motion.div>
+    </motion.section>
   );
 }

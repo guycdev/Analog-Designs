@@ -4,7 +4,7 @@ import Stack from "./Stack/Stack";
 import Pricing from "./Pricing/Pricing ";
 import VideoObject from "./VideoObject/VideoObject";
 import ContactForm from "./ContactForm/ContactForm";
-import GettingStarted from "./GettingStarted/GettingStarted";
+import AboutUs from "./GettingStarted/AboutUs";
 import Steps from "./Steps/Steps";
 import Testimonials from "./Testimonials/Testimonials";
 import Swag from "../../components/Swag";
@@ -23,7 +23,7 @@ function App() {
           color: "#7070ea",
         }}
       />
-      <GettingStarted />
+      <AboutUs />
       <Steps />
       <VideoObject
         sectionNumber={4}

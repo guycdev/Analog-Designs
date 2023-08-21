@@ -10,9 +10,10 @@ async function getUserByEmail(email) {
 }
 
 async function getUserById(id) {
-  const user = await pool.query("select email,pass from users where id = ?", [
-    id,
-  ]);
+  const user = await pool.query(
+    "select id,email,pass from users where id = ?",
+    [id]
+  );
 
   return user[0][0];
 }

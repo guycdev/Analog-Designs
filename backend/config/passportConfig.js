@@ -6,7 +6,6 @@ const { getUserById } = require("../models/user");
 
 async function verifyUser(email, password, done) {
   try {
-    console.log(email);
     const user = await getUserByEmail(email);
 
     if (user) {

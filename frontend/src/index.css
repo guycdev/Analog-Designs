@@ -716,7 +716,7 @@ form .btn-container {
 .getting-started-container {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 40px;
 }
 
 .getting-started-container .top-left {
@@ -725,7 +725,7 @@ form .btn-container {
   left: 20px;
 }
 
-.getting-started-container > .steps > * {
+.getting-started-container > * {
   flex: 1;
   position: relative;
 }
@@ -748,14 +748,6 @@ form .btn-container {
 }
 
 /*Pricing cards*/
-
-.pricing-container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  gap: 50px;
-  margin: auto;
-}
 
 .pricing-details-container {
   display: flex;

@@ -2,6 +2,7 @@ const express = require("express");
 const passport = require("passport");
 const app = express();
 const auth = require("./routes/auth");
+const order = require("./routes/order");
 const session = require("express-session");
 const MySQLStore = require("express-mysql-session")(session);
 const env = require("dotenv").config();
@@ -9,8 +10,9 @@ const cors = require("cors");
 
 app.use(
   cors({
-    origin: "http://127.0.0.1:5173",
+    origin: "http://app.local.example.com:5174",
     credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
 
@@ -41,12 +43,15 @@ app.use(
   session({
     secret: process.env.SECRET,
     store: sessionStore,
-    resave: false,
-    saveUninitialized: false,
+    resave: true,
+    saveUninitialized: true,
+
     cookie: {
-      sameSite: "none",
-      secure: false, // Set to false in a local environment without HTTPS
+      httpOnly: true,
+      secure: false,
+      sameSite: "lax",
       maxAge: 1000 * 60 * 60 * 24,
+      domain: ".local.example.com",
     },
   })
 );
@@ -56,6 +61,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use("/api/account", auth);
+app.use("/api/order", order);
 
 app.listen(3003, () => {
   console.log("Listening on port 3003...");
