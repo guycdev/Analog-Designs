@@ -1,10 +1,10 @@
 const { pool } = require("../config/db");
 
 async function getOrdersByCostumerId(id) {
-  const orders = await pool.query("select * from orders where costumerId = ?", [
+  const orders = await pool.query("select * from orders where userID = ?", [
     id,
   ]);
-  return orders[0][0];
+  return orders[0];
 }
 
 async function getOrderByOrderId(id) {

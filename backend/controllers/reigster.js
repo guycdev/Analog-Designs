@@ -5,9 +5,17 @@ const { hashPassword } = require("../services/passwordUtils");
 
 async function createAccountController(req, res) {
   try {
-    const { email, pass, firstName, lastName, phone } = req.body;
+    const { email, pass, firstName, lastName, phone, avatar } = req.body;
+    console.log(avatar);
     const hashedPass = await hashPassword(pass);
-    const userInput = [email, `${firstName} ${lastName}`, phone, hashedPass];
+    const userInput = [
+      email,
+      `${firstName} ${lastName}`,
+      phone,
+      hashedPass,
+      `${firstName}.${lastName}`,
+      avatar,
+    ];
 
     const results = await createAccount(userInput);
 
