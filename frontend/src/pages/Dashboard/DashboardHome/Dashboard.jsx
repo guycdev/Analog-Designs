@@ -5,39 +5,20 @@ import ActiveOrders from "./ActiveOrders";
 import OrderChart from "./DashboardChart";
 import TerminateProject from "./TerminateProject";
 import Chart from "../../../components/Chart";
-import orders from "./test-cases";
 import { useLoaderData, redirect } from "react-router-dom";
 
 export async function loader() {
   try {
-    console.log("Dashobard loader");
     const request = await fetch(
-      "https://random-data-api.com/api/v2/users?size=2&is_xml=true"
-    );
-    const requestTwo = await fetch(
-      "http://api.local.example.com:3003/api/order/check-session",
+      "http://api.local.example.com:3003/api/order/orders",
       {
         credentials: "include",
       }
     );
 
-    if (requestTwo.status != 200) {
-      return redirect("../account");
-    }
-
-    const data2 = await requestTwo.json();
-    console.log(data2);
-
     const data = await request.json();
 
-    const revisedData = data[0];
-
-    const filteredOrders = orders.filter((order) => order.user_id == 1);
-
-    return {
-      ...revisedData,
-      orders: filteredOrders,
-    };
+    return data;
   } catch (err) {
     throw new Error(err);
   }
@@ -46,19 +27,13 @@ export async function loader() {
 export default function Dashboard() {
   const data = useLoaderData();
 
-  const profile = {
-    name: `${data["first_name"]} ${data["last_name"]}`,
-    username: data.username,
-    email: data.email,
-    avi: data.avatar,
-    orders: data.orders,
-  };
+  console.log(data);
 
   return (
     <>
       <div className="card">
-        <FaceCard profile={profile} />
-        <ActiveOrders data={profile.orders} />
+        <FaceCard data={data} />
+        <ActiveOrders data={data.orders} />
       </div>
       <div className={styles.dashboardActionsContainer}>
         <OrderChart />
@@ -78,6 +53,7 @@ export default function Dashboard() {
                 ],
               }}
               legend="top"
+              size={250}
             />
           </div>
         </div>

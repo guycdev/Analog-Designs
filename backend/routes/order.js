@@ -5,6 +5,7 @@ const passport = require("passport");
 const {
   deleteOrderController,
   testimonialController,
+  profileController,
 } = require("../controllers/orders");
 
 router
@@ -13,6 +14,7 @@ router
 router
   .route("/testimonial")
   .post(passport.authenticate("local"), testimonialController);
+router.route("/orders").get(profileController);
 
 router.route("/check-session").get((req, res) => {
   console.log("Session ID:", req.sessionID);

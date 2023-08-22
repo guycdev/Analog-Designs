@@ -11,7 +11,7 @@ async function getUserByEmail(email) {
 
 async function getUserById(id) {
   const user = await pool.query(
-    "select id,email,pass from users where id = ?",
+    "select id,email,pass,full_name,username,avatar from users where id = ?",
     [id]
   );
 
@@ -20,7 +20,7 @@ async function getUserById(id) {
 
 async function createAccount(userInput) {
   try {
-    const query = `insert into users (email,full_name,phone, pass) values(?, ?, ?, ?);`;
+    const query = `insert into users (email,full_name,phone, pass,username,avatar) values(?, ?, ?, ?,?,?);`;
 
     const results = await pool.query(query, userInput);
     return { success: true };

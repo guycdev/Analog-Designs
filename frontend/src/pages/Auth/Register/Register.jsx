@@ -16,6 +16,7 @@ export default function Register() {
     phone: "",
     email: "",
     pass: "",
+    avatar: "",
   });
 
   const [errorMessage, setErrorMessage] = useState("");
@@ -81,6 +82,16 @@ export default function Register() {
 
   async function handleSubmit(event) {
     event.preventDefault();
+    const avatar = await fetch(
+      "https://random-data-api.com/api/v2/users?size=2&is_xml=true"
+    );
+    const avatarData = await avatar.json();
+    setFormData((prev) => {
+      return {
+        ...prev,
+        avatar: avatarData[0].avatar,
+      };
+    });
     const response = await accountResgitration();
     console.log(await response);
   }

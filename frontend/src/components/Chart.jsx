@@ -6,11 +6,13 @@ import ChartDataLabels from "chartjs-plugin-datalabels";
 ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
 
 export default function Chart(props) {
-  const { data, rotate, title, legend } = props;
+  const { data, rotate, title, legend, size } = props;
 
   return (
     <div>
       <Doughnut
+        width={size ? size : null}
+        height={size ? size : null}
         data={data}
         options={{
           rotation: rotate ? 55 : 0,
@@ -37,11 +39,14 @@ export default function Chart(props) {
               borderRadius: 50,
               anchor: "end",
               align: "start",
-              offset: 16,
+              offset: 10,
               font: {
                 size: 16,
               },
               padding: 6,
+              borderColor: "#fff",
+              borderWidth: 1,
+              textAlign: "center",
               formatter: (value, context) => {
                 return context.chart.data.labels[context.dataset.data];
               },

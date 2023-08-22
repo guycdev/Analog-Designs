@@ -1,5 +1,5 @@
 const { getOrderByOrderId, getOrdersByCostumerId } = require("../models/order");
-const { getUserByEmail } = require("../models/user");
+const { getUserByEmail, getUserById } = require("../models/user");
 const { deleteOrder } = require("../services/orderUtils");
 
 async function deleteOrderController(req, res) {
@@ -17,7 +17,7 @@ async function deleteOrderController(req, res) {
           });
     }
   } catch (err) {
-    return res.status(500).json({ status: "failed", reason: err.message });
+    return res.status(500).json({ status: "failed", reason: err });
   }
 }
 
@@ -34,15 +34,19 @@ async function profileController(req, res) {
     const profile = await getUserById(id);
 
     return res.status(200).json({
-      ...orders,
-      ...profile,
+      orders: orders,
+      email: profile.email,
+      fullName: profile.full_name,
+      username: profile.username,
+      avatar: profile.avatar,
     });
   } catch (error) {
-    return res.status(500).json({ status: "failed", reason: err.message });
+    return res.status(500).json({ status: "failed", reason: error.message });
   }
 }
 
 module.exports = {
   deleteOrderController,
   testimonialController,
+  profileController,
 };
