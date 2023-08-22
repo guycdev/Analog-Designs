@@ -15,13 +15,13 @@ export default function ActiveOrders(props) {
         }`}
         key={index}
       >
-        <td>{order.order_key}</td>
+        <td>{order.orderID}</td>
         <td className={styles.orderInformationCell}>{order.business_name}</td>
         <td>
           <a href={order.domain}>{order.domain}</a>
         </td>
         <td>
-          <ReactSVG src={order.is_active ? checkmark : x} />
+          <ReactSVG src={order.isActive ? checkmark : x} />
         </td>
       </tr>
     );

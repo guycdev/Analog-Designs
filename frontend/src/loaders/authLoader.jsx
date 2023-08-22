@@ -14,8 +14,7 @@ export async function loader() {
     if (response.status === 200) {
       return null;
     }
-    // return redirect("../../account");
-    return null;
+    return redirect("../../account");
   } catch (err) {
     console.error(err);
   }

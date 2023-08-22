@@ -7,7 +7,7 @@ import { ReactSVG } from "react-svg";
 import { NavLink } from "react-router-dom";
 
 export default function FaceCard(props) {
-  const { profile } = props;
+  const { data } = props;
 
   const [isHovered, setIsHovered] = useState(false);
 
@@ -25,13 +25,13 @@ export default function FaceCard(props) {
       </div>
       <div className={styles.infoContainer}>
         <img
-          src={profile.avi}
+          src={data.avatar}
           alt="Profile photo"
           className={styles.dashboardProfilePhoto}
         />
         <div>
-          <h4>{profile.name}</h4>
-          <em className="body-em">{`@${profile.username}`}</em>
+          <h4>{data.fullName}</h4>
+          <em className="body-em">{`@${data.username}`}</em>
         </div>
       </div>
       <div className={styles.miscButtonContainer}>

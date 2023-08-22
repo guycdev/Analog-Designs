@@ -138,11 +138,6 @@ table > * {
   width: 100%;
 }
 
-.chartContainer > canvas {
-  height: 100%;
-  width: 80%;
-}
-
 .dashboardActionsContainer {
   display: flex;
   flex-direction: column;
