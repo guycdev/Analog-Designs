@@ -1,3 +1,92 @@
+.pricingContainer {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.pricingContainer > *:nth-child(1),
+.pricingContainer > *:nth-child(3) {
+  flex: 0.95;
+}
+
+.pricingContainer > *:nth-child(2) {
+  flex: 1.1;
+}
+
 .pricingCardContainer {
-  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  position: relative;
+}
+
+.pricingContent {
+  box-shadow: unset;
+  border-radius: 0px 0px 10px 10px;
+  height: 55%;
+}
+
+.imgContainer {
+  height: 45%;
+  background-color: #fff;
+  border-radius: 10px 10px 0px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.imgContainer > * {
+  flex: 1;
+}
+
+.priceContainer,
+.headingContainer {
+  border-radius: 10px;
+  border-bottom: 2px solid black;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: -15px 0px 0px 0px;
+  background-image: url(../../../assets/card1bg.svg);
+  background-size: cover;
+}
+
+.headingContainer {
+  z-index: 1;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.price,
+.heading {
+  position: absolute;
+  bottom: -23px;
+  background-color: #fff;
+  padding: 10px 40px;
+  border-radius: 50px;
+  box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.25);
+  border: 2px solid black;
+}
+
+.price > em {
+  color: #8e9cff;
+}
+
+.pricingContent {
+  display: block;
+}
+
+.pricingHeadings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pricingHeadings > h4 {
+  margin: 20px 0px 0px 0px;
+  padding: 10px 10px 10px 10px;
+  border: thin solid black;
+  border-radius: 50px;
+  font-weight: 400;
 }
