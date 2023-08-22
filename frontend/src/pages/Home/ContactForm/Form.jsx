@@ -15,6 +15,8 @@ import {
   faPhone,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+import TextInput from "../../../components/TextInput";
+import TextAreaInput from "../../../components/TextAreaInput";
 
 export default function Form(props) {
   const [formData, setFormData] = useState({
@@ -30,8 +32,8 @@ export default function Form(props) {
 
   const { handleSubmit, messageStatus } = useFormSubmission(templateId);
 
-  function handleChange({ target }) {
-    const { name, value } = target;
+  function handleChange(event) {
+    const { name, value } = event.target;
 
     setFormData((prev) => {
       return {
@@ -43,7 +45,6 @@ export default function Form(props) {
   return (
     <div className="contact-card">
       <div>
-        {/* <img src={gif} alt="" className='contact-img' /> */}
         {messageStatus == "success" && (
           <Confetti recycle={false} numberOfPieces={1200} />
         )}
@@ -88,88 +89,76 @@ export default function Form(props) {
           </div>
         </div>
         <div className="name-container">
-          <div>
-            <label htmlFor="firstName">
-              <FontAwesomeIcon icon={faUser} />
-              First Name
-            </label>
-            <input
-              type="text"
-              name="firstName"
-              id="firstName"
-              placeholder="First name..."
-              value={formData.firstName}
-              onChange={handleChange}
-              required
-              autoComplete="on"
-            />
-          </div>
-          <div>
-            <label htmlFor="lastName">
-              <FontAwesomeIcon icon={faUser} />
-              Last Name
-            </label>
-            <input
-              type="text"
-              name="lastName"
-              id="lastName"
-              value={formData.lastName}
-              onChange={handleChange}
-              placeholder="Last name..."
-              required
-              autoComplete="on"
-            />
-          </div>
-        </div>
-        <div>
-          <label htmlFor="email">
-            <FontAwesomeIcon icon={faEnvelope} />
-            Email
-          </label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            value={formData.email}
+          <TextInput
+            label={
+              <>
+                <FontAwesomeIcon icon={faUser} /> First Name
+              </>
+            }
+            id="firstName"
+            name="firstName"
+            placeholder="First name..."
+            value={formData.firstName}
             onChange={handleChange}
-            placeholder="Email..."
-            required
-            autoComplete="on"
+          />
+
+          <TextInput
+            label={
+              <>
+                <FontAwesomeIcon icon={faUser} /> Last Name
+              </>
+            }
+            id="lastName"
+            name="lastName"
+            placeholder="Last name..."
+            value={formData.lastName}
+            onChange={handleChange}
           />
         </div>
-        <div>
-          <label htmlFor="number">
-            <FontAwesomeIcon icon={faPhone} />
-            Phone Number
-          </label>
-          <input
-            type="number"
-            name="number"
-            id="number"
-            value={formData.number}
-            onChange={handleChange}
-            placeholder="Phone Number..."
-            autoComplete="on"
-          />
-          <div></div>
-          <label htmlFor="message">
-            <FontAwesomeIcon icon={faMessage} />
-            Message
-          </label>
-          <textarea
-            type="textarea"
-            name="message"
-            id="message"
-            value={formData.message}
-            onChange={handleChange}
-            placeholder="Your message..."
-            required
-          />
-        </div>
+
+        <TextInput
+          label={
+            <>
+              <FontAwesomeIcon icon={faEnvelope} /> Email
+            </>
+          }
+          id="email"
+          name="email"
+          placeholder="Email..."
+          value={formData.email}
+          onChange={handleChange}
+        />
+
+        <TextInput
+          label={
+            <>
+              <FontAwesomeIcon icon={faPhone} /> Phone Number
+            </>
+          }
+          id="number"
+          name="number"
+          placeholder="Phone Number..."
+          value={formData.number}
+          onChange={handleChange}
+        />
+
+        <TextAreaInput
+          label={
+            <>
+              <FontAwesomeIcon icon={faMessage} /> Message
+            </>
+          }
+          id="message"
+          name="message"
+          placeholder="Your message..."
+          value={formData.message}
+          onChange={handleChange}
+        />
+
         <Button
           buttonType="primary-btn"
           text="Send Message"
-          img={send}
+          img={send} // Assuming 'send' is imported from somewhere
           messageStatus={messageStatus}
         />
       </form>

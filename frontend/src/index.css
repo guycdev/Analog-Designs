@@ -934,11 +934,15 @@ form p,
 .clicked_svg > div {
   background-color: var(--hue);
   color: white;
+  box-shadow: 0 -2px 0 hsla(0, 0%, 100%, 0.15),
+    inset 0 2px 2px hsla(0, 0%, 0%, 0.2);
 }
 
 .subject > div:hover {
   background-color: var(--hue);
   color: white;
+  box-shadow: 0 -2px 0 hsla(0, 0%, 100%, 0.15),
+    inset 0 2px 2px hsla(0, 0%, 0%, 0.2);
 }
 
 .contact-form > *,

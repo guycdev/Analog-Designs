@@ -10,7 +10,12 @@ export default function FloatingImages() {
         id={1}
         img={designImg}
         heading={"Design Selection"}
-        content={`Select from a wide array of pre-existing or costume designs`}
+        content={
+          <>
+            Select from a wide array of <span>pre-existing</span> or{" "}
+            <span>costume designs</span>
+          </>
+        }
         direction="left-card first-eat-up"
         styles="compress-p"
       />
@@ -19,7 +24,10 @@ export default function FloatingImages() {
         img={hostImg}
         heading={"Web Hosting"}
         content={
-          "We ensure your online presence is impactful and uninterrupted"
+          <>
+            We ensure your online presence is <span>impactful</span> and{" "}
+            <span>uninterrupted</span>
+          </>
         }
         direction="right-card"
         styles="compress-p"
@@ -28,7 +36,12 @@ export default function FloatingImages() {
         id={3}
         img={applicationImg}
         heading={"Income Verification"}
-        content={"Strengthen your applications with a credible online presence"}
+        content={
+          <>
+            <span>Strengthen</span> your applications with a{" "}
+            <span>credible online presence</span>
+          </>
+        }
         direction="left-card"
         styles="compress-p"
       />

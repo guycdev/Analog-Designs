@@ -11,8 +11,6 @@ export default function ServiceManager(props) {
 
   const [activeServices, setActiveServices] = useState(1);
 
-  const [isHovered, setIsHovered] = useState(false);
-
   function handleChange(event) {
     const { name, value } = event.target;
 
