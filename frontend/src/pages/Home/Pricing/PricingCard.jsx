@@ -9,11 +9,11 @@ export default function PricingCard(props) {
 
   return (
     <div className={styles.pricingCardContainer}>
-      <div className={styles.imgContainer}>
+      <div className={`${styles[background]}  ${styles.imgContainer}`}>
         <div className={styles.headingContainer}>
           <h2 className={styles.heading}>{heading}</h2>
         </div>
-        <div className={styles.priceContainer}>
+        <div className={`${styles.priceContainer}`}>
           <p className={styles.price}>
             ${price}&nbsp;
             <em>/site</em>

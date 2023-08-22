@@ -17,6 +17,7 @@ export default function Pricing() {
             Ideal for a <span>simple online presence</span>
           </>
         }
+        background="white"
       />
       <PricingCard
         price={800}
@@ -31,6 +32,7 @@ export default function Pricing() {
           </>
         }
         isMainCard={true}
+        background="purple"
       />
       <PricingCard
         price={500}
@@ -44,6 +46,7 @@ export default function Pricing() {
             Great for <span>growing brokers</span>
           </>
         }
+        background="white"
       />
     </section>
   );

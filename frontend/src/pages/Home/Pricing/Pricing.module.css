@@ -25,11 +25,11 @@
 .pricingContent {
   box-shadow: unset;
   border-radius: 0px 0px 10px 10px;
-  height: 55%;
+  height: 50%;
 }
 
 .imgContainer {
-  height: 45%;
+  height: 50%;
   background-color: #fff;
   border-radius: 10px 10px 0px 0px;
   display: flex;
@@ -49,13 +49,21 @@
   align-items: flex-end;
   justify-content: center;
   margin: -15px 0px 0px 0px;
+  background-size: cover;
+}
+
+.purple {
   background-image: url(../../../assets/card1bg.svg);
+  background-size: cover;
+}
+.white {
+  background-image: url(../../../assets//card3bg.svg);
   background-size: cover;
 }
 
 .headingContainer {
-  z-index: 1;
   border-radius: 10px 10px 0px 0px;
+  z-index: 1;
 }
 
 .price,
