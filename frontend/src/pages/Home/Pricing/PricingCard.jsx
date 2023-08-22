@@ -1,49 +1,24 @@
 import React from "react";
-import Card from "../../../components/Card";
-import { ReactSVG } from "react-svg";
-import Button from "../../../components/Button";
-import email from "../../../assets//email.svg";
-import Tag from "../../../components/Tag";
+import styles from "./Pricing.module.css";
 
 export default function PricingCard(props) {
-  const { heading, pricing, features, content, styles, btnStyle, img, tag } =
+  const { background, price, heading, subheading, features, isMainCard } =
     props;
 
-  const renderFeatures = (features) => {
-    if (!features) {
-      return null;
-    }
-
-    return features.map((e, index) => (
-      <p key={index} className="pricing-features">
-        {e[0]}
-        <ReactSVG src={e[1]} />
-      </p>
-    ));
-  };
+  const featuresArr = [];
 
   return (
-    <Card id={0} heading={heading} content={content} styles={styles} img={img}>
-      <div className="pricing-details-container">
-        {tag && <Tag color={tag.color} name={tag.name} direction="top-left" />}
-        {pricing && (
-          <p className="pricing">
-            ${pricing}
-            <span className="small blue">/site</span>
-          </p>
-        )}
-        {renderFeatures(features)}
-        <Button
-          buttonType={btnStyle}
-          text="Contact Us"
-          variance={{
-            scale: 1.1,
-            backgroundColor: "#ededed",
-            color: "black",
-          }}
-          img={email}
-        />
+    <div className={`card ${styles.pricingCardContainer}`}>
+      <div className={styles.priceContainer}>
+        <h3>{price}</h3>
       </div>
-    </Card>
+      <div className={styles.pricingContent}>
+        <div className={styles.pricingHeadings}>
+          <h2>{heading}</h2>
+          <em>{subheading}</em>
+        </div>
+        <div className={styles.featureContainer}>{featuresArr}</div>
+      </div>
+    </div>
   );
 }

@@ -15,26 +15,59 @@ export default function Steps() {
   return (
     <section id="learn-more" className={styles.container}>
       <div className={styles.steps}>
-        <PricingCard
-          heading="Create Account"
-          content="Set up an account with our integrated system. This lets you monitor your present and future orders conveniently."
+        <Card
+          heading={
+            <>
+              <span>Create</span> Account
+            </>
+          }
+          content={
+            <>
+              Set up an <span>account</span> with our integrated system. This
+              lets you monitor your <span>present</span> and{" "}
+              <span>future orders</span> conveniently.
+            </>
+          }
           btnStyle="primary-btn"
           img={createAccount}
           tag={tag}
+          id={0}
         />
-        <PricingCard
-          heading="Open a Ticket"
-          content="Select from our extensive range of design templates and packages then open a ticket with your specific request."
+        <Card
+          heading={
+            <>
+              Open a <span>Ticket</span>
+            </>
+          }
+          content={
+            <>
+              Select from our extensive range of <span>design templates</span>{" "}
+              and packages then open a <span>ticket</span> with your specific
+              request.
+            </>
+          }
           btnStyle="primary-btn"
           img={ticket}
           tag={tag}
+          id={1}
         />
-        <PricingCard
-          heading="We Handle the Rest"
-          content="Once we have your details, we manage the building and hosting of your client's site.  Be sure to follow up upon approval."
+        <Card
+          heading={
+            <>
+              We Handle the <span>Rest</span>
+            </>
+          }
+          content={
+            <>
+              Once we have your details, we manage the <span>building</span> and{" "}
+              <span>hosting</span> of your client's site. Be sure to follow up
+              upon approval.
+            </>
+          }
           btnStyle="primary-btn"
           img={coding}
           tag={tag}
+          id={2}
         />
       </div>
     </section>
