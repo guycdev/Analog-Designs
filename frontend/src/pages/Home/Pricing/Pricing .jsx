@@ -18,6 +18,14 @@ export default function Pricing() {
           </>
         }
         background="white"
+        features={[
+          "feature 1",
+          "feature 2",
+          "feature 3",
+          "feature 4",
+          "feature 5",
+        ]}
+        isMainCard={false}
       />
       <PricingCard
         price={800}
@@ -31,8 +39,18 @@ export default function Pricing() {
             For <span>serious brokers</span> with multiple needs
           </>
         }
-        isMainCard={true}
         background="purple"
+        features={[
+          "feature 1",
+          "feature 2",
+          "feature 3",
+          "feature 4",
+          "feature 5",
+          "feature 6",
+          "feature 7",
+          "feature 8",
+        ]}
+        isMainCard={true}
       />
       <PricingCard
         price={500}
@@ -47,6 +65,14 @@ export default function Pricing() {
           </>
         }
         background="white"
+        features={[
+          "feature 1",
+          "feature 2",
+          "feature 3",
+          "feature 4",
+          "feature 5",
+        ]}
+        isMainCard={false}
       />
     </section>
   );
