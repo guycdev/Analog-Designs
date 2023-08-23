@@ -114,7 +114,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   flex-grow: 1;
   justify-content: space-between;
   box-shadow: unset;
@@ -128,7 +128,7 @@
 }
 
 .pricingHeading {
-  margin: 20px 0px 0px 0px;
+  margin: 40px 0px 0px 0px;
   padding: 10px 20px;
   border-radius: 50px;
   font-weight: 400;
@@ -176,10 +176,10 @@
 
 .whiteBtn,
 .purpleBtn {
-  padding: 10px 45px;
+  padding: 10px 75px;
   border-radius: 50px;
   box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.25);
-  margin: 25px 0px;
+  margin: 0px 0px 25px 0px;
   transition: all 0.3s;
 }
 

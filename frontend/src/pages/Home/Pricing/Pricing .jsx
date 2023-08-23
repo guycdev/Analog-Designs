@@ -14,7 +14,7 @@ export default function Pricing() {
         }
         subheading={
           <>
-            Ideal for a <span>simple online presence</span>
+            Ideal for a <span>simple online </span>presence
           </>
         }
         background="white"

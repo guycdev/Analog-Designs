@@ -49,7 +49,7 @@ export default function PricingCard(props) {
         <div className={styles.pricingHeadings}>
           <h4
             className={`${styles.pricingHeading} ${
-              background == "white" ? styles.black : styles.white
+              !isMainCard ? styles.black : styles.white
             }`}
           >
             {subheading}
