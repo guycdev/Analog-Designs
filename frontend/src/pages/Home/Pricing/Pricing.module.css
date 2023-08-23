@@ -142,7 +142,7 @@
 .black {
   color: white;
   border: 2px solid white;
-  background-color: #333;
+  background-color: #8b99ff;
 }
 
 .featureContainer {
@@ -174,20 +174,39 @@
   position: relative;
 }
 
-.pricingCardContainer button {
+.whiteBtn,
+.purpleBtn {
+  padding: 10px 45px;
   border-radius: 50px;
+  box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.25);
+  margin: 25px 0px;
+  transition: all 0.3s;
 }
 
-.purpleBtn button {
-  border: 2px solid #333;
-}
-
-.purpleBtn button:hover {
-  border: 2px solid white;
-}
-
-.whiteBtn button {
-  border: 2px solid white;
-  background-color: #333;
+.whiteBtn {
+  background-color: #8b99ff;
   color: white;
+  border: 2px solid white;
+}
+
+.purpleBtn {
+  background-color: white;
+  border: 2px solid black;
+}
+
+.purpleBtn:hover {
+  background-color: #8b99ff;
+  color: white;
+  border-color: white;
+}
+
+.whiteBtn:hover {
+  background-color: white;
+  color: #333;
+  border-color: black;
+}
+
+.whiteBtn:hover,
+.purpleBtn:hover {
+  transform: scale(1.1);
 }

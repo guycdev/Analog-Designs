@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./Pricing.module.css";
 import checkmark from "../../../assets/checkmark.svg";
 import { ReactSVG } from "react-svg";
-import Button from "../../../components/Button";
 
 export default function PricingCard(props) {
   const {
@@ -24,10 +23,12 @@ export default function PricingCard(props) {
     );
   });
 
-  const opposite = background == "purple" ? "white" : "purple";
-
   return (
-    <div className={styles.pricingCardContainer}>
+    <div
+      className={`${styles[`${background}Container`]} ${
+        styles.pricingCardContainer
+      }`}
+    >
       <div className={styles.whiteBg}>
         <div className={`${styles[background]}  ${styles.imgContainer}`}>
           <div className={styles.headingContainer}>
@@ -55,13 +56,9 @@ export default function PricingCard(props) {
           </h4>
         </div>
         <div className={styles.featureContainer}>{featuresArr}</div>
-        <div className={styles[`${background}Btn`]}>
-          <Button
-            text="Contact us"
-            buttonType={isMainCard ? "primary-btn" : "secondary-btn"}
-            img={checkmark}
-          />
-        </div>
+        <a className={styles[`${background}Btn`]} href="#contact">
+          Contact Us
+        </a>
       </div>
     </div>
   );

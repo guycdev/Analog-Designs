@@ -63,7 +63,7 @@ export default function Pricing() {
         }
         subheading={
           <>
-            Great for <span>growing brokers</span>
+            Great for <span>growing </span>brokers
           </>
         }
         background="white"
