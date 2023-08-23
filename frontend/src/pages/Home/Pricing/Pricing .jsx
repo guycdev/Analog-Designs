@@ -9,7 +9,7 @@ export default function Pricing() {
         price={200}
         heading={
           <>
-            <span>Starter </span>Plan
+            Starter <span>Plan</span>
           </>
         }
         subheading={
@@ -19,13 +19,14 @@ export default function Pricing() {
         }
         background="white"
         features={[
-          "feature 1",
-          "feature 2",
-          "feature 3",
-          "feature 4",
-          "feature 5",
+          "1 website pakacge",
+          "3 page website",
+          "Non-aged domain",
+          "1 month free hosting",
+          "Costume logos",
         ]}
         isMainCard={false}
+        planStatus="Starter Plan"
       />
       <PricingCard
         price={800}
@@ -41,22 +42,23 @@ export default function Pricing() {
         }
         background="purple"
         features={[
-          "feature 1",
-          "feature 2",
-          "feature 3",
-          "feature 4",
-          "feature 5",
-          "feature 6",
-          "feature 7",
-          "feature 8",
+          "2 website package",
+          "4 page websites",
+          "Aged domain",
+          "2 month free hosting",
+          "Costume logos",
+          "24/7 support",
+          "Advanced SEO",
+          "2-day delivery",
         ]}
         isMainCard={true}
+        planStatus="Best Value"
       />
       <PricingCard
         price={500}
         heading={
           <>
-            <span>Professional </span>Plan
+            Proffesional <span>Plan</span>
           </>
         }
         subheading={
@@ -66,13 +68,14 @@ export default function Pricing() {
         }
         background="white"
         features={[
-          "feature 1",
-          "feature 2",
-          "feature 3",
-          "feature 4",
-          "feature 5",
+          "1 website package",
+          "4 page website",
+          "Aged domain",
+          "2 month free hosting",
+          "Advanced SEO",
         ]}
         isMainCard={false}
+        planStatus="Most Popular"
       />
     </section>
   );

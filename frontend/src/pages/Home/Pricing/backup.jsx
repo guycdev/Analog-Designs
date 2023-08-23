@@ -27,17 +27,23 @@ export default function PricingCard(props) {
   const opposite = background == "purple" ? "white" : "purple";
 
   return (
-    <div className={styles.pricingCardContainer}>
+    <div
+      className={`${`${styles[`${background}Container`]}`} ${
+        styles.pricingCardContainer
+      }`}
+    >
       <div className={styles.whiteBg}>
         <div className={`${styles[background]}  ${styles.imgContainer}`}>
           <div className={styles.headingContainer}>
             <div className={styles.planStatus}>
-              <p>{planStatus}</p>
+              <p className={styles[opposite]}>{planStatus}</p>
             </div>
-            <h2 className={styles.heading}>{heading}</h2>
+            <h2 className={`${styles[opposite]} ${styles.heading}`}>
+              {heading}
+            </h2>
           </div>
           <div className={`${styles.priceContainer}`}>
-            <p className={styles.price}>
+            <p className={`${styles[opposite]} ${styles.price}`}>
               ${price}&nbsp;
               <em>/site</em>
             </p>
@@ -47,7 +53,7 @@ export default function PricingCard(props) {
       <div className={`card ${styles.pricingContent}`}>
         <div className={styles.pricingHeadings}>
           <h4
-            className={`${styles.pricingHeading} ${
+            className={`${styles[opposite]} ${styles.pricingHeading} ${
               background == "white" ? styles.black : styles.white
             }`}
           >
@@ -55,13 +61,11 @@ export default function PricingCard(props) {
           </h4>
         </div>
         <div className={styles.featureContainer}>{featuresArr}</div>
-        <div className={styles[`${background}Btn`]}>
-          <Button
-            text="Contact us"
-            buttonType={isMainCard ? "primary-btn" : "secondary-btn"}
-            img={checkmark}
-          />
-        </div>
+        <Button
+          text="Contact us"
+          buttonType={isMainCard ? "primary-btn" : "secondary-btn"}
+          img={checkmark}
+        />
       </div>
     </div>
   );
