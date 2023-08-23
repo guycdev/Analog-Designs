@@ -7,7 +7,7 @@ import {
   Route,
 } from "react-router-dom";
 import Register from "./pages/Auth/Register/Register";
-import Login from "./pages/Auth/Login/Login";
+import Login, { action as loginAction } from "./pages/NewAuth/Login";
 import HomeLayout from "./layouts/HomeLayout.jsx";
 import Home from "./pages/Home/Home";
 import AuthLayout from "./layouts/AuthLayout";
@@ -24,7 +24,7 @@ const route = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<HomeLayout />}>
       <Route path="/account" element={<AuthLayout />}>
-        <Route index element={<Login />} />
+        <Route index element={<Login />} action={loginAction} />
         <Route path="register" element={<Register />} />
       </Route>
       <Route path="/dashboard" element={<DashboardLayout />}>

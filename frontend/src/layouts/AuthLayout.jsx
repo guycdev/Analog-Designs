@@ -4,11 +4,11 @@ import { Outlet } from "react-router-dom";
 
 export default function Login() {
   return (
-    <section className="login-container card">
-      <div className="auth-form ">
+    <section className="login-container">
+      <div className="card">
         <Outlet />
       </div>
-      <MiscCard />
+      <div></div>
     </section>
   );
 }
