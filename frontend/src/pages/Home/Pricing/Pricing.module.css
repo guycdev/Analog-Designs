@@ -74,7 +74,7 @@
 .price,
 .heading {
   position: absolute;
-  bottom: -23px;
+  bottom: -25px;
   background-color: #fff;
   padding: 10px 40px;
   border-radius: 50px;
@@ -104,7 +104,7 @@
 }
 
 .pricingHeadings > h4 {
-  margin: 30px 0px 0px 0px;
+  margin: 20px 0px 0px 0px;
   padding: 10px 20px;
   border-radius: 50px;
   font-weight: 400;
@@ -115,14 +115,15 @@
   display: grid;
   grid-template-rows: repeat(5, 1fr);
   grid-auto-flow: column;
-  width: 50%;
+  width: 60%;
   text-align: center;
-  gap: 20px;
+  gap: 20px 40px;
+  justify-content: center;
 }
 
 .feature {
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 
 .feature > div > div {

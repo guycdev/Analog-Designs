@@ -31,7 +31,7 @@ export default function Pricing() {
         price={800}
         heading={
           <>
-            <span> Reccuring </span>Plan
+            <span> Recurring </span>Plan
           </>
         }
         subheading={
