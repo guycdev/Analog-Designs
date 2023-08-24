@@ -5,7 +5,12 @@ import login from "../../assets/login.svg";
 import Headings from "./Headings";
 import Socials from "./Socials";
 import TextInput from "../../components/TextInput";
-import { faEnvelope, faEye, faUser } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelope,
+  faEye,
+  faUser,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
 import FormRedirect from "./FormRedirect";
 import Copyright from "./Copyright";
 import Logo from "./Logo";
@@ -14,27 +19,35 @@ import Button from "../../components/Button";
 export async function action(obj) {
   try {
     const formData = await obj.request.formData();
+    const name = formData.get("name");
     const email = formData.get("email");
     const pass = formData.get("pass");
+    const phone = formData.get("phone");
 
-    const returnObj = {
-      email: email,
-      pass: pass,
-    };
-
-    const data = await fetch(
-      "http://api.local.example.com:3003/api/account/login",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(returnObj),
-        credentials: "include",
-      }
+    const avi = await fetch(
+      "https://random-data-api.com/api/v2/users?size=2&is_xml=true"
     );
 
-    return redirect("../dashboard");
+    const avatarData = await avi.json();
+
+    const returnObj = {
+      name: name,
+      phone: phone,
+      email: email,
+      pass: pass,
+      avatar: avatarData[0].avatar,
+    };
+
+    const data = await fetch("http://localhost:3003/api/account/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(returnObj),
+      credentials: "include",
+    });
+
+    return redirect("../");
   } catch (err) {
     return err.message;
   }
@@ -68,6 +81,13 @@ export default function Login() {
           type="email"
           placeholder="example123@gmail.com..."
           icon={faEnvelope}
+        />
+        <TextInput
+          label="Phone"
+          name="phone"
+          type="number"
+          placeholder="647-111-1234..."
+          icon={faPhone}
         />
         <div className={styles.passwordConfContainer}>
           <TextInput
