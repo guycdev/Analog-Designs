@@ -47,6 +47,10 @@ export async function action(obj) {
       credentials: "include",
     });
 
+    if (data.status != 200) {
+      return data.response.body.message;
+    }
+
     return redirect("../");
   } catch (err) {
     return err.message;

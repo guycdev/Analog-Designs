@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Auth.module.css";
-import { Form, redirect } from "react-router-dom";
+import { Form, redirect, useActionData } from "react-router-dom";
 import login from "../../assets/login.svg";
 import Headings from "./Headings";
 import Socials from "./Socials";
@@ -34,6 +34,10 @@ export async function action(obj) {
       }
     );
 
+    if (data.status == 401) {
+      return "User does not exist";
+    }
+
     return redirect("../dashboard");
   } catch (err) {
     return err.message;
@@ -41,6 +45,9 @@ export async function action(obj) {
 }
 
 export default function Login() {
+  const error = useActionData();
+  console.log(error);
+
   return (
     <div className={styles.loginContainer}>
       <Logo />
@@ -68,6 +75,8 @@ export default function Login() {
           type="password"
           placeholder="min 8 characters..."
         />
+        {error && <h4 className={styles.error}>{error}</h4>}
+
         <Button buttonType="primary-btn" text="Login" img={login} />
       </Form>
       <FormRedirect
