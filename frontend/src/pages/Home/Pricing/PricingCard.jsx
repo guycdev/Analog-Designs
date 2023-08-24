@@ -12,6 +12,7 @@ export default function PricingCard(props) {
     features,
     isMainCard,
     planStatus,
+    icon,
   } = props;
 
   const featuresArr = features.map((feature, index) => {
@@ -33,7 +34,10 @@ export default function PricingCard(props) {
         <div className={`${styles[background]}  ${styles.imgContainer}`}>
           <div className={styles.headingContainer}>
             <div className={styles.planStatus}>
-              <p>{planStatus}</p>
+              <>
+                <ReactSVG src={icon} />
+                <p>{planStatus}</p>
+              </>
             </div>
             <h2 className={styles.heading}>{heading}</h2>
           </div>

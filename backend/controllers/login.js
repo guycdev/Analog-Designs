@@ -1,4 +1,5 @@
 async function loginController(req, res) {
+  console.log("hi");
   try {
     if (req.user) {
       console.log(req.user);
