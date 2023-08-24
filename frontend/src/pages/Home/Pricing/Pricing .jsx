@@ -1,49 +1,81 @@
 import React from "react";
+import styles from "./Pricing.module.css";
 import PricingCard from "./PricingCard";
-import x from "../../../assets/x.svg";
-import checkMark from "../../../assets/check.svg";
 
-export default function Pricing(props) {
+export default function Pricing() {
   return (
-    <section className="getting-started-container" id="pricing">
+    <section className={styles.pricingContainer}>
       <PricingCard
-        heading={"Premium Recuring Package"}
-        content={"Perfect package for recuring costumers"}
-        pricing={"200"}
+        price={200}
+        heading={
+          <>
+            Starter <span>Plan</span>
+          </>
+        }
+        subheading={
+          <>
+            Ideal for a <span>simple online </span>presence
+          </>
+        }
+        background="white"
         features={[
-          ["5 websites minimum", checkMark],
-          ["Costume logos", x],
-          ["1 day delivery", x],
-          ["14 day hosting", x],
+          "1 website pakacge",
+          "3 page website",
+          "Non-aged domain",
+          "1 month free hosting",
+          "Costume logos",
         ]}
-        styles="primary-plan"
-        btnStyle="secondary-btn"
+        isMainCard={false}
+        planStatus="Starter Plan"
       />
       <PricingCard
-        heading={"Premium Recuring Package"}
-        content={"Perfect package for recuring costumers"}
-        pricing={"200"}
+        price={800}
+        heading={
+          <>
+            <span> Recurring </span>Plan
+          </>
+        }
+        subheading={
+          <>
+            For <span>serious brokers</span> with multiple needs
+          </>
+        }
+        background="purple"
         features={[
-          ["5 websites minimum", checkMark],
-          ["Costume logos", checkMark],
-          ["1 day delivery", checkMark],
-          ["14 day hosting", checkMark],
+          "2 website package",
+          "4 page websites",
+          "Aged domain",
+          "2 month free hosting",
+          "Costume logos",
+          "24/7 support",
+          "Advanced SEO",
+          "2-day delivery",
         ]}
-        styles="primary-plan"
-        btnStyle="primary-btn"
+        isMainCard={true}
+        planStatus="Best Value"
       />
       <PricingCard
-        heading={"Premium Recuring Package"}
-        content={"Perfect package for recuring costumers"}
-        pricing={"200"}
+        price={500}
+        heading={
+          <>
+            Proffesional <span>Plan</span>
+          </>
+        }
+        subheading={
+          <>
+            Great for <span>growing </span>brokers
+          </>
+        }
+        background="white"
         features={[
-          ["5 websites minimum", checkMark],
-          ["Costume logos", x],
-          ["1 day delivery", x],
-          ["14 day hosting", x],
+          "1 website package",
+          "4 page website",
+          "Aged domain",
+          "2 month free hosting",
+          "Advanced SEO",
         ]}
-        styles="primary-plan"
-        btnStyle="secondary-btn"
+        isMainCard={false}
+        planStatus="Most Popular"
       />
     </section>
   );

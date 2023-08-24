@@ -5,15 +5,15 @@ const { hashPassword } = require("../services/passwordUtils");
 
 async function createAccountController(req, res) {
   try {
-    const { email, pass, firstName, lastName, phone, avatar } = req.body;
+    const { email, pass, name, phone, avatar } = req.body;
     console.log(avatar);
     const hashedPass = await hashPassword(pass);
     const userInput = [
       email,
-      `${firstName} ${lastName}`,
+      name,
       phone,
       hashedPass,
-      `${firstName}.${lastName}`,
+      name.split(" ").join("."),
       avatar,
     ];
 
@@ -28,12 +28,6 @@ async function createAccountController(req, res) {
     }
 
     return res.status(200).json({ status: "Registered" });
-    // users.push({
-    //   email: email,
-    //   password: hashedPass,
-    // });
-    // return res.status(200).json({ status: "success", data: users });
-    // Leave for testing
   } catch (err) {
     return res.status(500).json({ status: "error", msg: err.message });
   }

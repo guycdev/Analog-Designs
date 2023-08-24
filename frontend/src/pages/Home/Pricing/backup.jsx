@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Pricing.module.css";
 import checkmark from "../../../assets/checkmark.svg";
 import { ReactSVG } from "react-svg";
+import Button from "../../../components/Button";
 
 export default function PricingCard(props) {
   const {
@@ -12,7 +13,6 @@ export default function PricingCard(props) {
     features,
     isMainCard,
     planStatus,
-    icon,
   } = props;
 
   const featuresArr = features.map((feature, index) => {
@@ -24,9 +24,11 @@ export default function PricingCard(props) {
     );
   });
 
+  const opposite = background == "purple" ? "white" : "purple";
+
   return (
     <div
-      className={`${styles[`${background}Container`]} ${
+      className={`${`${styles[`${background}Container`]}`} ${
         styles.pricingCardContainer
       }`}
     >
@@ -34,15 +36,14 @@ export default function PricingCard(props) {
         <div className={`${styles[background]}  ${styles.imgContainer}`}>
           <div className={styles.headingContainer}>
             <div className={styles.planStatus}>
-              <>
-                <ReactSVG src={icon} />
-                <p>{planStatus}</p>
-              </>
+              <p className={styles[opposite]}>{planStatus}</p>
             </div>
-            <h2 className={styles.heading}>{heading}</h2>
+            <h2 className={`${styles[opposite]} ${styles.heading}`}>
+              {heading}
+            </h2>
           </div>
           <div className={`${styles.priceContainer}`}>
-            <p className={styles.price}>
+            <p className={`${styles[opposite]} ${styles.price}`}>
               ${price}&nbsp;
               <em>/site</em>
             </p>
@@ -52,17 +53,19 @@ export default function PricingCard(props) {
       <div className={`card ${styles.pricingContent}`}>
         <div className={styles.pricingHeadings}>
           <h4
-            className={`${styles.pricingHeading} ${
-              !isMainCard ? styles.black : ""
+            className={`${styles[opposite]} ${styles.pricingHeading} ${
+              background == "white" ? styles.black : styles.white
             }`}
           >
             {subheading}
           </h4>
         </div>
         <div className={styles.featureContainer}>{featuresArr}</div>
-        <a className={styles[`${background}Btn`]} href="#contact">
-          Contact Us
-        </a>
+        <Button
+          text="Contact us"
+          buttonType={isMainCard ? "primary-btn" : "secondary-btn"}
+          img={checkmark}
+        />
       </div>
     </div>
   );
