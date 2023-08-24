@@ -42,6 +42,13 @@
   color: inherit;
   border-radius: unset;
   box-shadow: unset;
+  transition: all 0.3s;
+}
+
+.loginContainer input:focus {
+  border-radius: 10px;
+  box-shadow: 0 -2px 0 hsla(0, 0%, 100%, 0.25),
+    inset 0 2px 3px hsla(0, 0%, 0%, 0.2);
 }
 
 pre {
