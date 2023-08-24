@@ -73,7 +73,7 @@ export default function Login() {
       <FormRedirect
         text="Don't have an account ? "
         redirect={<span>Register here</span>}
-        path="./account"
+        path="./register"
       />
       <Copyright />
     </div>

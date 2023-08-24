@@ -58,3 +58,8 @@ pre {
   left: middle;
   width: fit-content;
 }
+
+.passwordConfContainer {
+  display: flex;
+  gap: 20px;
+}

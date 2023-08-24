@@ -6,7 +6,7 @@ import {
   createRoutesFromElements,
   Route,
 } from "react-router-dom";
-import Register from "./pages/Auth/Register/Register";
+import Register from "./pages/NewAuth/Register";
 import Login, { action as loginAction } from "./pages/NewAuth/Login";
 import HomeLayout from "./layouts/HomeLayout.jsx";
 import Home from "./pages/Home/Home";
