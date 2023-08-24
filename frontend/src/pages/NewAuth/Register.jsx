@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Auth.module.css";
-import { Form, redirect } from "react-router-dom";
+import { Form, redirect, useActionData } from "react-router-dom";
 import login from "../../assets/login.svg";
 import Headings from "./Headings";
 import Socials from "./Socials";
@@ -23,6 +23,7 @@ export async function action(obj) {
     const email = formData.get("email");
     const pass = formData.get("pass");
     const phone = formData.get("phone");
+    const confPass = formData.get("conf-pass");
 
     const avi = await fetch(
       "https://random-data-api.com/api/v2/users?size=2&is_xml=true"
@@ -31,10 +32,11 @@ export async function action(obj) {
     const avatarData = await avi.json();
 
     const returnObj = {
-      name: name,
-      phone: phone,
-      email: email,
-      pass: pass,
+      name,
+      phone,
+      email,
+      pass,
+      confPass,
       avatar: avatarData[0].avatar,
     };
 
@@ -47,8 +49,9 @@ export async function action(obj) {
       credentials: "include",
     });
 
-    if (data.status != 200) {
-      return data.response.body.message;
+    if (data.status == 400) {
+      const errorMessage = await data.json();
+      return errorMessage.message;
     }
 
     return redirect("../");
@@ -58,6 +61,8 @@ export async function action(obj) {
 }
 
 export default function Login() {
+  const error = useActionData();
+
   return (
     <div className={styles.loginContainer}>
       <Logo />
@@ -109,6 +114,7 @@ export default function Login() {
             placeholder="min 8 characters..."
           />
         </div>
+        {error && <h4 className={styles.error}>{error}</h4>}
         <Button buttonType="primary-btn" text="Sign Up" img={login} />
       </Form>
       <FormRedirect
