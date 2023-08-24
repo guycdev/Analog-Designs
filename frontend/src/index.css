@@ -1381,10 +1381,10 @@ hr {
   align-items: stretch;
   justify-content: center;
   margin: 0;
-  background-color: #edeced;
-  padding: 15px;
+  background-color: #fff;
   border-radius: 10px;
   box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.25);
+  padding: 10px;
 }
 
 .login-container > * {
@@ -1399,92 +1399,6 @@ hr {
 
 .login-container > div:last-child {
   flex: 1.25;
-}
-
-.auth-form {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-  border-radius: 5px;
-}
-
-.login-container > div {
-  position: relative;
-}
-
-.app-login,
-.app-register {
-  display: flex;
-  gap: 20px;
-  margin: 30px 0px;
-}
-
-.main-form {
-  padding: 100px;
-  padding-bottom: 70px;
-}
-
-.login-logo {
-  position: absolute;
-  top: 40px;
-  left: 40px;
-}
-
-.login-form .primary-btn,
-.register-form {
-  margin-bottom: 30px;
-}
-
-.utils {
-  position: absolute;
-  bottom: 30px;
-  font-size: 0.6rem;
-  left: 225px;
-  width: fit-content;
-}
-
-.login-container > div > div {
-  display: flex;
-}
-
-.misc-card-container {
-  background-color: #d7d8f2;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-}
-
-.misc-card-container > img {
-  width: 100%;
-}
-
-.misc-card-container > * {
-  text-align: start;
-}
-
-#root > section > div > div > div.misc-card-container > h2 {
-  text-wrap: unset;
-  font-weight: 300;
-}
-
-.registration-password {
-  display: flex;
-  gap: 10px;
-  position: relative;
-}
-
-.registration-password > div {
-  width: 100%;
-  z-index: 2;
-}
-
-.password-missmatch {
-  position: absolute;
-  font-size: 0.6rem;
-  border: 1px solid red;
-  background-color: var(--primary-color);
-  padding: 10px 15px;
-  border-radius: 10px;
-  right: 35px;
-  z-index: 1;
 }
 
 video {
