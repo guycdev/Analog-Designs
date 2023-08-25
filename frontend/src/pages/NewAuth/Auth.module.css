@@ -93,3 +93,73 @@ pre {
 .authHeroCardContainer > *:last-child {
   width: 75%;
 }
+
+.authHeroCardContainer > *:nth-child(2) {
+  width: 75%;
+  height: 300px;
+  background-color: #efd739;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.goggleContainer {
+  content: " ";
+  width: 100%;
+  height: 30px;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.strapContainer {
+  content: " ";
+  width: 50%;
+  height: 40px;
+  background-color: #a8a7ac;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.eyeWrapper {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 10px solid #78777d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eye {
+  width: 130px;
+  height: 130px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 10px solid #a6a4ad;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eyeBalls {
+  height: 3.2rem;
+  width: 3.2rem;
+  background: radial-gradient(#271e1e 35%, #935a29 37%);
+  border-radius: 50%;
+  position: relative;
+  content: " ";
+}
+
+.pupels {
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  height: 0.7em;
+  width: 0.5em;
+  transform: rotate(45deg);
+}
