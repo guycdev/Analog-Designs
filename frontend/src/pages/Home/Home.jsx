@@ -9,6 +9,14 @@ import Steps from "./Steps/Steps";
 import Testimonials from "./Testimonials/Testimonials";
 import Swag from "../../components/Swag";
 import { information } from "./utils/information";
+import react from "../../assets/react.svg";
+import bootstrap from "../../assets/bootstrap.svg";
+import node from "../../assets/node.svg";
+import shopify from "../../assets/shopify.svg";
+import wixx from "../../assets/wixx.svg";
+import squarespace from "../../assets/squarespace.svg";
+import wordPress from "../../assets/word-press.svg";
+import Marquee from "../../components/Marquee";
 
 function App() {
   return (
@@ -46,7 +54,10 @@ function App() {
             /> */}
       {/*Temporary disabling this video player until i get assetes for designs*/}
       <Testimonials />
-      <Stack />
+      {/* <Stack /> */}
+      <Marquee
+        logos={[react, bootstrap, node, shopify, wixx, squarespace, wordPress]}
+      />
       <Pricing />
 
       <ContactForm />
