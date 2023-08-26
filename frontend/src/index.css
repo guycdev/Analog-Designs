@@ -1646,8 +1646,7 @@ video {
 }
 
 @media (max-width: 450px) {
-  .hero-section hr,
-  .hero-section .stat-items {
+  .stat-items > p {
     display: none;
   }
 
