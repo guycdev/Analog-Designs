@@ -242,3 +242,20 @@
 .purpleBtn:hover {
   transform: scale(1.1);
 }
+
+@media (max-width: 1000px) {
+  .pricingContainer {
+    flex-direction: column;
+  }
+
+  .pricingCardContainer {
+    min-width: 75%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .pricingCardContainer {
+    margin: unset;
+  }
+}

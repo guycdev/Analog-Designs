@@ -86,3 +86,10 @@
   width: 0.75rem;
   height: 0.75rem;
 }
+
+@media (max-width: 1000px) {
+  .container > div {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

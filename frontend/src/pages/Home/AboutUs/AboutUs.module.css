@@ -16,6 +16,12 @@
   justify-content: space-between;
 }
 
+.chartContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .boxEffect,
 .chartContainer > * {
   background-color: #f7f7f7;
@@ -25,7 +31,6 @@
 }
 
 .chartContainer > * {
-  margin: 20px 0px;
   height: 310px;
   width: 310px;
 }
@@ -57,6 +62,16 @@
     gap: 30px;
   }
   .contentContainer {
-    width: 90%;
+    width: 100%;
+  }
+
+  .chartContainer {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 850px) {
+  .chartContainer {
+    display: none;
   }
 }

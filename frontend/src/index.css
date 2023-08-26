@@ -831,7 +831,6 @@ video {
   justify-content: center;
   align-items: stretch;
   overflow-y: hidden;
-  margin: 8.5rem 0rem 0rem 0rem;
   gap: 20px;
 }
 
@@ -1129,13 +1128,13 @@ hr {
   .welcome-heading {
     font-size: 2.5rem;
   }
+
+  .hero-section {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 1290px) {
-  .container {
-    margin: 7rem 0rem;
-  }
-
   .hero-section > div {
     gap: 20px;
   }
@@ -1175,6 +1174,10 @@ hr {
     gap: 20px;
   }
 
+  .video-player-container {
+    max-width: unset;
+  }
+
   .control-bar-container > .card {
     width: fit-content;
   }
@@ -1201,6 +1204,25 @@ hr {
   }
 }
 
+@media (max-width: 1190px) {
+  .welcome-heading h1 {
+    font-size: 2rem;
+  }
+  .swag-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .swag-block > *:nth-child(2) {
+    display: none;
+  }
+
+  .content-block {
+    max-width: 50%;
+  }
+}
+
 @media (max-width: 1120px) {
   .contact-container {
     width: fit-content;
@@ -1208,6 +1230,35 @@ hr {
 }
 
 @media (max-width: 1010px) {
+  .hero-section > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .swag-block {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .swag-block > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .swag-block > *:nth-child(2) {
+    display: block;
+  }
+
+  .content-block {
+    max-width: 100%;
+  }
+
+  .form-container > div {
+    width: 75%;
+  }
+
   .contact-card {
     flex-direction: column;
   }
@@ -1222,6 +1273,12 @@ hr {
 
   .contact-card > div {
     height: 500px;
+    width: 100%;
+  }
+
+  .contact-form > p,
+  .contact-form > h2 {
+    text-align: center;
   }
 
   .desktop-nav {
@@ -1239,18 +1296,6 @@ hr {
 }
 
 @media (max-width: 950px) {
-  .hero-section > div {
-    flex-direction: column;
-  }
-
-  /* .welcome-heading {
-    font-size: 4.4rem;
-  }
-
-  .subheading {
-    font-size: 2rem;
-  } */
-
   #home
     > div:nth-child(1)
     > div.content-block.card
@@ -1265,10 +1310,6 @@ hr {
     margin: auto;
   }
 
-  .swag-block {
-    display: flex;
-  }
-
   .stack-container {
     display: none;
   }
@@ -1276,10 +1317,6 @@ hr {
   .swag-container {
     flex-direction: column;
     align-items: center;
-  }
-
-  #features .swag-row {
-    max-width: 60%;
   }
 
   .desktop-nav ul {
@@ -1332,6 +1369,10 @@ hr {
 }
 
 @media (max-width: 775px) {
+  #root {
+    padding: 0rem 1.25rem;
+  }
+
   .container {
     margin: 3.5rem 0rem;
   }
