@@ -1436,6 +1436,12 @@ hr {
     font-size: 2.5rem;
     margin-right: 0;
   }
+  .subject-selector {
+    flex-direction: column;
+  }
+  .contact-card > *:first-child {
+    display: none;
+  }
 }
 
 .login-container {
