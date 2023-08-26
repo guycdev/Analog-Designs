@@ -25,7 +25,7 @@ export default function ControlBar(props) {
   return (
     <div className="control-bar-container">
       <Card id={0} heading={header} content={subtitle}>
-        <div>{optionsArr}</div>
+        <div className="control-bar">{optionsArr}</div>
       </Card>
     </div>
   );

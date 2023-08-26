@@ -54,8 +54,6 @@
 @media (max-width: 950px) {
   .container {
     flex-direction: column;
-    width: 75%;
-    gap: 20px;
   }
 
   .container p,

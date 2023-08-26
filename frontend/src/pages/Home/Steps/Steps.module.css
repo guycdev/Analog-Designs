@@ -21,10 +21,19 @@
 
 @media (max-width: 950px) {
   .steps {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
   }
-  .container > div {
-    width: 65%;
-    margin: auto;
+
+  .steps > *:last-child {
+    grid-column: 1/3;
+  }
+}
+
+@media (max-width: 550px) {
+  .steps {
+    display: flex;
+    flex-direction: column;
   }
 }

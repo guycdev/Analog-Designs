@@ -1177,10 +1177,6 @@ hr {
     max-width: unset;
   }
 
-  .control-bar-container > .card {
-    width: fit-content;
-  }
-
   .control-bar-container > .card > div > div {
     display: flex;
   }
@@ -1254,8 +1250,8 @@ hr {
     max-width: 100%;
   }
 
-  .form-container > div {
-    width: 75%;
+  .form-container {
+    display: unset;
   }
 
   .contact-card {
@@ -1264,6 +1260,10 @@ hr {
 
   .card-container > div > p {
     width: fit-content;
+  }
+
+  .control-bar-container > .card-container > div > p {
+    width: unset;
   }
 
   .feature-container > .card-container > div > p {
@@ -1396,6 +1396,17 @@ hr {
 
   .card-container > div > img {
     width: 200px;
+  }
+}
+
+@media (max-width: 550px) {
+  .control-bar-container {
+    max-width: unset;
+    width: 100%;
+  }
+  .control-bar {
+    flex-direction: column;
+    width: 100%;
   }
 }
 
