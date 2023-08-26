@@ -1,10 +1,10 @@
 .container {
   display: flex;
+  gap: 40px;
 }
 
 .container > * {
   flex: 1;
-  border-radius: 0px;
 }
 
 .container > * > div {
@@ -12,14 +12,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-
-.container > div:nth-child(1) {
-  border-radius: 5px 0px 0px 5px;
-}
-
-.container > div:nth-child(3) {
-  border-radius: 0px 5px 5px 0px;
 }
 
 .container > * > div > img {
@@ -59,9 +51,13 @@
   text-transform: uppercase;
 }
 
-@media (max-width: 1212px) {
+@media (max-width: 950px) {
   .container {
     flex-direction: column;
-    width: 50%;
+  }
+
+  .container p,
+  .container h6 {
+    text-align: center;
   }
 }

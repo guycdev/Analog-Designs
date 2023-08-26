@@ -831,7 +831,6 @@ video {
   justify-content: center;
   align-items: stretch;
   overflow-y: hidden;
-  margin: 8.5rem 0rem 0rem 0rem;
   gap: 20px;
 }
 
@@ -1069,14 +1068,13 @@ hr {
   gap: 7.5px;
   background-color: var(--card-color);
   width: 52px;
-  border: 1px solid black;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: fixed;
-  left: 0;
+  left: 1.25rem;
   top: 0;
-  margin: 10px;
+  margin: 10px 0px;
   z-index: 1000;
   transition: all 0.3s;
 }
@@ -1129,13 +1127,13 @@ hr {
   .welcome-heading {
     font-size: 2.5rem;
   }
+
+  .hero-section {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 1290px) {
-  .container {
-    margin: 7rem 0rem;
-  }
-
   .hero-section > div {
     gap: 20px;
   }
@@ -1175,8 +1173,8 @@ hr {
     gap: 20px;
   }
 
-  .control-bar-container > .card {
-    width: fit-content;
+  .video-player-container {
+    max-width: unset;
   }
 
   .control-bar-container > .card > div > div {
@@ -1201,6 +1199,25 @@ hr {
   }
 }
 
+@media (max-width: 1190px) {
+  .welcome-heading h1 {
+    font-size: 2rem;
+  }
+  .swag-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .swag-block > *:nth-child(2) {
+    display: none;
+  }
+
+  .content-block {
+    max-width: 50%;
+  }
+}
+
 @media (max-width: 1120px) {
   .contact-container {
     width: fit-content;
@@ -1208,6 +1225,35 @@ hr {
 }
 
 @media (max-width: 1010px) {
+  .hero-section > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .swag-block {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .swag-block > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .swag-block > *:nth-child(2) {
+    display: block;
+  }
+
+  .content-block {
+    max-width: 100%;
+  }
+
+  .form-container {
+    display: unset;
+  }
+
   .contact-card {
     flex-direction: column;
   }
@@ -1216,12 +1262,22 @@ hr {
     width: fit-content;
   }
 
+  .control-bar-container > .card-container > div > p {
+    width: unset;
+  }
+
   .feature-container > .card-container > div > p {
     width: 40ch;
   }
 
   .contact-card > div {
     height: 500px;
+    width: 100%;
+  }
+
+  .contact-form > p,
+  .contact-form > h2 {
+    text-align: center;
   }
 
   .desktop-nav {
@@ -1239,18 +1295,6 @@ hr {
 }
 
 @media (max-width: 950px) {
-  .hero-section > div {
-    flex-direction: column;
-  }
-
-  /* .welcome-heading {
-    font-size: 4.4rem;
-  }
-
-  .subheading {
-    font-size: 2rem;
-  } */
-
   #home
     > div:nth-child(1)
     > div.content-block.card
@@ -1261,12 +1305,7 @@ hr {
   }
 
   .content-block {
-    max-width: fit-content;
     margin: auto;
-  }
-
-  .swag-block {
-    display: flex;
   }
 
   .stack-container {
@@ -1276,10 +1315,6 @@ hr {
   .swag-container {
     flex-direction: column;
     align-items: center;
-  }
-
-  #features .swag-row {
-    max-width: 60%;
   }
 
   .desktop-nav ul {
@@ -1332,6 +1367,10 @@ hr {
 }
 
 @media (max-width: 775px) {
+  #root {
+    padding: 0rem 1.25rem;
+  }
+
   .container {
     margin: 3.5rem 0rem;
   }
@@ -1360,9 +1399,32 @@ hr {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
+  .control-bar-container {
+    max-width: unset;
+    width: 100%;
+  }
+  .control-bar {
+    flex-direction: column;
+    width: 100%;
+  }
+  .content-block {
+    padding: 2rem 1rem;
+  }
+
   .hero-section h1 {
     font-size: 1.7rem;
+  }
+
+  .subheading {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .hero-section hr,
+  .hero-section .stat-items {
+    display: none;
   }
 
   .welcome-heading::before,
@@ -1373,6 +1435,12 @@ hr {
   .welcome-heading::first-letter {
     font-size: 2.5rem;
     margin-right: 0;
+  }
+  .subject-selector {
+    flex-direction: column;
+  }
+  .contact-card > *:first-child {
+    display: none;
   }
 }
 
@@ -1588,4 +1656,8 @@ video {
 .marquee-item {
   font-size: 3rem;
   fill: #7f57ff;
+}
+
+.centre-svg > div {
+  display: flex;
 }
