@@ -1068,14 +1068,13 @@ hr {
   gap: 7.5px;
   background-color: var(--card-color);
   width: 52px;
-  border: 1px solid black;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: fixed;
-  left: 0;
+  left: 1.25rem;
   top: 0;
-  margin: 10px;
+  margin: 10px 0px;
   z-index: 1000;
   transition: all 0.3s;
 }
