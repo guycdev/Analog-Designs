@@ -1443,6 +1443,27 @@ hr {
   .contact-card > *:first-child {
     display: none;
   }
+
+  .top {
+    top: 0%;
+  }
+
+  .middle {
+    top: 45%;
+    transform: rotate(120deg);
+  }
+
+  .bottom {
+    top: 88%;
+  }
+
+  .left {
+    left: -10%;
+  }
+
+  .right {
+    left: 85%;
+  }
 }
 
 .login-container {
