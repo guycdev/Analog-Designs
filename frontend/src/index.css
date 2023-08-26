@@ -1408,11 +1408,23 @@ hr {
     flex-direction: column;
     width: 100%;
   }
+  .content-block {
+    padding: 2rem 1rem;
+  }
+
+  .hero-section h1 {
+    font-size: 1.7rem;
+  }
+
+  .subheading {
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 450px) {
-  .hero-section h1 {
-    font-size: 1.7rem;
+  .hero-section hr,
+  .hero-section .stat-items {
+    display: none;
   }
 
   .welcome-heading::before,
@@ -1638,4 +1650,8 @@ video {
 .marquee-item {
   font-size: 3rem;
   fill: #7f57ff;
+}
+
+.centre-svg > div {
+  display: flex;
 }
