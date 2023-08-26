@@ -165,3 +165,20 @@ pre {
   width: 0.5em;
   transform: rotate(45deg);
 }
+
+@media (max-width: 950px) {
+  .headings > h2 {
+    font-size: 1.85rem;
+  }
+
+  .headings > p,
+  .loginContainer > p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .authHeroCardContainer {
+    display: none;
+  }
+}
