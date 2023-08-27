@@ -1377,6 +1377,13 @@ video {
   }
 }
 
+@media (max-width: 1250px) {
+  .dashboard-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
 @media (max-width: 1210px) {
   .control-bar-container {
     max-width: fit-content;

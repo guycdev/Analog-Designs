@@ -207,3 +207,38 @@ table > * {
 .deploymentControlBarHeadings > * {
   margin: 0.75rem 0px;
 }
+
+@media (max-width: 1250px) {
+  .dashboardActionsContainer {
+    flex-direction: row;
+    width: 100%;
+  }
+  .dashboardActionsContainer > * {
+    flex: 1;
+  }
+}
+
+@media (max-width: 1200px) {
+  .dashboardActionsContainer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 550px) {
+  .dashboardActionsContainer > div:last-child {
+    display: grid;
+    grid-template-rows: auto auto;
+  }
+  .deploymentControlBar {
+    grid-row: 2;
+  }
+  .dashboardActionsContainer > div:last-child > div:last-child {
+    grid-row: 1;
+  }
+}
+
+@media (max-width: 450px) {
+  th {
+    padding: 0;
+  }
+}

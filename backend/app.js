@@ -10,7 +10,7 @@ const cors = require("cors");
 
 app.use(
   cors({
-    origin: "http://app.local.example.com:5174",
+    origin: "http://app.local.example.com:5173",
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
