@@ -868,6 +868,10 @@ form p,
   align-items: center;
 }
 
+.subject > div > div {
+  display: flex;
+}
+
 .subject svg {
   width: 25px;
   height: 25px;
@@ -1696,8 +1700,16 @@ video {
     font-size: 2.5rem;
     margin-right: 0;
   }
-  .subject-selector {
-    flex-direction: column;
+  .subject > div {
+    width: 45px;
+    height: 45px;
+  }
+  .subject svg {
+    width: 20px;
+    height: 20px;
+  }
+  .contact-form h6 {
+    font-size: 0.7rem;
   }
   .contact-card > *:first-child {
     display: none;
