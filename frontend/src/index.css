@@ -1334,14 +1334,6 @@ video {
 }
 
 @media (max-width: 1312px) {
-  /* #home
-    > div:nth-child(1)
-    > div.content-block.card
-    > div.main-content
-    > h1
-    > div {
-    display: block;
-  } */
   .welcome-heading {
     font-size: 2.5rem;
   }
@@ -1440,6 +1432,9 @@ video {
   .contact-container {
     width: fit-content;
   }
+  .container > .marquee-container .child {
+    margin: 0rem 3.6rem;
+  }
 }
 
 @media (max-width: 1010px) {
@@ -1510,6 +1505,9 @@ video {
     border-bottom-right-radius: 0px;
     padding: 20px 30px;
   }
+  .container > .marquee-container .child {
+    margin: 0rem 3.2rem;
+  }
 }
 
 @media (max-width: 950px) {
@@ -1548,9 +1546,20 @@ video {
     gap: 0.2rem;
   }
 
+  .login-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+  .login-container > div:last-child {
+    max-width: 100%;
+    grid-row: 1/2;
+  }
   .login-container > div:first-child {
     padding: 2rem;
     flex: none;
+  }
+  .container > .marquee-container .child {
+    margin: 0rem 3rem;
   }
 }
 
@@ -1568,6 +1577,9 @@ video {
 
   .footer-container {
     display: none;
+  }
+  .container > .marquee-container .child {
+    margin: 0rem 2.85rem;
   }
 }
 
@@ -1587,15 +1599,24 @@ video {
   .desktop-nav ul {
     gap: 10px;
   }
+  .container > .marquee-container .child {
+    margin: 0rem 2.8rem;
+  }
 }
 
 @media (max-width: 775px) {
+  .container > .marquee-container .child {
+    margin: 0rem 2.6rem;
+  }
   #root {
     padding: 0rem 1.25rem;
   }
 
   .container {
     margin: 3.5rem 0rem;
+  }
+  .login-container {
+    margin: 4rem 0rem;
   }
 
   .logos {
@@ -1612,6 +1633,9 @@ video {
 }
 
 @media (max-width: 650px) {
+  .container > .marquee-container .child {
+    margin: 0rem 2.4rem;
+  }
   .swag-block {
     flex-direction: column;
     gap: 20px;
@@ -1623,6 +1647,15 @@ video {
 }
 
 @media (max-width: 550px) {
+  .container > .marquee-container .child {
+    margin: 0rem 2.2rem;
+  }
+  .login-container {
+    display: unset;
+  }
+  .login-container > div:last-child {
+    display: none;
+  }
   .control-bar-container {
     max-width: unset;
     width: 100%;
@@ -1648,6 +1681,10 @@ video {
 @media (max-width: 450px) {
   .stat-items > p {
     display: none;
+  }
+
+  .container > .marquee-container .child {
+    margin: 0rem 2rem;
   }
 
   .welcome-heading::before,
