@@ -45,7 +45,7 @@ export default function DashboardLayout() {
           </NavLink>
         </div>
         <div className={styles.dashboardHelpContainer}>
-          <NavLink
+          {/* <NavLink
             to="help"
             className={({ isActive }) => {
               return isActive ? styles.activeDashboardSelection : "";
@@ -53,7 +53,7 @@ export default function DashboardLayout() {
           >
             <ReactSVG src={info} />
             Help & Information
-          </NavLink>
+          </NavLink> */}
           <NavLink to="../">
             <ReactSVG src={dash} />
             Log Out
