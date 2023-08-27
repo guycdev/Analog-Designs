@@ -868,6 +868,10 @@ form p,
   align-items: center;
 }
 
+.subject > div > div {
+  display: flex;
+}
+
 .subject svg {
   width: 25px;
   height: 25px;
@@ -1373,6 +1377,13 @@ video {
   }
 }
 
+@media (max-width: 1250px) {
+  .dashboard-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
 @media (max-width: 1210px) {
   .control-bar-container {
     max-width: fit-content;
@@ -1544,6 +1555,16 @@ video {
 
   .misc-container {
     gap: 0.2rem;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .button-theme {
+    display: flex;
+  }
+  .button-theme svg {
+    width: 15px;
+    height: 15px;
   }
 
   .login-container {
@@ -1560,6 +1581,18 @@ video {
   }
   .container > .marquee-container .child {
     margin: 0rem 3rem;
+  }
+  .nav-items {
+    font-size: 0.9rem;
+  }
+  .contact-container > a {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 910px) {
+  .button-theme {
+    display: none;
   }
 }
 
@@ -1696,8 +1729,16 @@ video {
     font-size: 2.5rem;
     margin-right: 0;
   }
-  .subject-selector {
-    flex-direction: column;
+  .subject > div {
+    width: 45px;
+    height: 45px;
+  }
+  .subject svg {
+    width: 20px;
+    height: 20px;
+  }
+  .contact-form h6 {
+    font-size: 0.7rem;
   }
   .contact-card > *:first-child {
     display: none;
