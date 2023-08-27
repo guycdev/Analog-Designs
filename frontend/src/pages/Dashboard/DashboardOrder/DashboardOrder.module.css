@@ -96,11 +96,12 @@ textarea,
 .bottomRowLastColumn {
   display: flex;
   gap: 20px;
+  height: 100%;
+  align-items: stretch;
 }
 
 .bottomRowLastColumn > * {
   flex: 1;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -130,4 +131,18 @@ textarea,
 
 .bottomRowLastColumn > div:first-child > div:nth-child(2) * {
   transition: all 0.2s ease-in;
+}
+
+@media (max-width: 850px) {
+  .bottomRowLastColumn {
+    display: grid;
+    grid-template-rows: auto auto;
+  }
+}
+
+@media (max-width: 372px) {
+  .dateContainer {
+    flex-direction: column;
+    width: 100%;
+  }
 }

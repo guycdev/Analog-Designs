@@ -1555,6 +1555,16 @@ video {
 
   .misc-container {
     gap: 0.2rem;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .button-theme {
+    display: flex;
+  }
+  .button-theme svg {
+    width: 15px;
+    height: 15px;
   }
 
   .login-container {
@@ -1571,6 +1581,18 @@ video {
   }
   .container > .marquee-container .child {
     margin: 0rem 3rem;
+  }
+  .nav-items {
+    font-size: 0.9rem;
+  }
+  .contact-container > a {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 910px) {
+  .button-theme {
+    display: none;
   }
 }
 
