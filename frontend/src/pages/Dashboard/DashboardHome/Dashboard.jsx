@@ -18,16 +18,18 @@ export async function loader() {
 
     const data = await request.json();
 
+    if (!data.status != 200) {
+      return redirect("../account");
+    }
+
     return data;
   } catch (err) {
-    throw new Error(err);
+    return redirect("../account");
   }
 }
 
 export default function Dashboard() {
   const data = useLoaderData();
-
-  console.log(data);
 
   return (
     <>
