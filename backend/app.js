@@ -1,5 +1,7 @@
 const express = require("express");
 const passport = require("passport");
+const fs = require("fs");
+const https = require("https");
 const app = express();
 const auth = require("./routes/auth");
 const order = require("./routes/order");
@@ -8,9 +10,14 @@ const MySQLStore = require("express-mysql-session")(session);
 const env = require("dotenv").config();
 const cors = require("cors");
 
+// HTTPS configuration
+const privateKey = fs.readFileSync("server.key", "utf8");
+const certificate = fs.readFileSync("server.cert", "utf8");
+const credentials = { key: privateKey, cert: certificate };
+
 app.use(
   cors({
-    origin: "http://app.local.example.com:5173",
+    origin: "https://app.local.example.com:5173", // Update the origin
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
@@ -31,11 +38,9 @@ const sessionStore = new MySQLStore(options);
 sessionStore
   .onReady()
   .then(() => {
-    // MySQL session store ready for use.
     console.log("MySQLStore ready");
   })
   .catch((error) => {
-    // Something went wrong.
     console.error(error);
   });
 
@@ -48,8 +53,8 @@ app.use(
 
     cookie: {
       httpOnly: true,
-      secure: false,
-      sameSite: "lax",
+      secure: true, // Modify this to true
+      sameSite: "none",
       maxAge: 1000 * 60 * 60 * 24,
       domain: ".local.example.com",
     },
@@ -63,6 +68,8 @@ app.use(passport.session());
 app.use("/api/account", auth);
 app.use("/api/order", order);
 
-app.listen(3003, () => {
-  console.log("Listening on port 3003...");
+// Create HTTPS server
+const httpsServer = https.createServer(credentials, app);
+httpsServer.listen(3003, () => {
+  console.log("HTTPS Server running on port 3003");
 });
