@@ -40,14 +40,18 @@ export async function action(obj) {
       avatar: avatarData[0].avatar,
     };
 
-    const data = await fetch("http://localhost:3003/api/account/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(returnObj),
-      credentials: "include",
-    });
+    // "http://ec2-18-215-255-171.compute-1.amazonaws.com:3003/api/account/login"
+    const data = await fetch(
+      "http://api.local.example.com:3003/api/account/login",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(returnObj),
+        credentials: "include",
+      }
+    );
 
     if (data.status == 400) {
       const errorMessage = await data.json();
