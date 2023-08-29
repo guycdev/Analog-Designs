@@ -21,6 +21,8 @@ export async function action(obj) {
       email: email,
       pass: pass,
     };
+    // "http://api.local.example.com:3003/api/account/login",
+    // "http://ec2-18-215-255-171.compute-1.amazonaws.com:3003/api/account/login"
 
     const data = await fetch(
       "http://ec2-18-215-255-171.compute-1.amazonaws.com:3003/api/account/login",
@@ -37,6 +39,8 @@ export async function action(obj) {
     if (data.status == 401) {
       return "User does not exist";
     }
+
+    console.log("hi");
 
     return redirect("../dashboard");
   } catch (err) {
