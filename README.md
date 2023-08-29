@@ -1,20 +1,58 @@
-# Analog Desings
+# Analog Designs
 
-The goal of this website is to provide mortgage brokers with an easy to use solution to generate websites for their clients who are missing an online presence for their business in their applications. After having built a couple websites of this kind for my mortgage broker friends, it seems like this is a legitimate business opportunity and I currently want to expand on it beyond the clientele of my social circle. Because the websites are intended solely for the purpose of income verification, I believe I can make 5+ design templates that componentize everything swapping assets, utils, and typography to speed up the development process. Down the line I want to add user auth to allow brokers to checkup on their websites and have the functionality to take them offline after their application is approved, as opposed to me having to do it as they are responsible for the hosting fees.
+<p align="center">
+  <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='currentColor' class='bi bi-node-plus-fill' viewBox='0 0 16 16'><path d='M11 13a5 5 0 1 0-4.975-5.5H4A1.5 1.5 0 0 0 2.5 6h-1A1.5 1.5 0 0 0 0 7.5v1A1.5 1.5 0 0 0 1.5 10h1A1.5 1.5 0 0 0 4 8.5h2.025A5 5 0 0 0 11 13zm.5-7.5v2h2a.5.5 0 0 1 0 1h-2v2a.5.5 0 0 1-1 0v-2h-2a.5.5 0 0 1 0-1h2v-2a.5.5 0 0 1 1 0z'/></svg>"
+  alt="Analog Designs Logo" />
+</p>
 
-## What problem does this solve?
+## Introduction
 
-After having spoken to mortgage brokers on the bank side, an online presence is a checkbox they search for to amplify the legitimacy of the client in question. Having an online presence is hence key for borrowers that are just on the cusp of approval and brokers have no objections to paying a couple hundred dollars to further verify the legitimacy of their applicant.
+The goal of Analog Designs is to offer mortgage brokers a simple, effective solution for generating websites for their clients who lack an online presence. Originally developed as a side project to assist friends in the mortgage business, Analog Designs aims to become a go-to solution for brokers beyond my immediate social circle.
+
+## Problem Statement
+
+After speaking with mortgage brokers and other professionals, it's clear that having an online presence significantly bolsters the legitimacy of an applicant. This service aims to be a cost-effective solution for brokers to improve the chances of loan approval for their clients.
 
 ## Goals
 
-Make a visually appealing design website so I can direct potential clients onto there as opposed to texting me directly
+1. Create a visually appealing website to serve as a landing page for potential clients.
+2. Develop reusable design templates in React to expedite the website creation process.
+3. Implement user authentication to allow brokers to manage their websites and possibly take them offline post-approval.
 
-Creating templates for different designs in react will make the process of creating the website much more efficient Down the line
+## Features
 
-Allowing users to create an account and give them the option to take the website offline will be less work for me, but will give me some experience working on backend code
+## Features
 
-## Technical breakdown
+Analog Designs offers the following key features to enhance the experience for both mortgage brokers and their clients:
 
-I will use React, js, bootsrtap, vite, node js or python and MySQL for this project. The agency website will be in CSS because my theoretical grasp of CSS is lacking, and I want to improve it. A database will be useful in the future for user auth and to store previous projects, maybe also having an automated system to upload information about the applicant’s company will be useful.
-It will be deployed on nelify and I will explore my options in terms of hosting client websites as they require their own domain names and other miniscule logistics.
+- **Place Orders**: Users can effortlessly place orders for new websites right from the dashboard using emailJS api.
+- **Order Follow-Up**: Keep track of existing orders with real-time status updates to ensure everything is progressing as planned.
+- **Delete Deployments**: Provides the flexibility to delete deployed websites, giving brokers control over the online presence once the application is approved.
+- **Add Testimonials**: Users can easily add testimonials to their websites, lending credibility and enhancing the site's authenticity.
+
+These features aim to create a seamless, efficient process for mortgage brokers to improve their clients' chances of loan approval.
+
+## Tech Stack
+
+- Front-end: React, JavaScript, CSS, framer motion
+- Back-end: Node.js or Python
+- Database: MySQL
+- Deployment: AWS
+
+Note: The main website will make use of pure CSS to improve my grasp of the technology.
+
+## Responsivness
+
+I worked on 4 different layouts catered towards desktop, laptop, tablet, and phone
+
+### Home page
+
+![home page](./readmegifs/home.gif)
+
+### Login page
+
+![login page](./readmegifs/login.gif)
+
+### Dash page
+
+![home page](./readmegifs/dash.gif)
