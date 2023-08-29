@@ -40,9 +40,6 @@ export async function action(obj) {
       avatar: avatarData[0].avatar,
     };
 
-    // "http://ec2-18-215-255-171.compute-1.amazonaws.com:3003/api/account/login"
-    // "http://api.local.example.com:3003/api/account/login",
-
     const data = await fetch(
       "http://ec2-18-215-255-171.compute-1.amazonaws.com:3003/api/account/login",
       {
