@@ -37,6 +37,7 @@ Note: The main website will make use of pure CSS to improve my grasp of the tech
 ## Placing Orders
 
 Users are able to place orders by filling out this form, adding services, and selecting the estimated length the application will take to be approved.
+
 ![Place orders](./readmegifs/orders.gif)
 
 ## Responsivness
