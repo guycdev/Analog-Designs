@@ -16,11 +16,9 @@ After speaking with mortgage brokers and other professionals, it's clear that ha
 
 ## Features
 
-## Features
-
 Analog Designs offers the following key features to enhance the experience for both mortgage brokers and their clients:
 
-- **Place Orders**: Users can effortlessly place orders for new websites right from the dashboard using emailJS api.
+- **Place Orders**: Users can effortlessly place orders for new websites right from the dashboard using the emailJS api and include information about the various services each business provides and the length of the deployment.
 - **Order Follow-Up**: Keep track of existing orders with real-time status updates to ensure everything is progressing as planned.
 - **Delete Deployments**: Provides the flexibility to delete deployed websites, giving brokers control over the online presence once the application is approved.
 - **Add Testimonials**: Users can easily add testimonials to their websites, lending credibility and enhancing the site's authenticity.
@@ -35,6 +33,11 @@ These features aim to create a seamless, efficient process for mortgage brokers 
 - Deployment: AWS
 
 Note: The main website will make use of pure CSS to improve my grasp of the technology.
+
+## Placing Orders
+
+Users are able to place orders by filling out this form, adding services, and selecting the estimated length the application will take to be approved.
+![Place orders](./readmegifs/orders.gif)
 
 ## Responsivness
 
