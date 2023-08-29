@@ -61,7 +61,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use("/api/account", auth);
-app.use("/api/order", order);
+app.use("/api/orders", order);
 
 app.listen(3003, () => {
   console.log("Listening on port 3003...");

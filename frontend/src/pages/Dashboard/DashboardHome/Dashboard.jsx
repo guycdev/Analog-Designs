@@ -10,8 +10,10 @@ import { useLoaderData, redirect } from "react-router-dom";
 export async function loader() {
   try {
     // "http://ec2-18-215-255-171.compute-1.amazonaws.com:3003/api/order/order"
+    // "http://api.local.example.com:3003/api/order/orders",
+
     const request = await fetch(
-      "http://api.local.example.com:3003/api/order/orders",
+      "http://ec2-18-215-255-171.compute-1.amazonaws.com:3003/api/orders/order",
       {
         credentials: "include",
       }
