@@ -25,7 +25,6 @@ dist-ssr
 
 # .gitignore
 .env
-/dist
 .vite
 /node_modules
 /.vscode
