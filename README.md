@@ -1,6 +1,4 @@
-# Analog Designs
-
-![alt text](./frontend//public/logo.svg)
+# Analog Designs ![alt text](./frontend//public/logo.svg)
 
 ## Test Credentials
 
