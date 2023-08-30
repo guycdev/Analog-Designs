@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import FloatingImages from "./FloatingImages";
 import MainCard from "./MainCard";
-import { information } from "../utils/information";
 import Swag from "../../../components/Swag";
 
 export default function Hero(props) {
@@ -35,15 +34,6 @@ export default function Hero(props) {
         <MainCard />
         <FloatingImages />
       </div>
-      {/* <Swag
-        id="features"
-        featureArr={information}
-        style="swag-container"
-        tag={{
-          name: "Features",
-          color: "#7070ea",
-        }}
-      /> */}
     </motion.section>
   );
 }

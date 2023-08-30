@@ -18,5 +18,9 @@ export default function Swag(props) {
     );
   });
 
-  return <section className={style}>{elementArr}</section>;
+  return style == "features-grid" ? (
+    <div className={style}>{elementArr}</div>
+  ) : (
+    <section className={style}>{elementArr}</section>
+  );
 }

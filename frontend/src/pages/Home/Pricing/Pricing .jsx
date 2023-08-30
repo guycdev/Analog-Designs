@@ -4,7 +4,7 @@ import PricingCard from "./PricingCard";
 
 export default function Pricing() {
   return (
-    <section className={styles.pricingContainer}>
+    <section className={styles.pricingContainer} id="pricing">
       <PricingCard
         price={200}
         heading={

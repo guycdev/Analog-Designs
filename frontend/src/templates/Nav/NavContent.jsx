@@ -28,29 +28,46 @@ export default function NavContent(props) {
           </li>
         </div>
         <div className="account-container">
-          <motion.li
-            className="contact-container login"
-            whileHover={{
-              scale: 1.1,
-              color: "white",
-              backgroundColor: "#7f57ff",
-            }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <Blobs size="small" />
-            <Link to={"account"}>Login</Link>
-          </motion.li>
-          <motion.li
-            className="contact-container register"
-            whileHover={{
-              scale: 1.1,
-              backgroundColor: "white",
-            }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <Blobs size="small" />
-            <Link to={"account/register"}>Register</Link>
-          </motion.li>
+          <Link to={"dashboard"}>
+            <motion.li
+              className="contact-container register"
+              whileHover={{
+                scale: 1.1,
+                backgroundColor: "white",
+              }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <Blobs size="small" />
+              Dash
+            </motion.li>
+          </Link>
+          <Link to={"account"}>
+            <motion.li
+              className="contact-container login"
+              whileHover={{
+                scale: 1.1,
+                color: "white",
+                backgroundColor: "#7f57ff",
+              }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <Blobs size="small" />
+              Login
+            </motion.li>
+          </Link>
+          <Link to={"account/register"}>
+            <motion.li
+              className="contact-container register"
+              whileHover={{
+                scale: 1.1,
+                backgroundColor: "white",
+              }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <Blobs size="small" />
+              Register
+            </motion.li>
+          </Link>
         </div>
       </ul>
     </div>

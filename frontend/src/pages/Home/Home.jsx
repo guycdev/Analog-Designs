@@ -54,12 +54,10 @@ function App() {
             /> */}
       {/*Temporary disabling this video player until i get assetes for designs*/}
       <Testimonials />
-      {/* <Stack /> */}
       <Marquee
         logos={[react, bootstrap, node, shopify, wixx, squarespace, wordPress]}
       />
       <Pricing />
-
       <ContactForm />
     </main>
   );
