@@ -10,7 +10,7 @@ export default function VideoObject(props) {
   return (
     <section
       className={`video-object-container section-${sectionNumber}`}
-      id="video-player"
+      id="demos"
     >
       {direction ? (
         <>

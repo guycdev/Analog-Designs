@@ -7,17 +7,13 @@ import Button from "../../../components/Button";
 import whiteArrow from "../../../assets/white-arrow.svg";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
+import { HashLink } from "react-router-hash-link";
 
 export default function MainCard(props) {
   const animationVar = { props };
 
   return (
-    <motion.div
-      className="content-block card "
-      drag
-      dragConstraints={{ left: -0, right: 0, top: 0, bottom: -0 }}
-      dragElastic={0.25}
-    >
+    <motion.div className="content-block card ">
       <div className="main-content">
         <p>
           <em className="body-em">Design Your Success</em>
@@ -40,28 +36,32 @@ export default function MainCard(props) {
           An efficient solution to creating an online presence for borrowers
         </p>
         <div className="btn-container">
-          <Button
-            buttonType="primary-btn"
-            text="Live Demos"
-            variance={{
-              scale: 1.1,
-              backgroundColor: "#ededed",
-              color: "black",
-            }}
-            img={whiteArrow}
-            hoverImg={arrow}
-          />
-          <Button
-            buttonType="secondary-btn"
-            variance={{
-              scale: 1.1,
-              backgroundColor: "#007BFF",
-              color: "white",
-            }}
-            text="Learn More"
-            img={arrow}
-            hoverImg={whiteArrow}
-          />
+          <HashLink to="#demos">
+            <Button
+              buttonType="primary-btn"
+              text="Live Demos"
+              variance={{
+                scale: 1.1,
+                backgroundColor: "#ededed",
+                color: "black",
+              }}
+              img={whiteArrow}
+              hoverImg={arrow}
+            />
+          </HashLink>
+          <HashLink to="#pricing">
+            <Button
+              buttonType="secondary-btn"
+              variance={{
+                scale: 1.1,
+                backgroundColor: "#007BFF",
+                color: "white",
+              }}
+              text="Learn More"
+              img={arrow}
+              hoverImg={whiteArrow}
+            />
+          </HashLink>
         </div>
       </div>
       <hr className="main-hr" />

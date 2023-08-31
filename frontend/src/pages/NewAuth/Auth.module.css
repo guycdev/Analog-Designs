@@ -166,30 +166,25 @@ pre {
   transform: rotate(45deg);
 }
 
+@media (max-width: 1200px) {
+  .headings > h2 {
+    padding: 0rem 2rem;
+    font-size: 1.9rem;
+  }
+}
+
 @media (max-width: 950px) {
   .headings > h2 {
     font-size: 1.85rem;
   }
 
+  .headings {
+    flex-shrink: 1;
+  }
+
   .headings > p,
   .loginContainer > p {
     font-size: 0.8rem;
-  }
-  .authHeroCardContainer {
-    display: grid;
-    grid-template-rows: auto auto auto;
-    justify-items: center;
-  }
-  .authHeroCardContainer > :nth-child(1) {
-    grid-row: 1;
-  }
-
-  .authHeroCardContainer > :nth-child(2) {
-    grid-row: 3;
-  }
-
-  .authHeroCardContainer > :nth-child(3) {
-    grid-row: 2;
   }
 }
 
