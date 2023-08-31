@@ -9,11 +9,11 @@ import { useLoaderData, redirect } from "react-router-dom";
 
 export async function loader() {
   try {
-    // "http://ec2-18-215-255-171.compute-1.amazonaws.com:3003/api/order/order"
+    // "http://ec2-18-215-255-171.compute-1.amazonaws.com:3003/api/orders/order"
     // "http://api.local.example.com:3003/api/order/orders",
 
     const request = await fetch(
-      "http://ec2-18-215-255-171.compute-1.amazonaws.com:3003/api/orders/order",
+      "http://api.local.example.com:3003/api/orders/order",
       {
         credentials: "include",
       }
@@ -21,9 +21,9 @@ export async function loader() {
 
     const data = await request.json();
 
-    console.log("test1");
+    console.log(typeof data.status);
 
-    if (data.status > 205) {
+    if (data.status > 205 || typeof data.status == "string") {
       return redirect("../account");
     }
 
