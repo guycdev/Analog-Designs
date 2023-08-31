@@ -7,14 +7,8 @@ Pass: test123
 
 ## Currently working on:
 
-1. Fixing dead buttons
-2. Adding direct dashboard button if user is logged in
-3. Fix minor responsivness issue on auth route when client width is between 600-750px
-4. Fix bug where nav button only work if text is pressed
-5. Fix padding on contact-us section
-6. Make background size prop change dynamically based on current route
-7. Add domain
-8. Add emailjs api creds to prod
+1. Add domain
+2. Add emailjs api creds to prod
 
 ## Introduction
 
