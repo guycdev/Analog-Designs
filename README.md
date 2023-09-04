@@ -9,6 +9,7 @@ Pass: test123
 
 1. Add domain
 2. Add emailjs api creds to prod
+3. Add testimonials table
 
 ## Introduction
 
