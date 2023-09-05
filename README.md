@@ -5,6 +5,8 @@
 Email: John12@example.com
 Pass: test123
 
+** If login gives failed to fetch error it means my backend server is down **
+
 ## Currently working on:
 
 1. Add domain

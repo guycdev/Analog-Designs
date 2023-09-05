@@ -19,6 +19,7 @@ export default function AboutUs(props) {
           duration: 2,
         },
       }}
+      id="about-us"
     >
       <div className={`${styles.contentContainer} ${styles.boxEffect}`}>
         <h2>
