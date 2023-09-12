@@ -21,6 +21,10 @@ The goal of Analog Designs is to offer mortgage brokers a simple, effective solu
 
 After speaking with mortgage brokers and other professionals, it's clear that having an online presence significantly bolsters the legitimacy of an applicant. This service aims to be a cost-effective solution for brokers to improve the chances of loan approval for their clients.
 
+## Deployment
+
+Both frontend and backend are deployed on an AWS EC2 instance. The frontend was hosted via NGINX reverse proxy so that I wouldn't have to comply with CORS guidelines as HTTP cookies must be sent from the same top level domain if the sameSite header is set to none. The node server is being managed by PM2 for 247 uptime.
+
 ## Goals
 
 1. Create a visually appealing website to serve as a landing page for potential clients.
@@ -29,8 +33,9 @@ After speaking with mortgage brokers and other professionals, it's clear that ha
 
 ## Features
 
-Analog Designs offers the following key features to enhance the experience for both mortgage brokers and their clients:
+Analog Designs offers the following key CRUD features to enhance the experience for both mortgage brokers and their clients:
 
+- **Create Account**: Users can create an account on the website. Passwords are encrypted with bycript via the registration controller.
 - **Place Orders**: Users can effortlessly place orders for new websites right from the dashboard using the emailJS api and include information about the various services each business provides and the length of the deployment.
 - **Order Follow-Up**: Keep track of existing orders with real-time status updates to ensure everything is progressing as planned.
 - **Delete Deployments**: Provides the flexibility to delete deployed websites, giving brokers control over the online presence once the application is approved.
