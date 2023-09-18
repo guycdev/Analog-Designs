@@ -6,7 +6,7 @@ import globe from "../../../assets/globe.svg";
 export default function OrderSummaryChart(props) {
   const { end, start, handleSubmit } = props;
 
-  const [orderTotal, setOrderTotal] = useState(200);
+  const [orderTotal, setOrderTotal] = useState(220);
   const [displayedOrderTotal, setDisplayedOrderTotal] = useState(0);
 
   useEffect(() => {
@@ -35,9 +35,9 @@ export default function OrderSummaryChart(props) {
     }
     if (end) {
       const months = orderTotalCalculator();
-      setOrderTotal(200 + months * 40);
+      setOrderTotal(220 + months * 40);
     } else {
-      setOrderTotal(200);
+      setOrderTotal(220);
     }
   }, [new Date(end).toDateString()]);
 
@@ -51,7 +51,7 @@ export default function OrderSummaryChart(props) {
           datasets: [
             {
               label: "Price",
-              data: [200, `${orderTotal - 200}`, 20],
+              data: [200, `${orderTotal - 220}`, 20],
               backgroundColor: ["#b6bdff", "#dddfff", "#d0d4ff"],
               borderWidth: 2,
             },

@@ -28,7 +28,7 @@ export default function Button(props) {
       >
         {text}
         {!isLoading && img && <ReactSVG src={img} />}
-        {isLoading && <div class="loader"></div>}
+        {isLoading && <div className="loader"></div>}
       </motion.button>
     </div>
   );
