@@ -9,9 +9,7 @@ Pass: test123
 
 ## Currently working on:
 
-1. Add domain
-2. Add emailjs api creds to prod
-3. Add testimonials table
+1. Add testimonials table
 
 ## Introduction
 
