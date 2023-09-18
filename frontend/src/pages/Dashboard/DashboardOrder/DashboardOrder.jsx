@@ -29,8 +29,6 @@ export default function DashboardOrder() {
 
   function handleSubmit(event) {
     event.preventDefault();
-
-    console.log("Form data submitted");
   }
 
   return (

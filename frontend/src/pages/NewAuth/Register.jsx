@@ -41,7 +41,7 @@ export async function action(obj) {
     };
 
     const data = await fetch(
-      "http://ec2-18-215-255-171.compute-1.amazonaws.com:3003/api/account/login",
+      "http://analogdesigns.net:3003/api/account/register",
       {
         method: "POST",
         headers: {
