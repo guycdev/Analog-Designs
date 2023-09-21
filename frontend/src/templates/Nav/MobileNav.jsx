@@ -4,6 +4,7 @@ import close from "../../assets/close.svg";
 import NavContent from "./NavContent";
 import MiscNavItems from "./MiscNavItems";
 import { motion } from "framer-motion";
+import { HashLink } from "react-router-hash-link";
 
 export default function MobileNav(props) {
   const navVariants = {
@@ -44,10 +45,10 @@ export default function MobileNav(props) {
             svg.classList.add("close-btn");
           }}
         />
-        <div className="logos">
+        <HashLink to="/#home" className="logos">
           <img src={logo} alt="Analog Studio Logo" />
           <h3 className="logo">{name}</h3>
-        </div>
+        </HashLink>
         <MiscNavItems theme={theme} />
         <hr />
         <NavContent

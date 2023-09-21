@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import NavContent from "./NavContent";
 import MiscNavItems from "./MiscNavItems";
+import { HashLink } from "react-router-hash-link";
 
 export default function MobileNav(props) {
   const { logo, name, theme } = props;
@@ -22,10 +23,10 @@ export default function MobileNav(props) {
           },
         }}
       >
-        <div className="logos">
+        <HashLink to="/#home" className="logos">
           <img src={logo} alt="Analog Studio Logo" />
           <h3 className="logo">{name}</h3>
-        </div>
+        </HashLink>
         <div className="vertical-line"></div>
         <NavContent theme={theme} style="desktop-content-container" />
         <MiscNavItems theme={theme} />
